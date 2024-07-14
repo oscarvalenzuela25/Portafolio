@@ -1,0 +1,20 @@
+.icon-button {
+  background-color: transparent;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  transition: all 0.2s;
+  &:hover {
+    opacity: 0.9;
+    box-shadow: 0px 0px 20px -18px;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.link-button {
+  text-decoration: none;
+}

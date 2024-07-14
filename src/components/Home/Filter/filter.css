@@ -1,0 +1,130 @@
+@import '../../../styles/variables.css';
+
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-primary);
+  border-radius: 4px;
+  width: calc(100% - 32px);
+  padding: 32px 16px;
+  gap: 32px;
+
+  /*  screen md - ml - ml */
+  @media screen and (515px <= width <= 1024px) {
+    padding: 16px;
+    gap: 24px;
+  }
+
+  /* screen mm - ms - mxs */
+  @media screen and (width <= 514px) {
+    padding: 16px;
+    gap: 16px;
+  }
+}
+
+.filter-title-desktop {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: var(--desktop-subtitle2-font-size);
+  font-weight: var(--desktop-subtitle2-font-weight);
+  text-align: center;
+
+  /* screen md - ml */
+  @media screen and (515px <= width <= 1024px) {
+    display: none;
+  }
+
+  /* screen mm - ms - mxs */
+  @media screen and (width <= 514px) {
+    display: none;
+  }
+}
+
+.filter-input-container-desktop {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  /* screen md - ml */
+  @media screen and (515px <= width <= 1024px) {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  /* screen mm - ms - mxs */
+  @media screen and (width <= 514px) {
+    display: none;
+  }
+}
+
+.container-button-desktop {
+  width: 100%;
+  @media screen and (width <= 514px) {
+    display: none;
+  }
+}
+
+.container-filter-title-mobile {
+  display: none;
+
+  /* screen mm - ms - mxs */
+  @media screen and (width <= 514px) {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.filter-title-mobile {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: var(--mobile-subtitle2-font-size);
+  font-weight: var(--mobile-subtitle2font-weight);
+  text-align: center;
+  width: calc(100% - 24px);
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:active {
+    transform: scale(0.8);
+  }
+}
+
+.filter-icon-mobile {
+  width: 24px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(0deg);
+
+  &:active {
+    transform: scale(0.8);
+  }
+}
+
+.filter-icon-mobile--active {
+  transform: rotate(180deg);
+}
+
+.filter-inputs-container-mobile {
+  display: none;
+
+  /* screen mm - ms - mxs */
+  @media screen and (width <= 514px) {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.container-button-mobile {
+  width: 100%;
+  display: none;
+
+  /* screen mm - ms - mxs */
+  @media screen and (width <= 514px) {
+    display: block;
+  }
+}

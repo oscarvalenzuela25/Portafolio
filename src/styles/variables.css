@@ -1,0 +1,105 @@
+:root {
+  --primary: #7f5af0;
+  --text-primary: #fffffe;
+  --text-secondary: #94a1b2;
+  --background-primary: #16161a;
+  --background-secondary: #242629;
+
+  /* Desktop typography */
+  --desktop-display-font-size: 64px;
+  --desktop-display-font-weight: 400;
+
+  --desktop-h1-font-size: 56px;
+  --desktop-h1-font-weight: 400;
+
+  --desktop-h2-font-size: 48px;
+  --desktop-h2-font-weight: 400;
+
+  --desktop-h3-font-size: 40px;
+  --desktop-h3-font-weight: 400;
+
+  --desktop-h4-font-size: 32px;
+  --desktop-h4-font-weight: 400;
+
+  --desktop-subtitle1-font-size: 28px;
+  --desktop-subtitle1-font-weight: 400;
+
+  --desktop-subtitle2-font-size: 24px;
+  --desktop-subtitle2-font-weight: 400;
+
+  --desktop-lead-font-size: 20px;
+  --desktop-lead-font-weight: 400;
+
+  --desktop-bodyLarge-font-size: 18px;
+  --desktop-bodyLarge-font-weight: 400;
+
+  --desktop-bodyLargeBold-font-size: 18px;
+  --desktop-bodyLargeBold-font-weight: 700;
+
+  --desktop-bodySmall-font-size: 16px;
+  --desktop-bodySmall-font-weight: 400;
+
+  --desktop-bodySmallBold-font-size: 16px;
+  --desktop-bodySmallBold-font-weight: 700;
+
+  --desktop-small-font-size: 14px;
+  --desktop-small-font-weight: 400;
+
+  --desktop-smallBold-font-size: 14px;
+  --desktop-smallBold-font-weight: 700;
+
+  --desktop-tiny-font-size: 12px;
+  --desktop-tiny-font-weight: 400;
+
+  --desktop-tinyBold-font-size: 12px;
+  --desktop-tinyBold-font-weight: 700;
+
+  /* Mobile typography */
+  --mobile-display-font-size: 32px;
+  --mobile-display-font-weight: 400;
+
+  --mobile-h1-font-size: 30px;
+  --mobile-h1-font-weight: 400;
+
+  --mobile-h2-font-size: 28px;
+  --mobile-h2-font-weight: 400;
+
+  --mobile-h3-font-size: 26px;
+  --mobile-h3-font-weight: 400;
+
+  --mobile-h4-font-size: 24px;
+  --mobile-h4-font-weight: 400;
+
+  --mobile-subtitle1-font-size: 22px;
+  --mobile-subtitle1-font-weight: 400;
+
+  --mobile-subtitle2-font-size: 20px;
+  --mobile-subtitle2-font-weight: 400;
+
+  --mobile-lead-font-size: 18px;
+  --mobile-lead-font-weight: 400;
+
+  --mobile-bodyLarge-font-size: 16px;
+  --mobile-bodyLarge-font-weight: 400;
+
+  --mobile-bodyLargeBold-font-size: 16px;
+  --mobile-bodyLargeBold-font-weight: 700;
+
+  --mobile-bodySmall-font-size: 14px;
+  --mobile-bodySmall-font-weight: 400;
+
+  --mobile-bodySmallBold-font-size: 14px;
+  --mobile-bodySmallBold-font-weight: 700;
+
+  --mobile-small-font-size: 12px;
+  --mobile-small-font-weight: 400;
+
+  --mobile-smallBold-font-size: 12px;
+  --mobile-smallBold-font-weight: 700;
+
+  --mobile-tiny-font-size: 11px;
+  --mobile-tiny-font-weight: 400;
+
+  --mobile-tinyBold-font-size: 11px;
+  --mobile-tinyBold-font-weight: 700;
+}

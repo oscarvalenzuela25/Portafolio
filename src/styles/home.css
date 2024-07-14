@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+@import 'variables.css';
+
+.root-container {
+  background-color: var(--background-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Mukta', sans-serif;
+}
+
+.grid-container {
+  max-width: 1360px;
+  min-height: calc(100vh - 231px);
+
+  @media screen and (width >= 1440px) {
+    width: 100%;
+  }
+  @media screen and (1025px <= width <= 1439px) {
+    width: calc(100% - 80px);
+  }
+  @media screen and (768px <= width <= 1024px) {
+    width: calc(100% - 80px);
+  }
+  @media screen and (width <= 767px) {
+    width: calc(100% - 48px);
+    min-height: calc(100vh - 161px);
+  }
+}
