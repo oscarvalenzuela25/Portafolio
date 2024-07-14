@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root {
+  --background-color: hsl(229, 57%, 11%);
+  --parrafo: hsl(243, 100%, 93%);
+  --flotante: hsl(229, 7%, 55%);
+  --container: hsl(228, 56%, 26%);
+  --container-fluid: hsl(229, 57%, 11%);
+  font-family: 'Raleway', sans-serif;
+}
+
+@media screen and (width >= 1025px) {
+  .container-fluid {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../assets/1-fylo-data-storage/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: var(--background-color);
+    background-size: 100% 50%;
+  }
+
+  .container-root {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 30px;
+  }
+
+  .container-left {
+    width: 350px;
+    height: 200px;
+    color: var(--parrafo);
+    background-color: var(--container);
+    border-radius: 10px 100px 10px 10px;
+  }
+
+  .container-left__logo {
+    margin: 40px;
+    margin-bottom: 20px;
+  }
+
+  .container-left__icons {
+    margin-left: 40px;
+    display: flex;
+  }
+
+  .container-left__icons-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+  }
+
+  .container-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(540px - 80px);
+    height: 150px;
+    background-color: var(--container);
+    border-radius: 10px;
+    position: relative;
+    padding: 0 40px;
+  }
+
+  .container-right__container-absolute {
+    width: 180px;
+    height: 70px;
+    color: var(--flotante);
+    background: #fffffd;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 130px;
+    right: 7%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container-right__container-absolute p {
+    margin: 0px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 2;
+  }
+
+  .container-right__container-absolute strong {
+    font-size: 40px;
+    color: var(--background-color);
+  }
+
+  .container-right__container-absolute-tail {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    background: #fffffd;
+    transform: skew(180deg, 50deg);
+  }
+
+  .container__right-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--parrafo);
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+  }
+
+  .container__right_container-progress-bar {
+    width: 100%;
+    height: 15px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    border: 2px solid var(--background-color);
+  }
+
+  .container__right_container-progress-bar-used {
+    width: 81%;
+    height: 13px;
+    margin-top: 1px;
+    background: linear-gradient(
+      90deg,
+      hsl(6, 100%, 80%) 0%,
+      hsl(335, 100%, 65%) 100%
+    );
+    border-radius: 10px;
+  }
+
+  .container__right_container-meta-data {
+    display: flex;
+    justify-content: space-between;
+    color: var(--parrafo);
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (width < 1025px) {
+  .container-fluid {
+    width: calc(100vw - 32px);
+    height: 100vh;
+    padding: 0 16px;
+    background-image: url(../../assets/1-fylo-data-storage/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: var(--background-color);
+    background-size: cover;
+  }
+  .container-root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .container-left {
+    width: 100%;
+    max-width: 330px;
+    height: 200px;
+    color: var(--parrafo);
+    background-color: var(--container);
+    border-radius: 10px 100px 10px 10px;
+  }
+
+  .container-left__logo {
+    margin: 40px;
+    margin-bottom: 20px;
+  }
+
+  .container-left__icons {
+    margin-left: 40px;
+    display: flex;
+    gap: 15px;
+  }
+
+  .container-left__icons-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+  }
+
+  .container-right {
+    max-width: 290px;
+    width: calc(100% - 40px);
+    height: 160px;
+    background-color: var(--container);
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+  }
+
+  .container-right__container-absolute {
+    width: 180px;
+    height: 70px;
+    color: var(--flotante);
+    background: #fffffd;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -25%;
+    right: 25%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container-right__container-absolute p {
+    margin: 0px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 2;
+  }
+
+  .container-right__container-absolute strong {
+    font-size: 40px;
+    color: var(--background-color);
+  }
+
+  .container-right__container-absolute-tail {
+    display: none;
+  }
+
+  .container__right-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--parrafo);
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .container__right_container-progress-bar {
+    width: 100%;
+    height: 15px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    border: 2px solid var(--background-color);
+  }
+
+  .container__right_container-progress-bar-used {
+    width: 81%;
+    height: 13px;
+    margin-top: 1px;
+    background: linear-gradient(
+      90deg,
+      hsl(6, 100%, 80%) 0%,
+      hsl(335, 100%, 65%) 100%
+    );
+    border-radius: 10px;
+  }
+
+  .container__right_container-meta-data {
+    display: flex;
+    justify-content: space-between;
+    color: var(--parrafo);
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}

@@ -7,7 +7,7 @@
     "url": "/1-fylo-data-storage",
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portfolio/tree/main/src/app/1-fylo-data-storage",
-    "image": "/images/1-fylo-data-storage/desktop-design.jpg"
+    "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/1-fylo-data-storage/desktop-design.jpg"
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
     "url": "/2-coding-bootcamp-testimonials-slider",
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portfolio/tree/main/src/app/2-coding-bootcamp-testimonials-slider",
-    "image": "/images/2-coding-bootcamp-testimonials-slider/desktop-design.jpg"
+    "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/2-coding-bootcamp-testimonials-slider/desktop-design.jpg"
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
     "url": "/3-article-preview-component",
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portfolio/tree/main/src/app/3-article-preview-component",
-    "image": "/images/3-article-preview-component/desktop-design.jpg"
+    "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/3-article-preview-component/desktop-design.jpg"
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "url": "/4-four-card-feature-section",
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portfolio/tree/main/src/app/4-four-card-feature-section",
-    "image": "/images/4-four-card-feature-section/desktop-design.jpg"
+    "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/4-four-card-feature-section/desktop-design.jpg"
   },
   {
     "id": 5,
@@ -47,7 +47,7 @@
     "url": "/5-base-apparel-coming-soon-page",
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portfolio/tree/main/src/app/5-base-apparel-coming-soon-page",
-    "image": "/images/5-base-apparel-coming-soon-page/desktop-design.jpg"
+    "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/5-base-apparel-coming-soon-page/desktop-design.jpg"
   },
   {
     "id": 6,
@@ -57,7 +57,7 @@
     "url": "/6-intro-component-with-sign-up-form",
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portfolio/tree/main/src/app/6-intro-component-with-sign-up-form",
-    "image": "/images/6-intro-component-with-sign-up-form/desktop-design.jpg"
+    "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/6-intro-component-with-sign-up-form/desktop-design.jpg"
   },
   {
     "id": 7,
@@ -67,7 +67,7 @@
     "url": "/7-single-price-grid-component",
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portfolio/tree/main/src/app/7-single-price-grid-component",
-    "image": "/images/7-single-price-grid-component/desktop-design.jpg"
+    "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/7-single-price-grid-component/desktop-design.jpg"
   },
   {
     "id": 8,
@@ -77,7 +77,7 @@
     "url": "/8-ping-single-column-coming-soon-page",
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portfolio/tree/main/src/app/8-ping-single-column-coming-soon-page",
-    "image": "/images/8-ping-single-column-coming-soon-page/desktop-design.jpg"
+    "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/8-ping-single-column-coming-soon-page/desktop-design.jpg"
   },
   {
     "id": 9,
@@ -87,7 +87,7 @@
     "url": "/9-huddle-landing-page-with-a-single-introductory-section",
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portfolio/tree/main/src/app/9-huddle-landing-page-with-a-single-introductory-section",
-    "image": "/images/9-huddle-landing-page-with-a-single-introductory-section/desktop-design.jpg"
+    "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/9-huddle-landing-page-with-a-single-introductory-section/desktop-design.jpg"
   },
   {
     "id": 10,
@@ -97,7 +97,7 @@
     "url": "/10-huddle-landing-page-with-alternating-feature-blocks",
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portfolio/tree/main/src/app/10-huddle-landing-page-with-alternating-feature-blocks",
-    "image": "/images/10-huddle-landing-page-with-alternating-feature-blocks/desktop-design.jpg"
+    "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/10-huddle-landing-page-with-alternating-feature-blocks/desktop-design.jpg"
   },
   {
     "id": 11,
@@ -107,7 +107,7 @@
     "url": "/11-fylo-landing-page-with-two-column-layout",
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portfolio/tree/main/src/app/11-fylo-landing-page-with-two-column-layout",
-    "image": "/images/11-fylo-landing-page-with-two-column-layout/desktop-design.jpg"
+    "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/11-fylo-landing-page-with-two-column-layout/desktop-design.jpg"
   },
   {
     "id": 12,
@@ -117,7 +117,7 @@
     "url": "/12-social-media-dashboard-with-theme-switcher",
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portfolio/tree/main/src/app/12-social-media-dashboard-with-theme-switcher",
-    "image": "/images/12-social-media-dashboard-with-theme-switcher/desktop-design.jpg"
+    "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/12-social-media-dashboard-with-theme-switcher/desktop-design.jpg"
   },
   {
     "id": 13,
@@ -127,7 +127,7 @@
     "url": "/13-insure-landing-page",
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portfolio/tree/main/src/app/13-insure-landing-page",
-    "image": "/images/13-insure-landing-page/desktop-design.jpg"
+    "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/13-insure-landing-page/desktop-design.jpg"
   },
   {
     "id": 14,
@@ -137,7 +137,7 @@
     "url": "/14-pricing-component-with-toggle",
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portfolio/tree/main/src/app/14-pricing-component-with-toggle",
-    "image": "/images/14-pricing-component-with-toggle/desktop-design.jpg"
+    "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/14-pricing-component-with-toggle/desktop-design.jpg"
   },
   {
     "id": 15,
@@ -147,6 +147,6 @@
     "url": "/15-project-tracking-intro-component",
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portfolio/tree/main/src/app/15-project-tracking-intro-component",
-    "image": "/images/15-project-tracking-intro-component/desktop-design.jpg"
+    "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/15-project-tracking-intro-component/desktop-design.jpg"
   }
 ]

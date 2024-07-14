@@ -1,0 +1,54 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Logo from '@assets/1-fylo-data-storage/logo.svg';
+import IconDocument from '@assets/1-fylo-data-storage/icon-document.svg';
+import IconFolder from '@assets/1-fylo-data-storage/icon-folder.svg';
+import IconUpload from '@assets/1-fylo-data-storage/icon-upload.svg';
+import './1-fylo-data-storage.css';
+---
+
+<Layout title="Fylo data storage">
+  <div class="container-fluid">
+    <div class="container-root">
+      <div class="container-left">
+        <Image src={Logo} alt="logo" class="container-left__logo" />
+
+        <div class="container-left__icons">
+          <div class="container-left__icons-detail">
+            <Image src={IconDocument} alt="document" />
+          </div>
+          <div class="container-left__icons-detail">
+            <Image src={IconFolder} alt="folder" />
+          </div>
+          <div class="container-left__icons-detail">
+            <Image src={IconUpload} alt="upload" />
+          </div>
+        </div>
+      </div>
+
+      <div class="container-right">
+        <div class="container-right__container-absolute">
+          <p>
+            <strong>185</strong>
+            <span>GB Left</span>
+          </p>
+          <div class="container-right__container-absolute-tail"></div>
+        </div>
+
+        <p class="container__right-title">
+          You’ve used <strong>815 GB</strong> of your storage
+        </p>
+
+        <div class="container__right_container-progress-bar">
+          <div class="container__right_container-progress-bar-used"></div>
+        </div>
+
+        <div class="container__right_container-meta-data">
+          <strong>0 GB</strong>
+          <strong>1000 GB</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
