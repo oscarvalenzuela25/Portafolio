@@ -26,6 +26,7 @@ const Card: FC<Props> = ({ project }) => {
       <img
         src={image}
         alt={image}
+        loading="lazy"
         style={{
           width: '100%',
           height: 'auto',

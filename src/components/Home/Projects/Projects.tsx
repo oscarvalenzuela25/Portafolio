@@ -5,6 +5,7 @@ import Filter from '../Filter';
 import Spacer from '@components/commons/Spacer';
 import useProjects from './hooks/useProjects';
 import CardSectionSkeleton from '../CardSectionSkeleton';
+import Paginate from '../Paginate';
 import './projects.css';
 
 const Projects = () => {
@@ -17,10 +18,13 @@ const Projects = () => {
     handleSetBackendFilter,
     fetchProjectsIsLoading,
     fetchProjectsIsError,
-    fetchProjectsData,
     fetchProjectsIsEmpty,
     technologiesSelected,
     handleFilterSubmit,
+    currentPage,
+    currentItems,
+    totalPages,
+    handlePageClick,
   } = useProjects();
 
   return (
@@ -58,11 +62,15 @@ const Projects = () => {
             isEmpty={fetchProjectsIsEmpty}
           >
             <div className="card-container">
-              {fetchProjectsData.map(project => (
+              {currentItems.map(project => (
                 <div className="card-grid" key={project.id}>
                   <Card project={project} />
                 </div>
               ))}
+            </div>
+
+            <div className="paginator-container">
+              <Paginate />
             </div>
           </CardSectionSkeleton>
         </div>

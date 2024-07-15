@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import useFetchProjects from '../infrastructure/hooks/useFetchProjects';
 import useProjectsStore from '@stores/projects.store';
 
-const useProjects = () => {
+const useProjects = (itemsPerPage: number = 6) => {
   const searchFilterStore = useProjectsStore(state => state.searchFilter);
   const frontendFilterStore = useProjectsStore(state => state.frontendFilter);
   const backendFilterStore = useProjectsStore(state => state.backendFilter);
@@ -20,6 +20,7 @@ const useProjects = () => {
   const [searchFilter, setSearchFilter] = useState<string>('');
   const [frontendFilter, setFrontendFilter] = useState<string[]>([]);
   const [backendFilter, setBackendFilter] = useState<string[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const handleSetSearchFilter = (searchValue: string) =>
     setSearchFilter(searchValue);
@@ -28,12 +29,15 @@ const useProjects = () => {
   const handleSetBackendFilter = (backendValue: string[]) =>
     setBackendFilter(backendValue);
 
-  const { fetchProjectsIsLoading, fetchProjectsIsError, fetchProjectsData } =
-    useFetchProjects({
-      search: searchFilterStore,
-      frontend: frontendFilterStore,
-      backend: backendFilterStore,
-    });
+  const {
+    fetchProjectsIsLoading,
+    fetchProjectsIsError,
+    fetchProjectsData = [],
+  } = useFetchProjects({
+    search: searchFilterStore,
+    frontend: frontendFilterStore,
+    backend: backendFilterStore,
+  });
 
   const fetchProjectsIsEmpty = !fetchProjectsData.length;
 
@@ -51,6 +55,15 @@ const useProjects = () => {
     }
   }, [searchFilterStore]);
 
+  const itemOffset = (currentPage - 1) * itemsPerPage;
+  const endOffset = itemOffset + itemsPerPage;
+  const currentItems = fetchProjectsData?.slice(itemOffset, endOffset);
+  const totalPages = Math.ceil(fetchProjectsData?.length / itemsPerPage);
+
+  const handlePageClick = (pageSelected: number) => {
+    setCurrentPage(pageSelected);
+  };
+
   return {
     searchFilter,
     handleSetSearchFilter,
@@ -64,6 +77,10 @@ const useProjects = () => {
     fetchProjectsIsEmpty,
     technologiesSelected,
     handleFilterSubmit,
+    currentPage,
+    currentItems,
+    totalPages,
+    handlePageClick,
   };
 };
 
