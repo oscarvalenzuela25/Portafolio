@@ -1,0 +1,64 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Drawers from '@assets/3-article-preview-component/drawers.jpg';
+import avatarMichelle from '@assets/3-article-preview-component/avatar-michelle.jpg';
+import iconFacebook from '@assets/3-article-preview-component/icon-facebook.svg';
+import iconTwitter from '@assets/3-article-preview-component/icon-twitter.svg';
+import iconPinterest from '@assets/3-article-preview-component/icon-pinterest.svg';
+import './3-article-preview-component.css';
+---
+
+<Layout title="Article preview component">
+  <div class="container-fluid">
+    <div class="container">
+      <Image src={Drawers} alt="drawers" class="container__image" />
+
+      <div class="container__body">
+        <div class="container__body__text">
+          <p class="container__body__text--title">
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home
+          </p>
+          <p class="container__body__text--paragraph">
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I’ve got some simple tips to help
+            you make any room feel complete.
+          </p>
+        </div>
+
+        <div class="container__body__footer">
+          <div class="container__body__footer__avatar">
+            <Image
+              src={avatarMichelle}
+              alt="avatar-michelle"
+              class="container__body__footer__avatar--image"
+            />
+            <p>
+              <strong>Michelle Appleton</strong>
+              <br />
+              28 Jun 2020
+            </p>
+          </div>
+
+          <div class="container__body__footer__icon" id="icon">
+            <span class="icon-share"></span>
+          </div>
+        </div>
+
+        <div class="container__body__share hidden">
+          <p>S H A R E</p>
+          <Image src={iconFacebook} alt="icon-facebook" />
+          <Image src={iconTwitter} alt="icon-twitter" />
+          <Image src={iconPinterest} alt="icon-pinterest" />
+        </div>
+
+        <div class="container__body--colita hidden">
+          <div class="container__body--colita--medio"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script src="./share.ts"></script>
