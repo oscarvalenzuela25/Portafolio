@@ -1,0 +1,58 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Logo from '@assets/5-base-apparel-coming-soon-page/logo.svg';
+import heroMobile from '@assets/5-base-apparel-coming-soon-page/hero-mobile.jpg';
+import iconArrow from '@assets/5-base-apparel-coming-soon-page/icon-arrow.svg';
+import iconError from '@assets/5-base-apparel-coming-soon-page/icon-error.svg';
+import heroDesktop from '@assets/5-base-apparel-coming-soon-page/hero-desktop.jpg';
+import './5-base-apparel-coming-soon-page.css';
+---
+
+<Layout title="Base apparel coming soon page">
+  <main class="container">
+    <div class="row">
+      <div class="container-body">
+        <Image src={Logo} alt="logo" class="container-body--logo" />
+
+        {/* Imagen solo version mobile */}
+        <Image
+          src={heroMobile}
+          alt="hero-mobile"
+          class="container-body--hero-mobile"
+        />
+        <div class="container-body__paragraph">
+          <h1>
+            <span>Were</span>
+            <br />
+            coming
+            <br />
+            soon
+          </h1>
+          <p>
+            Hello fellow shoppers! Were currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+
+          <form action="" method="GET" id="form">
+            <input type="text" placeholder="Email Address" id="inputText" />
+            <button type="submit">
+              <Image src={iconArrow} alt="icon-arrow" />
+            </button>
+            <Image src={iconError} alt="icon-error" class="icon-error hidden" />
+          </form>
+        </div>
+        <span class="container-body__paragraph--error-message hidden">
+          Please provide a valid email
+        </span>
+      </div>
+
+      <div class="container-img container-img--hero-desktop">
+        <Image src={heroDesktop} alt="hero-desktop" />
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<script src="./actionForm.ts"></script>

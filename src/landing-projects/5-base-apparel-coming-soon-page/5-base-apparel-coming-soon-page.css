@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+  --Desaturated-Red: hsl(0, 36%, 70%);
+  --Soft-Red: hsl(0, 93%, 68%);
+  --Dark-Grayish-Red: hsl(0, 6%, 24%);
+
+  --font: 'Josefin Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*Clases generales*/
+.hidden {
+  display: none;
+}
+
+.border-error {
+  border: 1px solid var(--Soft-Red) !important;
+}
+
+/*SECCION DE FORMULARIO*/
+.container-body__paragraph form {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  border-radius: 100px;
+  border: 1px solid hsl(0, 36%, 70%, 50%);
+  margin-top: 30px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.container-body__paragraph input[type='text'] {
+  width: 65.3%;
+  height: 48px;
+  margin-left: 30px;
+  border: transparent;
+  background: transparent;
+  font-family: var(--font);
+  font-size: 16px;
+  padding: 0 2px;
+  margin-right: 5%;
+  color: var(--Desaturated-Red);
+}
+
+.container-body__paragraph input[type='text']::placeholder {
+  color: var(--Desaturated-Red);
+  opacity: 0.6;
+}
+
+.container-body__paragraph input[type='text']:focus {
+  outline: none;
+}
+
+.container-body__paragraph button {
+  width: 22.8%;
+  padding: 0px;
+  height: 48px;
+  border-radius: 100px;
+  border: transparent;
+  background: linear-gradient(
+    135deg,
+    hsl(0, 80%, 86%) 0%,
+    hsl(0, 74%, 74%) 100%
+  );
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.container-body__paragraph button:focus {
+  outline: none;
+}
+
+.icon-error {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: calc((48px - 24px) / 2);
+  right: 25%;
+}
+
+.container-body__paragraph--error-message {
+  color: var(--Soft-Red);
+  font-family: var(--font);
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 425px) {
+  .container {
+    width: 100vw;
+    background: linear-gradient(
+        135deg,
+        hsl(0, 0%, 100%) 0%,
+        hsl(0, 100%, 98%) 100%
+      ),
+      linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
+  }
+  .row {
+    width: 100%;
+    height: 800px;
+  }
+
+  .container-body {
+    width: 100%;
+  }
+
+  .container-body--logo {
+    width: 100px;
+    height: 25px;
+    margin: 30px;
+  }
+
+  .container-body--hero-mobile {
+    width: 100%;
+  }
+
+  .container-body__paragraph {
+    font-family: var(--font);
+    margin-top: 30px;
+    text-align: center;
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+
+  .container-body__paragraph h1 {
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-size: 42px;
+    font-weight: 600;
+    color: var(--Dark-Grayish-Red);
+    margin-bottom: 18px;
+  }
+
+  .container-body__paragraph h1 span {
+    font-weight: 300;
+    color: var(--Desaturated-Red);
+  }
+
+  .container-body__paragraph p {
+    font-size: 14px;
+    color: var(--Desaturated-Red);
+    line-height: 22px;
+  }
+
+  .container-img--hero-desktop {
+    display: none;
+  }
+
+  .container-body__paragraph--error-message {
+    color: var(--Soft-Red);
+    margin-left: 70px;
+    font-size: 15px;
+    font-family: var(--font);
+  }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .container {
+    width: 100vw;
+    background: linear-gradient(
+        135deg,
+        hsl(0, 0%, 100%) 0%,
+        hsl(0, 100%, 98%) 100%
+      ),
+      linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
+  }
+
+  .row {
+    width: 100%;
+    height: 800px;
+  }
+
+  .container-body {
+    width: 100%;
+  }
+
+  .container-body--logo {
+    width: 160px;
+    height: 35px;
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+
+  .container-body--hero-mobile {
+    display: none;
+  }
+
+  .container-body__paragraph {
+    font-family: var(--font);
+    margin-top: 100px;
+    margin-left: calc((100vw - 400px) / 2);
+    width: 400px;
+  }
+
+  .container-body__paragraph h1 {
+    letter-spacing: 13px;
+    text-transform: uppercase;
+    font-size: 59px;
+    font-weight: 600;
+    color: var(--Dark-Grayish-Red);
+    text-align: center;
+  }
+
+  .container-body__paragraph h1 span {
+    font-weight: 300;
+    color: var(--Desaturated-Red);
+  }
+
+  .container-body__paragraph p {
+    font-size: 16px;
+    color: var(--Desaturated-Red);
+    line-height: 30px;
+    text-align: center;
+  }
+
+  /*SECCION DE FORMULARIO*/
+  .container-body__paragraph form {
+    height: 55px;
+  }
+
+  .container-body__paragraph input[type='text'] {
+    height: 55px;
+  }
+
+  .container-body__paragraph button {
+    height: 55px;
+  }
+
+  .container-img--hero-desktop {
+    display: none;
+  }
+
+  .container-body__paragraph--error-message {
+    margin-left: calc((100vw - 400px) / 2 + 30px);
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        135deg,
+        hsl(0, 0%, 100%) 0%,
+        hsl(0, 100%, 98%) 100%
+      ),
+      linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
+  }
+
+  .row {
+    width: 1024px;
+    height: 800px;
+    background: url(../../assets/5-base-apparel-coming-soon-page/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .container-body {
+    width: 40vw;
+    margin-left: 5.5vw;
+    margin-top: 4.2vw;
+    margin-right: calc(100vw - 42.3vw - 5.5vw - 40vw);
+  }
+
+  .container-body--logo {
+    width: 160px;
+    height: 35px;
+  }
+
+  .container-body--hero-mobile {
+    display: none;
+  }
+
+  .container-body__paragraph {
+    font-family: var(--font);
+    margin-top: 135px;
+  }
+
+  .container-body__paragraph h1 {
+    letter-spacing: 15px;
+    text-transform: uppercase;
+    font-size: 64px;
+    font-weight: 600;
+    color: var(--Dark-Grayish-Red);
+  }
+
+  .container-body__paragraph h1 span {
+    font-weight: 300;
+    color: var(--Desaturated-Red);
+  }
+
+  .container-body__paragraph p {
+    font-size: 16px;
+    color: var(--Desaturated-Red);
+    line-height: 30px;
+    text-align: center;
+  }
+  /*SECCION DE FORMULARIO*/
+  .container-body__paragraph form {
+    height: 55px;
+  }
+
+  .container-body__paragraph input[type='text'] {
+    height: 55px;
+  }
+
+  .container-body__paragraph button {
+    height: 55px;
+  }
+
+  .container-img {
+    width: 42.3vw;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+  }
+
+  .container-img img {
+    width: 100%;
+    max-width: 610px;
+    max-height: 800px;
+  }
+
+  .container-body__paragraph--error-message {
+    margin-left: 30px;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        135deg,
+        hsl(0, 0%, 100%) 0%,
+        hsl(0, 100%, 98%) 100%
+      ),
+      linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
+  }
+
+  .row {
+    width: 1440px;
+    height: 800px;
+    background: url(../../assets/5-base-apparel-coming-soon-page/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .container-body {
+    width: 440px;
+    margin-left: 11.1vw;
+    margin-top: 4.2vw;
+    margin-right: calc(100vw - 42.3vw - 11.1vw - 440px);
+  }
+
+  .container-body--logo {
+    width: 160px;
+    height: 35px;
+  }
+
+  .container-body--hero-mobile {
+    display: none;
+  }
+
+  .container-body__paragraph {
+    font-family: var(--font);
+    margin-top: 135px;
+  }
+
+  .container-body__paragraph h1 {
+    letter-spacing: 18px;
+    text-transform: uppercase;
+    font-size: 64px;
+    font-weight: 600;
+    color: var(--Dark-Grayish-Red);
+  }
+
+  .container-body__paragraph h1 span {
+    font-weight: 300;
+    color: var(--Desaturated-Red);
+  }
+
+  .container-body__paragraph p {
+    font-size: 16px;
+    color: var(--Desaturated-Red);
+    line-height: 30px;
+  }
+  /*SECCION DE FORMULARIO*/
+  .container-body__paragraph form {
+    height: 55px;
+    margin-top: 40px;
+  }
+
+  .container-body__paragraph input[type='text'] {
+    height: 55px;
+  }
+
+  .container-body__paragraph button {
+    height: 55px;
+  }
+
+  .container-img {
+    width: 42.3vw;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+  }
+
+  .container-img img {
+    width: 100%;
+    max-width: 610px;
+    max-height: 800px;
+  }
+
+  .container-body__paragraph--error-message {
+    margin-left: 30px;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1441px) {
+  .container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        135deg,
+        hsl(0, 0%, 100%) 0%,
+        hsl(0, 100%, 98%) 100%
+      ),
+      linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
+  }
+
+  .row {
+    width: 1440px;
+    height: 800px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .container-body {
+    width: 440px;
+    margin-left: 11.1%;
+    margin-top: 4.2%;
+    margin-right: calc(1440px - 42.3% - 11.1% - 440px);
+  }
+
+  .container-body--logo {
+    width: 160px;
+    height: 35px;
+  }
+
+  .container-body--hero-mobile {
+    display: none;
+  }
+
+  .container-body__paragraph {
+    font-family: var(--font);
+    margin-top: 135px;
+  }
+
+  .container-body__paragraph h1 {
+    letter-spacing: 18px;
+    text-transform: uppercase;
+    font-size: 64px;
+    font-weight: 600;
+    color: var(--Dark-Grayish-Red);
+  }
+
+  .container-body__paragraph h1 span {
+    font-weight: 300;
+    color: var(--Desaturated-Red);
+  }
+
+  .container-body__paragraph p {
+    font-size: 16px;
+    color: var(--Desaturated-Red);
+    line-height: 30px;
+  }
+  /*SECCION DE FORMULARIO*/
+  .container-body__paragraph form {
+    height: 55px;
+
+    margin-top: 40px;
+  }
+
+  .container-body__paragraph input[type='text'] {
+    height: 55px;
+  }
+
+  .container-body__paragraph button {
+    height: 55px;
+  }
+
+  .container-img {
+    width: 42.3vw;
+  }
+
+  .container-img img {
+    width: 100%;
+    max-width: 610px;
+    max-height: 800px;
+  }
+
+  .container-body__paragraph--error-message {
+    margin-left: 30px;
+    font-size: 15px;
+  }
+}
