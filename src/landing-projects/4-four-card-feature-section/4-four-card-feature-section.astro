@@ -1,0 +1,61 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import iconSupervisor from '@assets/4-four-card-feature-section/icon-supervisor.svg';
+import iconTeamBuilder from '@assets/4-four-card-feature-section/icon-team-builder.svg';
+import iconKarma from '@assets/4-four-card-feature-section/icon-karma.svg';
+import iconCalculator from '@assets/4-four-card-feature-section/icon-calculator.svg';
+import './4-four-card-feature-section.css';
+---
+
+<Layout title="Four card feature section">
+  <main class="container-fluid">
+    <div class="container-titles">
+      <div class="container-titles__row">
+        <h1 class="container-titles__row--title">
+          Reliable, efficient delivery
+        </h1>
+        <h2 class="container-titles__row--subtitle">Powered by Technology</h2>
+        <p class="container-titles__row--paragraph">
+          Our Artificial Intelligence powered tools use millions of project data
+          points to ensure that your project is successful
+        </p>
+      </div>
+    </div>
+
+    <div class="container-boxs">
+      <div class="container-boxs__container-left">
+        <div class="container-boxs__container-left__card-left card">
+          <h3>Supervisor</h3>
+          <p>Monitors activity to identify project roadblocks</p>
+          <Image src={iconSupervisor} alt="icon-supervisor" />
+        </div>
+      </div>
+
+      <div class="container-boxs__container-center">
+        <div class="container-boxs__container-center__card-center-first card">
+          <h3>Team Builder</h3>
+          <p>
+            Scans our talent network to create the optimal team for your project
+          </p>
+          <Image src={iconTeamBuilder} alt="icon-team-builder" />
+        </div>
+        <div class="container-boxs__container-center__card-center-second card">
+          <h3>Karma</h3>
+          <p>Regularly evaluates our talent to ensure quality</p>
+          <Image src={iconKarma} alt="icon-karma" />
+        </div>
+      </div>
+
+      <div class="container-boxs__container-right">
+        <div class="container-boxs__container-right__card-right card">
+          <h3>Calculator</h3>
+          <p>
+            Uses data from past projects to provide better delivery estimates
+          </p>
+          <Image src={iconCalculator} alt="icon-calculator" />
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

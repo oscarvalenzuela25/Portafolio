@@ -8,11 +8,6 @@
   --font: 'Manrope', sans-serif;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
 .container-fluid {
   display: flex;
   justify-content: center;
