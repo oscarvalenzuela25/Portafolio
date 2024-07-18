@@ -1,0 +1,50 @@
+---
+import Layout from '@layouts/Layout.astro';
+import './7-single-price-grid-component.css';
+---
+
+<Layout title="Single price grid component">
+  <main class="container">
+    <div class="row">
+      <div class="container-up">
+        <h1>Join our community</h1>
+        <p class="container-up--green">
+          30-day, hassle-free money back guarantee
+        </p>
+        <p class="container-up--paragraph">
+          Gain access to our full library of tutorials along with expert code
+          reviews.
+          <br class="mobile-disable" />
+          Perfect for any developers who are serious about honing their skills.
+        </p>
+      </div>
+
+      <div class="container-down">
+        <div class="container-down__suscription">
+          <h3>Monthly Subscription</h3>
+          <p class="container-down__suscription--price">
+            <strong>&dollar;29</strong>
+            <span>per month</span>
+          </p>
+          <p class="container-down__suscription--info">
+            Full access for less than &dollar;1 a day
+          </p>
+          <button>Sign Up</button>
+        </div>
+
+        <div class="container-down__whyus">
+          <h3>Why Us</h3>
+          <ul>
+            <li>Tutorials by industry experts</li>
+            <li>Peer &amp; expert code review</li>
+            <li>Coding exercises</li>
+            <li>Access to our GitHub repos</li>
+            <li>Community forum</li>
+            <li>Flashcard decks</li>
+            <li>New videos every week</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
