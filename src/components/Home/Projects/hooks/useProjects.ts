@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import useFetchProjects from '../infrastructure/hooks/useFetchProjects';
 import useProjectsStore from '@stores/projects.store';
 
-const useProjects = (itemsPerPage: number = 6) => {
+const useProjects = (itemsPerPage: number = 15) => {
   const searchFilterStore = useProjectsStore(state => state.searchFilter);
   const frontendFilterStore = useProjectsStore(state => state.frontendFilter);
   const backendFilterStore = useProjectsStore(state => state.backendFilter);

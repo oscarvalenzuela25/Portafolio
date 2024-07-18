@@ -1,0 +1,99 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import iconError from '@assets/6-intro-component-with-sign-up-form/icon-error.svg';
+import './6-intro-component-with-sign-up-form.css';
+---
+
+<Layout title="Intro component with sign up form">
+  <main class="container">
+    <div class="row">
+      <div class="container-left">
+        <div class="container-left__container-paragraphs">
+          <h1>Learn to code by watching others</h1>
+          <p>
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
+        </div>
+      </div>
+
+      <div class="container-right">
+        <div class="container-right__title">
+          <p>
+            <strong>Try it free 7 days</strong> then $20/mo. thereafter
+          </p>
+        </div>
+
+        <form
+          class="container-right__container-form"
+          action=""
+          method="GET"
+          id="formInput"
+        >
+          <div class="input-text">
+            <input type="text" name="firstName" placeholder="First Name" />
+            <Image
+              src={iconError}
+              alt="icon-error"
+              class="hidden"
+              id="firstNameImgError"
+            />
+            <span class="hidden" id="firstNameMsgError">
+              First Name cannot be empty
+            </span>
+          </div>
+
+          <div class="input-text">
+            <input type="text" name="lastName" placeholder="Last Name" />
+            <Image
+              src={iconError}
+              alt="icon-error"
+              class="hidden"
+              id="lastNameImgError"
+            />
+            <span class="hidden" id="lastNameMsgError">
+              Last Name cannot be empty
+            </span>
+          </div>
+
+          <div class="input-text">
+            <input type="text" name="email" placeholder="Email Address" />
+            <Image
+              src={iconError}
+              alt="icon-error"
+              class="hidden"
+              id="emailImgError"
+            />
+            <span class="hidden" id="emailMsgError">
+              Looks like this is not an email
+            </span>
+          </div>
+
+          <div class="input-text">
+            <input type="password" name="password" placeholder="Password" />
+            <Image
+              src={iconError}
+              alt="icon-error"
+              class="hidden"
+              id="passwordImgError"
+            />
+            <span class="hidden" id="passwordMsgError">
+              Password cannot be empty
+            </span>
+          </div>
+
+          <button type="submit">Claim your free trial</button>
+
+          <p>
+            By clicking the button, you are agreeing to our
+            <strong>Terms and Services</strong>
+          </p>
+        </form>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<script src="./validations.ts"></script>
