@@ -1,0 +1,61 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Logo from '@assets/8-ping-single-column-coming-soon-page/logo.svg';
+import IllustrationDashboard from '@assets/8-ping-single-column-coming-soon-page/illustration-dashboard.png';
+import './8-ping-single-column-coming-soon-page.css';
+---
+
+<Layout title="Ping single column coming soon page">
+  <main class="container">
+    <div class="row">
+      <Image src={Logo} alt="logo" class="logo" />
+
+      <h1 class="title">
+        We are launching <span>soon!</span>
+      </h1>
+
+      <p class="subtitle">Subscribe and get notified</p>
+
+      <form action="" method="get" id="formInput">
+        <input
+          type="text"
+          name="email"
+          placeholder="Your email address..."
+          id="input-email"
+        />
+        <p class="msgError hidden-in-desktop hidden">
+          Plase provide a valid email address
+        </p>
+        <button type="submit">Notify Me</button>
+      </form>
+      <p class="msgError hidden-in-mobile hidden">
+        Plase provide a valid email address
+      </p>
+
+      <Image
+        src={IllustrationDashboard}
+        alt="illustration-dashboard"
+        class="img-grande"
+      />
+
+      <div class="container-redes-sociales">
+        <div class="redes-sociales">
+          <span data-icon="3"></span>
+        </div>
+
+        <div class="redes-sociales">
+          <span data-icon="l"></span>
+        </div>
+
+        <div class="redes-sociales">
+          <span data-icon="k"></span>
+        </div>
+      </div>
+
+      <p class="footer">&copy; Copyright Ping. All rights reserved.</p>
+    </div>
+  </main>
+</Layout>
+
+<script src="./validation.ts"></script>

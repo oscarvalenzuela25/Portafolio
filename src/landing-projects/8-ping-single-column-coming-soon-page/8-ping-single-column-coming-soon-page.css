@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+@import url('https://file.myfontastic.com/c6bMe6q2EX423WrAAL4UwC/icons.css');
+
+:root {
+  --Blue: hsl(223, 87%, 63%);
+
+  --Pale-Blue: hsl(223, 100%, 88%);
+  --Light-Red: hsl(354, 100%, 66%);
+
+  --Gray: hsl(0, 0%, 59%);
+  --Very-Dark-Blue: hsl(209, 33%, 12%);
+
+  --font: 'Libre Franklin', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*Clases de ayuda*/
+.hidden {
+  display: none;
+}
+
+.border-error {
+  border: 1px solid var(--Light-Red) !important;
+  color: var(--Very-Dark-Blue) !important;
+}
+
+.msgError {
+  color: var(--Light-Red);
+  margin: 0;
+  margin-left: 30px;
+  margin-top: 5px;
+  font-size: 13px;
+  text-align: start !important;
+  font-style: italic;
+}
+
+.container {
+  width: 100vw;
+  height: 1024px;
+  display: flex;
+  justify-content: center;
+  font-family: var(--font);
+}
+
+.row {
+  width: 85vw;
+  max-width: 640px;
+  margin-top: 75px;
+  text-align: center;
+}
+
+.title {
+  color: var(--Gray);
+  font-weight: 300;
+  font-size: 42px;
+  margin: 0;
+  margin-top: 40px;
+}
+
+.title span {
+  font-weight: 700;
+  color: var(--Very-Dark-Blue);
+}
+
+.subtitle {
+  font-size: 20px;
+  margin: 0;
+  margin-top: 20px;
+}
+
+form {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+form input[type='text'] {
+  width: calc(65.6% - 60px);
+  margin-right: 15px;
+  height: 55px;
+  border-radius: 100px;
+  border: 1px solid var(--Pale-Blue);
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 16px;
+  color: var(--Pale-Blue);
+}
+
+form input[type='text']::placeholder {
+  color: var(--Pale-Blue);
+}
+
+form input[type='text']:focus {
+  outline: none;
+}
+
+form button {
+  width: 31.2%;
+  border-radius: 100px;
+  border: transparent;
+  background: var(--Blue);
+  color: #ffffff;
+  font-size: 18px;
+  box-shadow: 0px 3px 5px 0px gray;
+}
+
+form button:focus {
+  outline: none;
+}
+
+.img-grande {
+  width: 100%;
+  margin-top: 90px;
+}
+
+.container-redes-sociales {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.redes-sociales {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: var(--Blue);
+  border-radius: 100%;
+  border: 1px solid var(--Pale-Blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.redes-sociales span {
+  margin-top: 3px;
+}
+
+.redes-sociales:hover {
+  background: var(--Blue);
+  border: 1px solid var(--Blue);
+  color: #ffffff;
+}
+
+.footer {
+  margin: 0;
+  margin-top: 25px;
+  font-size: 12px;
+  color: var(--Gray);
+}
+
+@media (max-width: 425px) {
+  .title {
+    color: var(--Gray);
+    font-weight: 300;
+    font-size: 35px;
+    margin: 0;
+    margin-top: 40px;
+  }
+
+  .title span {
+    font-weight: 700;
+    color: var(--Very-Dark-Blue);
+  }
+
+  .subtitle {
+    font-size: 18px;
+    margin: 0;
+    margin-top: 20px;
+  }
+
+  form {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  form input[type='text'] {
+    width: calc(100% - 60px);
+    margin-right: 15px;
+    height: 55px;
+    border-radius: 100px;
+    border: 1px solid var(--Pale-Blue);
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 16px;
+    color: var(--Pale-Blue);
+  }
+
+  form button {
+    width: 100%;
+    height: 55px;
+    margin-top: 15px;
+    border-radius: 100px;
+    border: transparent;
+    background: var(--Blue);
+    color: #ffffff;
+    font-size: 18px;
+    box-shadow: 0px 3px 5px 0px gray;
+  }
+  .hidden-in-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 426px) {
+  .hidden-in-desktop {
+    display: none;
+  }
+}
