@@ -1,0 +1,91 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Logo from '@assets/15-project-tracking-intro-component/logo.svg';
+import IconClose from '@assets/15-project-tracking-intro-component/icon-close.svg';
+import IconHamburger from '@assets/15-project-tracking-intro-component/icon-hamburger.svg';
+import IllustrationDevices from '@assets/15-project-tracking-intro-component/illustration-devices.svg';
+import './15-project-tracking-intro-component.css';
+---
+
+<Layout title="Project tracking intro component">
+  <div class="container-fluid">
+    <div class="row">
+      <header>
+        <Image src={Logo} alt="logo" />
+
+        <Image
+          src={IconClose}
+          alt="icon-close"
+          class="hidden hidden-on-desktop"
+          id="close"
+        />
+        <Image
+          src={IconHamburger}
+          alt="icon-close"
+          class="hidden-on-desktop"
+          id="open"
+        />
+
+        <div class="botonera hidden-on-mobile">
+          <p>
+            <a href="#">Product</a>
+          </p>
+          <p>
+            <a href="#">Features</a>
+          </p>
+          <p>
+            <a href="#">Pricing</a>
+          </p>
+          <div class="penultimo"></div>
+          <p class="ultimo">
+            <a href="#">Login</a>
+          </p>
+        </div>
+      </header>
+
+      <main>
+        <div class="main__badge">
+          <p class="badge">New</p>
+          <p class="text">Monograph Dashboard</p>
+        </div>
+
+        <h1>Powerful insights into your team</h1>
+
+        <p class="subtitle">
+          Project planning and time tracking for agile teams
+        </p>
+
+        <div class="main__button">
+          <button>
+            <a href="#">Schedule a demo</a>
+          </button>
+          <p>to see a live preview</p>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div class="background-absolute"></div>
+  <div class="Image-absolute">
+    <Image src={IllustrationDevices} alt="illustration-devices" />
+  </div>
+
+  <div class="nav-mobile hidden-on-desktop" id="nav-mobile">
+    <p>
+      <a href="#">Product</a>
+    </p>
+    <p>
+      <a href="#">Features</a>
+    </p>
+    <p>
+      <a href="#">Pricing</a>
+    </p>
+    <div class="hr"></div>
+    <p class="nav-mobile--ultimo">
+      <a href="#">Login</a>
+    </p>
+  </div>
+</Layout>
+
+<script src="./action.ts"></script>

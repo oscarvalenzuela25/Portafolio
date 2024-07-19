@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+:root {
+  /*FONTS*/
+  --font-head: 'Barlow Condensed', sans-serif;
+  --font-body: 'Barlow', sans-serif;
+
+  /*COLORES PRIMARIOS*/
+  --Red: hsl(0, 100%, 68%);
+
+  /*COLORES SECUNDARIOS*/
+  --Very-Dark-Blue: hsl(230, 29%, 20%);
+  --Dark-Grayish-Blue: hsl(230, 11%, 40%);
+  --Grayish-Blue: hsl(231, 7%, 65%);
+  --Light-Grayish-Blue: hsl(207, 33%, 95%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container-fluid {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.row {
+  width: 90%;
+  max-width: 1110px;
+  z-index: 1;
+}
+
+/*HEADER*/
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 65px;
+  margin-bottom: 160px;
+  font-family: var(--font-head);
+}
+
+header img {
+  width: 32px;
+  height: 32px;
+}
+
+header .botonera {
+  width: 410px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.botonera p {
+  margin: 0;
+  margin-right: 40px;
+  transition: all 0.3s;
+}
+
+.botonera p:hover {
+  text-decoration: underline;
+}
+
+.botonera p a {
+  color: var(--Very-Dark-Blue);
+  letter-spacing: 1px;
+}
+
+.penultimo {
+  background: var(--Dark-Grayish-Blue) !important;
+  border-radius: 100%;
+  height: 5px;
+  width: 5px;
+  margin-right: 50px;
+  margin-top: 8px;
+}
+
+.ultimo a {
+  color: var(--Dark-Grayish-Blue) !important;
+}
+
+.botonera p:last-child {
+  margin-right: 0;
+}
+/*FIN HEADER*/
+
+/*MAIN*/
+main {
+  width: 47%;
+}
+
+.main__badge {
+  display: flex;
+}
+
+.main__badge .badge {
+  width: 50px;
+  background: var(--Very-Dark-Blue);
+  color: #ffffff;
+  text-align: center;
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-family: var(--font-head);
+  font-weight: 700;
+  padding: 5px 0;
+  font-size: 17px;
+  margin-right: 15px;
+}
+
+.main__badge .text {
+  font-size: 11px;
+  color: var(--Dark-Grayish-Blue);
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  padding-top: 15px;
+  letter-spacing: 5px;
+  transform: scaleY(1.5);
+  margin-bottom: 0;
+}
+
+main h1 {
+  margin: 0;
+  font-family: var(--font-head);
+  text-transform: uppercase;
+  color: var(--Very-Dark-Blue);
+  font-size: 64px;
+  line-height: 70px;
+  margin-bottom: 36px;
+}
+
+main .subtitle {
+  font-family: var(--font-body);
+  font-size: 18px;
+  width: 270px;
+  margin: 0;
+  margin-bottom: 65px;
+  color: var(--Dark-Grayish-Blue);
+}
+
+.main__button {
+  display: flex;
+}
+
+.main__button button {
+  margin-right: 25px;
+  width: 185px;
+  height: 50px;
+  background: var(--Red);
+  color: #ffffff;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: var(--font-head);
+  font-weight: bold;
+  border: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.main__button button:focus {
+  outline: none;
+}
+
+.main__button button:hover {
+  opacity: 0.7;
+}
+
+.main__button button a {
+  color: #ffffff;
+}
+
+.main__button p {
+  font-size: 12px;
+  font-family: var(--font-body);
+  color: var(--Dark-Grayish-Blue);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  transform: scaleY(1.5);
+  margin-top: 18px;
+}
+/*FIN MAIN*/
+
+/*FLOTANTES*/
+.background-absolute {
+  width: 48.95vw;
+  height: 29.65vw;
+  border-radius: 0 0 0 70px;
+  position: absolute;
+  z-index: 0;
+  top: 0px;
+  right: 0px;
+  background-color: var(--Light-Grayish-Blue);
+}
+
+.img-absolute {
+  width: 48.125vw;
+  position: absolute;
+  top: 215px;
+  right: 0;
+  overflow-x: hidden;
+}
+/*FIN FLOTANTES*/
+
+.hidden {
+  display: none !important;
+}
+
+@media (min-width: 1025px) {
+  .hidden-on-desktop {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hidden-on-desktop {
+    display: none !important;
+  }
+
+  .background-absolute {
+    width: 500px;
+    height: 300px;
+  }
+
+  .main__button p {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 525px) and (max-width: 768px) {
+  .hidden-on-desktop {
+    display: none !important;
+  }
+
+  header {
+    margin-bottom: 100px;
+  }
+  /*MAIN*/
+  main {
+    width: 60%;
+  }
+
+  .main__badge .text {
+    font-size: 10px;
+  }
+
+  main h1 {
+    margin: 0;
+    font-family: var(--font-head);
+    text-transform: uppercase;
+    color: var(--Very-Dark-Blue);
+    font-size: 64px;
+    line-height: 70px;
+    margin-bottom: 36px;
+  }
+
+  .main__button p {
+    font-size: 12px;
+    font-family: var(--font-body);
+    color: var(--Dark-Grayish-Blue);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    transform: scaleY(1.5);
+    margin-top: 10px;
+  }
+  /*FIN MAIN*/
+
+  .background-absolute {
+    width: 450px;
+    height: 180px;
+  }
+}
+
+/**************
+***************
+*****MOBILE****
+***************
+**************/
+@media (max-width: 524px) {
+  .hidden-on-mobile {
+    display: none !important;
+  }
+
+  .row {
+    width: 90%;
+    max-width: 315px;
+    z-index: 1;
+  }
+
+  /*HEADER*/
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    margin-bottom: 370px;
+    font-family: var(--font-head);
+  }
+
+  header img {
+    width: 23px;
+    height: 23px;
+  }
+
+  /*FIN HEADER*/
+
+  /*MAIN*/
+  main {
+    width: 100%;
+  }
+
+  .main__badge {
+    display: flex;
+  }
+
+  .main__badge .badge {
+    width: 50px;
+    background: var(--Very-Dark-Blue);
+    color: #ffffff;
+    text-align: center;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-family: var(--font-head);
+    font-weight: 700;
+    padding: 5px 0;
+    font-size: 17px;
+    margin-right: 15px;
+  }
+
+  .main__badge .text {
+    font-size: 11px;
+    color: var(--Dark-Grayish-Blue);
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    padding-top: 15px;
+    letter-spacing: 5px;
+    transform: scaleY(1.5);
+    margin-bottom: 0;
+  }
+
+  main h1 {
+    margin: 0;
+    font-family: var(--font-head);
+    text-transform: uppercase;
+    color: var(--Very-Dark-Blue);
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+
+  main .subtitle {
+    font-family: var(--font-body);
+    font-size: 18px;
+    width: 270px;
+    margin: 0;
+    margin-bottom: 30px;
+    color: var(--Dark-Grayish-Blue);
+  }
+
+  .main__button {
+    display: flex;
+  }
+
+  .main__button button {
+    margin-right: 20px;
+    width: 150px;
+    height: 40px;
+    background: var(--Red);
+    color: #ffffff;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: var(--font-head);
+    font-weight: bold;
+    border: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .main__button button:focus {
+    outline: none;
+  }
+
+  .main__button button:hover {
+    opacity: 0.7;
+  }
+
+  .main__button button a {
+    color: #ffffff;
+  }
+
+  .main__button p {
+    font-size: 10px;
+    font-family: var(--font-body);
+    color: var(--Dark-Grayish-Blue);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    transform: scaleY(1.5);
+    margin-top: 7px;
+  }
+  /*FIN MAIN*/
+
+  /*FLOTANTES*/
+  .background-absolute {
+    width: 50.13vw;
+    height: 425px;
+    border-radius: 0 0 0 70px;
+    position: absolute;
+    z-index: 0;
+    top: 0px;
+    right: 0px;
+    background-color: var(--Light-Grayish-Blue);
+  }
+
+  .img-absolute {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    top: 120px;
+    right: 0;
+    overflow-x: hidden;
+  }
+
+  .img-absolute img {
+    height: 250px;
+  }
+
+  .nav-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100px;
+    left: calc((100vw - 310px) / 2);
+    width: 310px;
+    height: 0px;
+    box-shadow: 2px 5px 10px -5px black;
+    background: #ffffff;
+    z-index: 2;
+    font-family: var(--font-head);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+
+  .nav-mobile p {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .nav-mobile p a {
+    color: var(--Very-Dark-Blue);
+  }
+
+  .nav-mobile p:hover {
+    text-decoration: underline;
+  }
+
+  .nav-mobile .hr {
+    width: 260px;
+    height: 1px;
+    background: var(--Light-Grayish-Blue);
+    margin-bottom: 25px;
+  }
+
+  .nav-mobile p:first-child {
+    margin-top: 25px;
+  }
+
+  .nav-mobile p:last-child a {
+    color: var(--Grayish-Blue);
+  }
+  /*FIN FLOTANTES*/
+}
