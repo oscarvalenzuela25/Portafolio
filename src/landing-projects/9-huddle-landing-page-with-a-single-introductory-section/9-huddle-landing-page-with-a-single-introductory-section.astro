@@ -1,0 +1,47 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Logo from '@assets/9-huddle-landing-page-with-a-single-introductory-section/logo.svg';
+import IllustrationMockups from '@assets/9-huddle-landing-page-with-a-single-introductory-section/illustration-mockups.svg';
+import './9-huddle-landing-page-with-a-single-introductory-section.css';
+---
+
+<Layout title="Huddle landing page with a single introductory section">
+  <div class="container">
+    <div class="row">
+      <header>
+        <Image src={Logo} alt="logo" class="xd" />
+      </header>
+
+      <main>
+        <Image src={IllustrationMockups} alt="illustration-mockups" />
+
+        <div class="main__paragraph">
+          <h1>Build The Community Your Fans Will Love</h1>
+          <p>
+            Huddle re-imagines the way we build communities. You have a voice,
+            but so does your audience. Create connections with your users as you
+            engage in genuine discussion.
+          </p>
+          <button>Register</button>
+        </div>
+      </main>
+
+      <footer>
+        <div class="container-social-networks">
+          <div class="social-network">
+            <span class="icon-facebook"></span>
+          </div>
+
+          <div class="social-network">
+            <span class="icon-twitter"></span>
+          </div>
+
+          <div class="social-network">
+            <span class="icon-instagram"></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</Layout>
