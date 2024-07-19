@@ -1,0 +1,96 @@
+---
+import Layout from '@layouts/Layout.astro';
+import './14-pricing-component-with-toggle.css';
+---
+
+<Layout title="Pricing component with toggle">
+  <div class="container-fluid">
+    <div class="row">
+      <header>
+        <h1>Nuestros Precios</h1>
+        <form action="#">
+          <p id="anual" class="p-active">Anual</p>
+          <div class="checker" id="checker">
+            <div class="checker-ball" id="checker-ball"></div>
+          </div>
+          <p id="mensual">Mensual</p>
+        </form>
+      </header>
+      <main>
+        <div class="container-card card-blanca first-card">
+          <div class="card">
+            <p class="card-title">Basic</p>
+            <div class="card-price-container anual">
+              <span>$</span>
+              <p class="card-price">199.99</p>
+            </div>
+            <div class="card-price-container mensual hidden">
+              <span>$</span>
+              <p class="card-price">19.99</p>
+            </div>
+            <hr />
+            <p class="card-body">500 GB Storage</p>
+            <hr />
+            <p class="card-body">2 Users Allowed</p>
+            <hr />
+            <p class="card-body">Send up to 3 GB</p>
+            <hr />
+            <button>
+              <a href="#">Learn More</a>
+            </button>
+          </div>
+        </div>
+
+        <div class="container-card card-morada second-card">
+          <div class="card">
+            <p class="card-title">Professional</p>
+            <div class="card-price-container anual">
+              <span>$</span>
+              <p class="card-price">249.99</p>
+            </div>
+            <div class="card-price-container mensual hidden">
+              <span>$</span>
+              <p class="card-price">24.99</p>
+            </div>
+            <hr />
+            <p class="card-body">1 TB Storage</p>
+            <hr />
+            <p class="card-body">5 Users Allowed</p>
+            <hr />
+            <p class="card-body">Send up to 10 GB</p>
+            <hr />
+            <button>
+              <a href="#">Learn More</a>
+            </button>
+          </div>
+        </div>
+
+        <div class="container-card card-blanca third-card">
+          <div class="card">
+            <p class="card-title">Master</p>
+            <div class="card-price-container anual">
+              <span>$</span>
+              <p class="card-price">399.99</p>
+            </div>
+            <div class="card-price-container mensual hidden">
+              <span>$</span>
+              <p class="card-price">39.99</p>
+            </div>
+            <hr />
+            <p class="card-body">2 TB Storage</p>
+            <hr />
+            <p class="card-body">10 Users Allowed</p>
+            <hr />
+            <p class="card-body">Send up to 20 GB</p>
+            <hr />
+            <button>
+              <a href="#">Learn More</a>
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</Layout>
+
+<script src="./action.ts"></script>
