@@ -1,0 +1,147 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Logo from '@assets/11-fylo-landing-page-with-two-column-layout/logo.svg';
+import Illustration1 from '@assets/11-fylo-landing-page-with-two-column-layout/illustration-1.svg';
+import AvatarTestimonial from '@assets/11-fylo-landing-page-with-two-column-layout/avatar-testimonial.jpg';
+import Illustration2 from '@assets/11-fylo-landing-page-with-two-column-layout/illustration-2.svg';
+import './11-fylo-landing-page-with-two-column-layout.css';
+---
+
+<Layout title="Fylo landing page with two column layout">
+  <div class="container-fluid">
+    <header>
+      <nav>
+        <Image src={Logo} alt="logo" />
+
+        <div class="titulos">
+          <a href="#">Features</a>
+          <a href="#">Team</a>
+          <a href="#">Sign In</a>
+        </div>
+      </nav>
+
+      <div class="container-header">
+        <div class="container-header__left">
+          <h1>All your files in one secure location, accessible anywhere.</h1>
+          <p>
+            Fylo stores your most important files in one secure location. Access
+            them wherever you need, share and collaborate with friends, family,
+            and co-workers.
+          </p>
+
+          <form action="" method="get">
+            <input type="text" placeholder="Enter your email..." />
+            <input type="submit" value="Get Started" />
+          </form>
+        </div>
+
+        <Image src={Illustration1} alt="" />
+      </div>
+    </header>
+
+    <main>
+      <div class="row-main">
+        <div class="row-main__left">
+          <h2>Stay productive, wherever you are</h2>
+          <p class="row-main__left--p">
+            Never let location be an issue when accessing your files. Fylo has
+            you covered for all of your file storage needs.
+          </p>
+          <p class="row-main__left--p">
+            Securely share files and folders with friends, family and colleagues
+            for live collaboration. No email attachments required!
+          </p>
+          <a href="#">
+            See how Fylo works{' '}
+            <span class="icon-arrow-circle-right"></span>
+          </a>
+
+          <div class="row-main__left__box">
+            <p class="row-main__left__box--p">
+              Fylo has improved our team productivity by an order of magnitude.
+              Since making the switch our team has become a well-oiled
+              collaboration machine.
+            </p>
+            <div class="avatar">
+              <Image
+                src={AvatarTestimonial}
+                alt="avatar"
+                class="avatar--Image"
+              />
+              <p class="avatar--p">
+                <strong>Kyle Burton</strong>
+                <br />
+                Founder & CEO, Huddle
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <Image
+          src={Illustration2}
+          alt="illustration-2"
+          class="row-main--Image"
+        />
+      </div>
+    </main>
+
+    <div class="penultimo">
+      <div class="row-penultimo">
+        <div class="row-penultimo__left">
+          <h2>Get early access today</h2>
+          <p>
+            It only takes a minute to sign up and our free starter tier is
+            extremely generous. If you have any questions, our support team
+            would be happy to help you.
+          </p>
+        </div>
+
+        <form action="#" method="get">
+          <input type="text" placeholder="email@example.com" />
+          <input type="submit" value="Get Started For Free" />
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <div class="row-footer">
+        <div class="row-footer__info">
+          <p>
+            <span class="icon-phone"></span> Phone: +1-543-123-4567
+          </p>
+          <p>
+            <span class="icon-envelope"></span> example@fylo.com
+          </p>
+        </div>
+
+        <div class="row-footer__categories">
+          <ul class="first">
+            <li>About Us</li>
+            <li>Jobs</li>
+            <li>Press</li>
+            <li>Blog</li>
+          </ul>
+
+          <ul class="second">
+            <li>Contact Us</li>
+            <li>Terms</li>
+            <li>Privacy</li>
+          </ul>
+        </div>
+
+        <div class="row-footer__social-networks">
+          <div class="social-network">
+            <span class="icon-facebook"></span>
+          </div>
+          <div class="social-network">
+            <span class="icon-twitter"></span>
+          </div>
+          <div class="social-network">
+            <span class="icon-instagram"></span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</Layout>
