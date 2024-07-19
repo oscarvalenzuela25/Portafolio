@@ -1,0 +1,219 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Logo from '@assets/13-insure-landing-page/logo.svg';
+import IconHamburger from '@assets/13-insure-landing-page/icon-hamburger.svg';
+import ImageIntroMobile from '@assets/13-insure-landing-page/image-intro-mobile.jpg';
+import ImageIntroDesktop from '@assets/13-insure-landing-page/image-intro-desktop.jpg';
+import IconSnappyProcess from '@assets/13-insure-landing-page/icon-snappy-process.svg';
+import IconAffordablePrices from '@assets/13-insure-landing-page/icon-affordable-prices.svg';
+import IconPeopleFirst from '@assets/13-insure-landing-page/icon-people-first.svg';
+import './13-insure-landing-page.css';
+---
+
+<Layout title="Insure landing page">
+  <div class="container-fluid">
+    <div class="row">
+      <header id="header">
+        <Image src={Logo} alt="logo" />
+
+        <nav class="hidden-on-mobile">
+          <p>
+            <a href="#">How we work</a>
+          </p>
+          <p>
+            <a href="#">Blog</a>
+          </p>
+          <p>
+            <a href="#">Account</a>
+          </p>
+          <button>
+            <a href="#">View plans</a>
+          </button>
+        </nav>
+
+        <Image
+          src={IconHamburger}
+          alt="icon-hamburger"
+          class="hamburger hidden-on-desktop hidden-on-426-768"
+          id="hamburger"
+        />
+      </header>
+
+      <div
+        class="nav-toggle hidden-on-desktop hidden-on-426-768"
+        id="navToggle"
+      >
+        <p>
+          <a href="#">How we work</a>
+        </p>
+        <p>
+          <a href="#">Blog</a>
+        </p>
+        <p>
+          <a href="#">Account</a>
+        </p>
+        <button>
+          <a href="#">View plans</a>
+        </button>
+      </div>
+
+      <div class="row-postheader">
+        <div class="postheader">
+          <Image
+            src={ImageIntroMobile}
+            alt="image-intro-mobile"
+            class="hidden-on-desktop Image-mobile hidden-on-426-768"
+          />
+
+          <div class="postheader__paragraphs">
+            <div class="paragraphs--hr hidden-on-mobile"></div>
+            <h1>Humanizing your insurance.</h1>
+            <p>
+              Get your life insurance coverage easier and faster. We blend our
+              expertise and technology to help you find the plan that’s right
+              for you. Ensure you and your loved ones are protected.
+            </p>
+            <button>
+              <a href="#">View plans</a>
+            </button>
+          </div>
+
+          <Image
+            src={ImageIntroDesktop}
+            alt="image-intro-desktop"
+            class="hidden-on-mobile hidden-on-426-768"
+          />
+        </div>
+      </div>
+
+      <main>
+        <div class="main--hr"></div>
+
+        <h2>We’re different</h2>
+
+        <div class="main__cards">
+          <div class="main__cards__info">
+            <Image src={IconSnappyProcess} alt="icon-snappy-process" />
+            <h3>Snappy Process</h3>
+            <p>
+              Our application process can be completed in minutes, not hours.
+              Don’t get stuck filling in tedious forms.
+            </p>
+          </div>
+
+          <div class="main__cards__info">
+            <Image src={IconAffordablePrices} alt="icon-affordable-prices" />
+            <h3>Affordable Prices</h3>
+            <p>
+              We don’t want you worrying about high monthly costs. Our prices
+              may be low, but we still offer the best coverage possible.
+            </p>
+          </div>
+
+          <div class="main__cards__info">
+            <Image src={IconPeopleFirst} alt="icon-people-first" />
+            <h3>People First</h3>
+            <p>
+              Our plans aren’t full of conditions and clauses to prevent
+              payouts. We make sure you’re covered when you need it.
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <div class="row-postmain">
+        <h2>Find out more about how we work</h2>
+        <button>
+          <a href="#">HOW WE WORK</a>
+        </button>
+      </div>
+
+      <footer>
+        <div class="footer">
+          <div class="footer__logo">
+            <Image src={Logo} alt="logo" />
+            <div class="footer__logo__social-networks">
+              <i class="icon-facebook-official"></i>
+              <i class="icon-twitter"></i>
+              <i class="icon-pinterest"></i>
+              <i class="icon-instagram"></i>
+            </div>
+          </div>
+
+          <div class="footer--hr"></div>
+
+          <div class="footer__information">
+            <div class="footer__information__box">
+              <p>Our company</p>
+              <ul>
+                <li>
+                  <a href="#">How we work</a>
+                </li>
+                <li>
+                  <a href="#">Why Insure?</a>
+                </li>
+                <li>
+                  <a href="#">View plans</a>
+                </li>
+                <li>
+                  <a href="#">Reviews</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer__information__box">
+              <p>Help Me</p>
+              <ul>
+                <li>
+                  <a href="#">Faq</a>
+                </li>
+                <li>
+                  <a href="#">Terms of use</a>
+                </li>
+                <li>
+                  <a href="#">Privacy policy</a>
+                </li>
+                <li>
+                  <a href="#">Cookies</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer__information__box">
+              <p>Contact</p>
+              <ul>
+                <li>
+                  <a href="#">Sales</a>
+                </li>
+                <li>
+                  <a href="#">Support</a>
+                </li>
+                <li>
+                  <a href="#">Live chat</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer__information__box">
+              <p>Others</p>
+              <ul>
+                <li>
+                  <a href="#">Careers</a>
+                </li>
+                <li>
+                  <a href="#">Press</a>
+                </li>
+                <li>
+                  <a href="#">Licenses</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</Layout>
+
+<script src="./utils.ts"></script>
