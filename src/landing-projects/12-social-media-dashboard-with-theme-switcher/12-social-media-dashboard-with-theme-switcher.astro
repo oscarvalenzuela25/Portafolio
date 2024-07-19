@@ -1,0 +1,191 @@
+---
+import Layout from '@layouts/Layout.astro';
+import './12-social-media-dashboard-with-theme-switcher.css';
+---
+
+<Layout title="Social Media Dashboard with Theme Switcher">
+  <main class="container-fluid bg-light">
+    <div class="row">
+      <div class="header">
+        <div class="header__title">
+          <h1 class="color-black-light">Social Media Dashboard</h1>
+          <p class="color-gray-light">Total Followers: 23,004</p>
+        </div>
+        <form action="" method="get" class="header__change-bg">
+          <label class="color-gray-light">Dark Mode</label>
+          <input type="checkbox" name="dark_mode" id="dark_mode" />
+        </form>
+      </div>
+
+      <div class="container-big-box">
+        <div class="instagram-absolute"></div>
+
+        <div class="big-box facebook-border bg-box-light">
+          <div class="big-box__user">
+            <i class="icon-facebook-official facebook"></i>
+            <p class="color-gray-light">@nathanf</p>
+          </div>
+          <strong class="color-black-light">1987</strong>
+          <p class="big-box--followers color-gray-light">Followers</p>
+          <p class="big-box--today green-text">
+            <span class="icon-caret-up-two"></span> 12 Today
+          </p>
+        </div>
+
+        <div class="big-box twitter-border bg-box-light">
+          <div class="big-box__user">
+            <i class="icon-twitter twitter"></i>
+            <p class="color-gray-light">@nathanf</p>
+          </div>
+          <strong class="color-black-light">1044</strong>
+          <p class="big-box--followers color-gray-light">Followers</p>
+          <p class="big-box--today green-text">
+            <span class="icon-caret-up-two"></span> 99 Today
+          </p>
+        </div>
+
+        <div class="big-box bg-box-light">
+          <div class="big-box__user">
+            <i class="icon-instagram instagram"></i>
+            <p class="color-gray-light">@realnathanf</p>
+          </div>
+          <strong class="color-black-light">11K</strong>
+          <p class="big-box--followers color-gray-light">Followers</p>
+          <p class="big-box--today green-text">
+            <span class="icon-caret-up-two"></span> 1099 Today
+          </p>
+        </div>
+
+        <div class="big-box youtube-border bg-box-light">
+          <div class="big-box__user">
+            <i class="icon-youtube-play youtube"></i>
+            <p class="color-gray-light">Nathan F.</p>
+          </div>
+          <strong class="color-black-light">8239</strong>
+          <p class="big-box--followers color-gray-light">Subscribers</p>
+          <p class="big-box--today red-text">
+            <span class="icon-caret-down-two"></span> 144 Today
+          </p>
+        </div>
+      </div>
+
+      <div class="container-subtitle">
+        <h2 class="color-gray-light">Overview - Today</h2>
+      </div>
+
+      <div class="container-small-box">
+        <div class="first-line-small-box">
+          <div class="small-box bg-box-light">
+            <div class="small-box__first-container">
+              <p class="color-gray-light">Page Views</p>
+              <span class="icon-facebook-official facebook"></span>
+            </div>
+            <div class="small-box__second-container">
+              <strong class="color-black-light">87</strong>
+              <p class="green-text">
+                <span class="icon-caret-up-two"></span> 3%
+              </p>
+            </div>
+          </div>
+
+          <div class="small-box bg-box-light">
+            <div class="small-box__first-container">
+              <p class="color-gray-light">Likes</p>
+              <span class="icon-facebook-official facebook"></span>
+            </div>
+            <div class="small-box__second-container">
+              <strong class="color-black-light">52</strong>
+              <p class="red-text">
+                <span class="icon-caret-down-two"></span> 2%
+              </p>
+            </div>
+          </div>
+
+          <div class="small-box bg-box-light">
+            <div class="small-box__first-container">
+              <p class="color-gray-light">Likes</p>
+              <span class="icon-instagram instagram"></span>
+            </div>
+            <div class="small-box__second-container">
+              <strong class="color-black-light">5462</strong>
+              <p class="green-text">
+                <span class="icon-caret-up-two"></span> 2257%
+              </p>
+            </div>
+          </div>
+
+          <div class="small-box bg-box-light">
+            <div class="small-box__first-container">
+              <p class="color-gray-light">Profile Views</p>
+              <span class="icon-instagram instagram"></span>
+            </div>
+            <div class="small-box__second-container">
+              <strong class="color-black-light">54K</strong>
+              <p class="green-text">
+                <span class="icon-caret-up-two"></span> 1375%
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="second-line-small-box">
+          <div class="small-box bg-box-light">
+            <div class="small-box__first-container">
+              <p class="color-gray-light">Retweets</p>
+              <span class="icon-twitter twitter"></span>
+            </div>
+            <div class="small-box__second-container">
+              <strong class="color-black-light">117</strong>
+              <p class="green-text">
+                <span class="icon-caret-up-two"></span> 303%
+              </p>
+            </div>
+          </div>
+
+          <div class="small-box bg-box-light">
+            <div class="small-box__first-container">
+              <p class="color-gray-light">Likes</p>
+              <span class="icon-twitter twitter"></span>
+            </div>
+            <div class="small-box__second-container">
+              <strong class="color-black-light">507</strong>
+              <p class="green-text">
+                <span class="icon-caret-up-two"></span> 553%
+              </p>
+            </div>
+          </div>
+
+          <div class="small-box bg-box-light">
+            <div class="small-box__first-container">
+              <p class="color-gray-light">Likes</p>
+              <span class="icon-youtube-play youtube"></span>
+            </div>
+            <div class="small-box__second-container">
+              <strong class="color-black-light">107</strong>
+              <p class="red-text">
+                <span class="icon-caret-down-two"></span> 19%
+              </p>
+            </div>
+          </div>
+
+          <div class="small-box bg-box-light">
+            <div class="small-box__first-container">
+              <p class="color-gray-light">total Views</p>
+              <span class="icon-youtube-play youtube"></span>
+            </div>
+            <div class="small-box__second-container">
+              <strong class="color-black-light">1407</strong>
+              <p class="red-text">
+                <span class="icon-caret-down-two"></span> 12%
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="background-absolute bg-absolute-light"></div>
+  </main>
+</Layout>
+
+<script src="./utils.ts"></script>
