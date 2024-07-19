@@ -1,0 +1,222 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Logo from '@assets/10-huddle-landing-page-with-alternating-feature-blocks/logo.svg';
+import IllustrationMockups from '@assets/10-huddle-landing-page-with-alternating-feature-blocks/illustration-mockups.svg';
+import IllustrationGrowTogether from '@assets/10-huddle-landing-page-with-alternating-feature-blocks/illustration-grow-together.svg';
+import IllustrationFlowingConversation from '@assets/10-huddle-landing-page-with-alternating-feature-blocks/illustration-flowing-conversation.svg';
+import IllustrationYourUsers from '@assets/10-huddle-landing-page-with-alternating-feature-blocks/illustration-your-users.svg';
+import './10-huddle-landing-page-with-alternating-feature-blocks.css';
+---
+
+<Layout title="Huddle landing page with alternating feature blocks">
+  <div class="container">
+    <div class="row">
+      <header>
+        <div class="container-logo">
+          <Image src={Logo} alt="logo" />
+          <button>Try It Free</button>
+        </div>
+
+        <div class="container-head">
+          <div class="container-head__paragraph">
+            <h1>Build The Community Your Fans Will Love</h1>
+            <p>
+              Huddle re-imagines the way we build communities. You have a voice,
+              but so does your audience. Create connections with your users as
+              you engage in genuine discussion.
+            </p>
+            <button>Get Started For Free</button>
+          </div>
+          <Image src={IllustrationMockups} alt="illustration-mockups" />
+        </div>
+      </header>
+
+      <main>
+        <div class="container-card hidden-on-mobile">
+          <div class="container-card__paragraph margin-left-card">
+            <h2>Grow Together</h2>
+            <p>
+              Generate meaningful discussions with your audience and build a
+              strong, loyal community. Think of the insightful conversations you
+              miss out on with a feedback form.
+            </p>
+          </div>
+
+          <Image
+            src={IllustrationGrowTogether}
+            alt="illustration-grow-together"
+            class="margin-right-card"
+          />
+        </div>
+
+        <div class="container-card-mobile hidden-on-desktop">
+          <Image
+            src={IllustrationGrowTogether}
+            alt="illustration-grow-together"
+          />
+
+          <div class="container-card__paragraph-mobile">
+            <h2>Grow Together</h2>
+            <p>
+              Generate meaningful discussions with your audience and build a
+              strong, loyal community. Think of the insightful conversations you
+              miss out on with a feedback form.
+            </p>
+          </div>
+        </div>
+
+        <div class="container-card hidden-on-mobile">
+          <Image
+            src={IllustrationFlowingConversation}
+            alt="illustration-grow-together"
+            class="margin-left-card"
+          />
+          <div class="container-card__paragraph margin-right-card">
+            <h2>Flowing Conversations</h2>
+            <p>
+              You wouldnt paginate a conversation in real life, so why do it
+              online? Our threads have just-in-time loading for a more natural
+              flow.
+            </p>
+          </div>
+        </div>
+
+        <div class="container-card-mobile hidden-on-desktop">
+          <Image
+            src={IllustrationFlowingConversation}
+            alt="illustration-grow-together"
+          />
+          <div class="container-card__paragraph-mobile">
+            <h2>Flowing Conversations</h2>
+            <p>
+              You wouldnt paginate a conversation in real life, so why do it
+              online? Our threads have just-in-time loading for a more natural
+              flow.
+            </p>
+          </div>
+        </div>
+
+        <div class="container-card hidden-on-mobile">
+          <div class="container-card__paragraph margin-left-card">
+            <h2>Your Users</h2>
+            <p>
+              It takes no time at all to integrate Huddle with your apps
+              authentication solution. This means, once signed in to your app,
+              your users can start chatting immediately.
+            </p>
+          </div>
+          <Image
+            src={IllustrationYourUsers}
+            alt="illustration-grow-together"
+            class="margin-right-card"
+          />
+        </div>
+
+        <div class="container-card-mobile hidden-on-desktop">
+          <Image src={IllustrationYourUsers} alt="illustration-grow-together" />
+
+          <div class="container-card__paragraph-mobile">
+            <h2>Your Users</h2>
+            <p>
+              It takes no time at all to integrate Huddle with your apps
+              authentication solution. This means, once signed in to your app,
+              your users can start chatting immediately.
+            </p>
+          </div>
+        </div>
+
+        <div class="container-community">
+          <h2>Ready To Build Your Community?</h2>
+          <button>Get Started For Free</button>
+        </div>
+      </main>
+
+      <footer>
+        <div class="container-footer">
+          <div class="container-info">
+            <table>
+              <tr>
+                <td>
+                  <span class="icon-ios-location"></span>
+                </td>
+                <td>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <span class="icon-phone"></span>
+                </td>
+                <td>
+                  <p>+1-543-123-4567</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <span class="icon-envelope"></span>
+                </td>
+                <td>
+                  <p>example@huddle.com</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="container-category">
+            <table>
+              <tr>
+                <td>
+                  <p>About Us</p>
+                </td>
+                <td>
+                  <p>Career</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>What We Do</p>
+                </td>
+                <td>
+                  <p>Blog</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>FAQ</p>
+                </td>
+                <td>
+                  <p>Contact Us</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="container-social-and-copyright">
+            <div class="container-social-networks">
+              <div class="social-network">
+                <span class="icon-facebook"></span>
+              </div>
+              <div class="social-network">
+                <span class="icon-twitter"></span>
+              </div>
+              <div class="social-network">
+                <span class="icon-instagram"></span>
+              </div>
+            </div>
+
+            <p class="copyright">
+              &copy; Copyright 2024 Huddle. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</Layout>
