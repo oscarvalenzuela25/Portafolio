@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import useFetchProjects from '../infrastructure/hooks/useFetchProjects';
 import useProjectsStore from '@stores/projects.store';
 
-const useProjects = (itemsPerPage: number = 15) => {
+const useProjects = () => {
   const searchFilterStore = useProjectsStore(state => state.searchFilter);
   const frontendFilterStore = useProjectsStore(state => state.frontendFilter);
   const backendFilterStore = useProjectsStore(state => state.backendFilter);
@@ -21,6 +21,7 @@ const useProjects = (itemsPerPage: number = 15) => {
   const [frontendFilter, setFrontendFilter] = useState<string[]>([]);
   const [backendFilter, setBackendFilter] = useState<string[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(6);
 
   const handleSetSearchFilter = (searchValue: string) =>
     setSearchFilter(searchValue);
@@ -55,13 +56,18 @@ const useProjects = (itemsPerPage: number = 15) => {
     }
   }, [searchFilterStore]);
 
+  const totalItems = fetchProjectsData.length;
   const itemOffset = (currentPage - 1) * itemsPerPage;
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = fetchProjectsData?.slice(itemOffset, endOffset);
-  const totalPages = Math.ceil(fetchProjectsData?.length / itemsPerPage);
 
-  const handlePageClick = (pageSelected: number) => {
+  const handleChangePage = (pageSelected: number) => {
     setCurrentPage(pageSelected);
+  };
+
+  const handleChangeItemsPerPage = (itemsPerPageSelected: number) => {
+    setCurrentPage(1);
+    setItemsPerPage(itemsPerPageSelected);
   };
 
   return {
@@ -77,10 +83,14 @@ const useProjects = (itemsPerPage: number = 15) => {
     fetchProjectsIsEmpty,
     technologiesSelected,
     handleFilterSubmit,
+
+    // Pagination
+    totalItems,
     currentPage,
     currentItems,
-    totalPages,
-    handlePageClick,
+    itemsPerPage,
+    handleChangePage,
+    handleChangeItemsPerPage,
   };
 };
 

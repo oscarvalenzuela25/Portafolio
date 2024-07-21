@@ -5,7 +5,7 @@ import Filter from '../Filter';
 import Spacer from '@components/commons/Spacer';
 import useProjects from './hooks/useProjects';
 import CardSectionSkeleton from '../CardSectionSkeleton';
-import Paginate from '../Paginate';
+import Pagination from '../Pagination';
 import './projects.css';
 
 const Projects = () => {
@@ -23,8 +23,10 @@ const Projects = () => {
     handleFilterSubmit,
     currentPage,
     currentItems,
-    totalPages,
-    handlePageClick,
+    totalItems,
+    itemsPerPage,
+    handleChangePage,
+    handleChangeItemsPerPage,
   } = useProjects();
 
   return (
@@ -70,7 +72,13 @@ const Projects = () => {
             </div>
 
             <div className="paginator-container">
-              <Paginate />
+              <Pagination
+                currentPage={currentPage}
+                totalItems={totalItems}
+                itemsPerPage={itemsPerPage}
+                handleChangePage={handleChangePage}
+                handleChangeItemsPerPage={handleChangeItemsPerPage}
+              />
             </div>
           </CardSectionSkeleton>
         </div>
