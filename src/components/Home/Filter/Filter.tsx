@@ -5,6 +5,7 @@ import useFilter from './hooks/useFilter';
 import Button from '@components/commons/Button';
 import classNames from 'classnames';
 import './filter.css';
+import MultiSelect from '@components/commons/MultiSelect';
 
 type Props = {
   fetchProjectsIsLoading: boolean;
@@ -41,7 +42,8 @@ const Filter: FC<Props> = ({
           onChange={e => handleSetSearchFilter(e.target.value)}
         />
         {/* Cambiar estos 2 inputs por los MultipleSelectInput */}
-        {/* <TextInput inputTitle="Frontend" /> */}
+        <MultiSelect 
+          inputTitle="Frontend" />
         {/* <TextInput inputTitle="Backend" /> */}
       </div>
 
@@ -79,7 +81,9 @@ const Filter: FC<Props> = ({
             onChange={e => handleSetSearchFilter(e.target.value)}
           />
           {/* Cambiar estos 2 inputs por los MultipleSelectInput */}
-          {/* <TextInput inputTitle="Frontend" /> */}
+          {/* <MultiSelect 
+            inputTitle="Frontend" 
+            /> */}
           {/* <TextInput inputTitle="Backend" /> */}
         </div>
       )}
