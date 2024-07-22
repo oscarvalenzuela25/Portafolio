@@ -61,13 +61,19 @@ const useProjects = () => {
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = fetchProjectsData?.slice(itemOffset, endOffset);
 
+  const handleTopScreen = () => {
+    window.scroll(0, 130);
+  };
+
   const handleChangePage = (pageSelected: number) => {
     setCurrentPage(pageSelected);
+    handleTopScreen();
   };
 
   const handleChangeItemsPerPage = (itemsPerPageSelected: number) => {
     setCurrentPage(1);
     setItemsPerPage(itemsPerPageSelected);
+    handleTopScreen();
   };
 
   return {
