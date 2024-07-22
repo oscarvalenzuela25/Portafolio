@@ -1,3 +1,5 @@
+@import '../styles/variables.css';
+
 body {
   margin: 0;
   padding: 0;
@@ -5,4 +7,21 @@ body {
 
 p {
   margin: 0;
+}
+
+/* Estilos de la base de la barra de scroll bar */
+body::-webkit-scrollbar {
+  width: 8px; /* Tamaño del scroll en vertical */
+  height: 8px; /* Tamaño del scroll en horizontal */
+  background: var(--background-secondary);
+}
+
+/* Estilos de la barra del scroll bar */
+body::-webkit-scrollbar-thumb {
+  background: var(--background-primary);
+}
+
+/* Estilos de la barra del scroll bar */
+.container::-webkit-scrollbar-track {
+  background: var(--background-primary);
 }
