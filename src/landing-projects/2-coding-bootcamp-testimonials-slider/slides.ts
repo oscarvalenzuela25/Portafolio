@@ -1,36 +1,30 @@
-let next_button: any = document.getElementsByClassName(
-  'container__image__button__right'
+let left_button: any = document.getElementsByClassName(
+  'container-right__button-left'
 );
-let back_button: any = document.getElementsByClassName(
-  'container__image__button__left'
+let right_button: any = document.getElementsByClassName(
+  'container-right__button-right'
 );
 
-let slides = document.getElementsByClassName('container');
+const texts =
+  document?.getElementsByClassName('container-left__text-title') || [];
+const names =
+  document?.getElementsByClassName('container-left__container-name') || [];
+const images =
+  document?.getElementsByClassName('container-right__img--img-principal') || [];
 
-let slideCount = slides.length;
+const toggleFunction = () => {
+  for (let count = 0; count < 4; count++) {
+    texts[count].classList.toggle('hidden');
+    names[count].classList.toggle('hidden');
+    images[count].classList.toggle('hidden');
+  }
+};
 
-let actualSlide = 0;
-
-for (let slide of next_button) {
-  slide.addEventListener('click', function () {
-    slides[actualSlide].classList.add('hidden');
-    if (actualSlide + 1 > slideCount - 1) {
-      actualSlide = 0;
-    } else {
-      actualSlide += 1;
-    }
-    slides[actualSlide].classList.remove('hidden');
-  });
+for (const leftElement of left_button) {
+  console.timeLog(leftElement);
+  leftElement.addEventListener('click', () => toggleFunction());
 }
 
-for (let slide of back_button) {
-  slide.addEventListener('click', function () {
-    slides[actualSlide].classList.add('hidden');
-    if (actualSlide - 1 < 0) {
-      actualSlide = slideCount - 1;
-    } else {
-      actualSlide -= 1;
-    }
-    slides[actualSlide].classList.remove('hidden');
-  });
+for (const rightElement of right_button) {
+  rightElement.addEventListener('click', () => toggleFunction());
 }
