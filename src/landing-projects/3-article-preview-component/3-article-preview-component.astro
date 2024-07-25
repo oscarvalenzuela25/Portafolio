@@ -12,50 +12,63 @@ import './3-article-preview-component.css';
 <Layout title="Article preview component">
   <div class="container-fluid">
     <div class="container">
-      <Image src={Drawers} alt="drawers" class="container__image" />
+      <div class="container__image">
+        <Image src={Drawers} alt="drawers" />
+      </div>
 
-      <div class="container__body">
-        <div class="container__body__text">
-          <p class="container__body__text--title">
+      <div class="container-body">
+        <div>
+          <p class="container-body__text-title">
             Shift the overall look and feel by adding these wonderful touches to
             furniture in your home
           </p>
-          <p class="container__body__text--paragraph">
+          <p class="container-body__text-paragraph">
             Ever been in a room and felt like something was missing? Perhaps it
             felt slightly bare and uninviting. I’ve got some simple tips to help
             you make any room feel complete.
           </p>
         </div>
 
-        <div class="container__body__footer">
-          <div class="container__body__footer__avatar">
-            <Image
-              src={avatarMichelle}
-              alt="avatar-michelle"
-              class="container__body__footer__avatar--image"
-            />
-            <p>
-              <strong>Michelle Appleton</strong>
-              <br />
-              28 Jun 2020
-            </p>
+        <div class="container-body__footer">
+          <div class="container-body__avatar-container">
+            <Image src={avatarMichelle} alt="avatar-michelle" />
+            <div class="container-body__avatar-text-container">
+              <p class="container-body__avatar-name">Michelle Appleton</p>
+              <p class="container-body__avatar-date">28 Jun 2020</p>
+            </div>
           </div>
 
-          <div class="container__body__footer__icon" id="icon">
-            <span class="icon-share"></span>
+          <div class="container-body__footer-icon" id="icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-share-3"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M13 4v4c-6.575 1.028 -9.02 6.788 -10 12c-.037 .206 5.384 -5.962 10 -6v4l8 -7l-8 -7z"
+              ></path>
+            </svg>
           </div>
         </div>
 
-        <div class="container__body__share hidden">
+        <div class="container-body__share hidden">
           <p>S H A R E</p>
-          <Image src={iconFacebook} alt="icon-facebook" />
-          <Image src={iconTwitter} alt="icon-twitter" />
-          <Image src={iconPinterest} alt="icon-pinterest" />
+          <div class="container-body__container-share-icons">
+            <Image src={iconFacebook} alt="icon-facebook" />
+            <Image src={iconTwitter} alt="icon-twitter" />
+            <Image src={iconPinterest} alt="icon-pinterest" />
+          </div>
         </div>
 
-        <div class="container__body--colita hidden">
-          <div class="container__body--colita--medio"></div>
-        </div>
+        <div class="container-body__colita hidden"></div>
       </div>
     </div>
   </div>

@@ -1,11 +1,9 @@
 const share = () => {
-  let share = document.getElementsByClassName('container__body__share')[0]
+  let share = document.getElementsByClassName('container-body__share')[0]
     .classList;
-
-  let colita = document.getElementsByClassName('container__body--colita')[0]
+  let colita = document.getElementsByClassName('container-body__colita')[0]
     .classList;
-
-  let icon = document.getElementsByClassName('container__body__footer__icon')[0]
+  let icon = document.getElementsByClassName('container-body__footer-icon')[0]
     .classList;
 
   document.getElementById('icon')?.addEventListener('click', function () {
