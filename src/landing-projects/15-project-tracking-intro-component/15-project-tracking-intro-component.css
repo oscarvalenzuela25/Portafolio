@@ -16,11 +16,6 @@
   --Light-Grayish-Blue: hsl(207, 33%, 95%);
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
 a {
   text-decoration: none;
   color: black;
