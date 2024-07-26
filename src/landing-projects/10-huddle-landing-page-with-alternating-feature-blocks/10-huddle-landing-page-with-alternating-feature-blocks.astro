@@ -12,26 +12,30 @@ import './10-huddle-landing-page-with-alternating-feature-blocks.css';
 <Layout title="Huddle landing page with alternating feature blocks">
   <div class="container">
     <div class="row">
-      <header>
-        <div class="container-logo">
-          <Image src={Logo} alt="logo" />
-          <button>Try It Free</button>
-        </div>
-
-        <div class="container-head">
-          <div class="container-head__paragraph">
-            <h1>Build The Community Your Fans Will Love</h1>
-            <p>
-              Huddle re-imagines the way we build communities. You have a voice,
-              but so does your audience. Create connections with your users as
-              you engage in genuine discussion.
-            </p>
-            <button>Get Started For Free</button>
+      <div class="row-header">
+        <header>
+          <div class="container-logo">
+            <Image src={Logo} alt="logo" />
+            <button>Try It Free</button>
           </div>
-          <Image src={IllustrationMockups} alt="illustration-mockups" />
-        </div>
-      </header>
 
+          <div class="container-head">
+            <div class="container-head__paragraph">
+              <h1>Build The Community Your Fans Will Love</h1>
+              <p>
+                Huddle re-imagines the way we build communities. You have a
+                voice, but so does your audience. Create connections with your
+                users as you engage in genuine discussion.
+              </p>
+              <button>Get Started For Free</button>
+            </div>
+            <Image src={IllustrationMockups} alt="illustration-mockups" />
+          </div>
+        </header>
+      </div>
+    </div>
+
+    <div class="row">
       <main>
         <div class="container-card hidden-on-mobile">
           <div class="container-card__paragraph margin-left-card">
@@ -131,7 +135,9 @@ import './10-huddle-landing-page-with-alternating-feature-blocks.css';
           <button>Get Started For Free</button>
         </div>
       </main>
+    </div>
 
+    <div class="row">
       <footer>
         <div class="container-footer">
           <div class="container-info">
