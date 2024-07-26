@@ -30,17 +30,20 @@ import './11-fylo-landing-page-with-two-column-layout.css';
             and co-workers.
           </p>
 
-          <form action="" method="get" id="form">
+          <form action="" method="get" id="formBase">
             <input
               type="text"
               placeholder="Enter your email..."
-              id="form-text-input"
+              id="formTextInput"
             />
+            <p class="hidden only-mobile input-message-error">
+              Por favor ingrese un correo valido
+            </p>
             <input type="submit" value="Get Started" />
           </form>
-          <span class="hidden" id="input-message-error"
-            >Por favor ingrese un correo valido
-          </span>
+          <p class="hidden only-desktop input-message-error">
+            Por favor ingrese un correo valido
+          </p>
         </div>
 
         <Image src={Illustration1} alt="" />
@@ -102,9 +105,6 @@ import './11-fylo-landing-page-with-two-column-layout.css';
             placeholder="email@example.com"
             id="form-text-input-early-access"
           />
-          <span class="hidden" id="input-message-error-early-access"
-            >Por favor ingrese un correo valido</span
-          >
           <input type="submit" value="Get Started For Free" />
         </form>
       </div>
@@ -152,4 +152,4 @@ import './11-fylo-landing-page-with-two-column-layout.css';
   </div>
 </Layout>
 
-<script src="./handler.ts"></script>
+<script src="./handler.js"></script>
