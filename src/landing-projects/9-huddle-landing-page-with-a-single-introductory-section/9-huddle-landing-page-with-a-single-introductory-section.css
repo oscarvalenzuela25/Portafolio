@@ -5,13 +5,7 @@
 :root {
   --font-head: 'Poppins', sans-serif;
   --font-body: 'Open Sans', sans-serif;
-
   --Violet: hsl(257, 40%, 49%);
-}
-
-body {
-  margin: 0;
-  padding: 0;
 }
 
 .container {
@@ -85,8 +79,20 @@ main img {
   border: transparent;
   background: #ffffff;
   font-family: var(--font-body);
+  font-weight: 600;
   font-size: 18px;
-  box-shadow: 5px 5px 30px -10px black;
+  box-shadow: 5px 5px 15px -10px black;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background: color-mix(in srgb, #ffffff 90%, transparent);
+    box-shadow: 5px 5px 20px -10px black;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
 }
 
 .main__paragraph button:focus {
@@ -103,6 +109,7 @@ footer {
 
 .container-social-networks {
   display: flex;
+  gap: 15px;
 }
 
 .social-network {
@@ -110,11 +117,21 @@ footer {
   height: 40px;
   border-radius: 100%;
   border: 2px solid #ffffff;
-  margin-left: 15px;
   color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  :hover {
+    color: color-mix(in srgb, #ffffff 90%, transparent);
+    box-shadow: 5px 5px 20px -10px black;
+  }
+
+  :active {
+    transform: scale(0.95);
+  }
 }
 
 .social-network span {
