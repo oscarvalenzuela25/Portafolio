@@ -10,11 +10,6 @@
   --font: 'Karla', sans-serif;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
 .container {
   font-family: var(--font);
   width: 100vw;
@@ -125,6 +120,16 @@ body {
   font-size: 16px;
   box-shadow: 0px 3px 5px 0px gray;
   margin-left: 40px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background: color-mix(in srgb, var(--Bright-Yellow) 90%, transparent);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
 }
 
 .container-down__suscription button:focus {
