@@ -30,11 +30,7 @@ const validations = () => {
     }
   }
 
-  if (countErrors == 0) {
-    return true;
-  } else {
-    return false;
-  }
+  return +countErrors === 0;
 };
 
 const form = document.getElementById('formInput');
