@@ -18,11 +18,10 @@ const Projects = () => {
     handleSetBackendFilterSelected,
     fetchProjectsIsLoading,
     fetchProjectsIsError,
-    fetchProjectsData,
     fetchProjectsIsEmpty,
     technologiesSelected,
     handleFilterSubmit,
-    removeTechnologiesSelected,
+    handleRemoveTechnologiesSelected,
 
     // Pagination
     totalItems,
@@ -51,11 +50,11 @@ const Projects = () => {
         </div>
         <div className="container__result-container">
           <div className="search-badge-container">
-            {technologiesSelected.map(technology => (
+            {technologiesSelected.map(technologyKey => (
               <SearchBadge
-                key={technology}
-                text={technology}
-                handler={() => removeTechnologiesSelected(technology)}
+                key={technologyKey}
+                text={technologyKey}
+                handler={() => handleRemoveTechnologiesSelected(technologyKey)}
               />
             ))}
           </div>

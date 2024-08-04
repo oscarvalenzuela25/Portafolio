@@ -1,18 +1,26 @@
-import React, { useState, type FC } from "react";
-import './multiSelect.css'
-import CloseIcon from "@icons/CloseIcon";
-import XmarkIcon from "@icons/XmarkIcon"
+import React, { useState, type FC } from 'react';
+import './multiSelect.css';
+import CloseIcon from '@icons/CloseIcon';
+import XmarkIcon from '@icons/XmarkIcon';
 import IconButton from '../IconButton/IconButton';
-import { type TechnologiesFilter } from "@utils/types";
+import { type TechnologiesFilter } from '@utils/types';
+
+type TechnologyType = 'FRONTEND' | 'BACKEND';
 
 type Props = {
   inputTitle: string;
-  type: 'FRONTEND' | 'BACKEND';
+  type: TechnologyType;
   options: TechnologiesFilter[];
   optionsSelected: TechnologiesFilter[];
-  handleSetTechnologySelected: (newTechnology: TechnologiesFilter, type: 'FRONTEND' | 'BACKEND') => void
-  handleRemoveTechnologySelected: (technology: TechnologiesFilter, type: 'FRONTEND' | 'BACKEND') => void
-  handleRemoveAllTechnologySelected: (type: 'FRONTEND' | 'BACKEND') => void;
+  handleSetTechnologySelected: (
+    newTechnology: TechnologiesFilter,
+    type: TechnologyType
+  ) => void;
+  handleRemoveTechnologySelected: (
+    technology: TechnologiesFilter,
+    type: TechnologyType
+  ) => void;
+  handleRemoveAllTechnologySelected: (type: TechnologyType) => void;
 };
 
 const MultiSelect: FC<Props> = ({
@@ -22,10 +30,9 @@ const MultiSelect: FC<Props> = ({
   optionsSelected,
   handleSetTechnologySelected,
   handleRemoveTechnologySelected,
-  handleRemoveAllTechnologySelected
+  handleRemoveAllTechnologySelected,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-
 
   return (
     <div className="container-multi-select">
@@ -34,21 +41,25 @@ const MultiSelect: FC<Props> = ({
       <div
         className="div-container-select"
         tabIndex={0}
-        onClick={() => setIsOpen((prevState) => !prevState)}>
+        onClick={() => setIsOpen(prevState => !prevState)}
+      >
         {optionsSelected?.length == 0 && (
-          <p className="placeholder-value">
-            Selecciona opciones
-          </p>
+          <p className="placeholder-value">Buscar por tecnologias a usar...</p>
         )}
         {optionsSelected?.length > 0 && (
           <div className="div-container-selected-option">
-            {optionsSelected.map((technology) => (
-              <div key={technology.key}
-                className="div-container-selected-option-content">
+            {optionsSelected.map(technology => (
+              <div
+                key={technology.key}
+                className="div-container-selected-option-content"
+              >
                 {technology.label}
                 <IconButton
-                  onClick={() => handleRemoveTechnologySelected(technology, type)}>
-                  <XmarkIcon styles={{ width: 14, color: "black" }} />
+                  onClick={() =>
+                    handleRemoveTechnologySelected(technology, type)
+                  }
+                >
+                  <XmarkIcon styles={{ width: 14, color: 'black' }} />
                 </IconButton>
               </div>
             ))}
@@ -57,37 +68,39 @@ const MultiSelect: FC<Props> = ({
 
         <IconButton
           onClick={e => {
-            e.stopPropagation()
-            handleRemoveAllTechnologySelected(type)
-          }}>
-          <CloseIcon styles={{ width: 20, color: "black" }} />
+            e.stopPropagation();
+            handleRemoveAllTechnologySelected(type);
+          }}
+        >
+          <CloseIcon styles={{ width: 20, color: 'black' }} />
         </IconButton>
 
         {isOpen && (
-          <div className="panel" >
-            {
-              options.length > 0 ? (
-                options.map(option => {
-                  return (
-                    <div
-                      key={option.label}
-                      onClick={e => {
-                        e.stopPropagation()
-                        handleSetTechnologySelected(option, type)
-                        setIsOpen(false)
-                      }}
-                      className="option-label" >{option.label}</div>
-                  )
-                })
-              ) : (
-                <div className="no-option">No hay opciones disponibles</div>
-              )}
+          <div className="panel">
+            {options.length > 0 ? (
+              options.map(option => {
+                return (
+                  <div
+                    key={option.label}
+                    onClick={e => {
+                      e.stopPropagation();
+                      handleSetTechnologySelected(option, type);
+                      setIsOpen(false);
+                    }}
+                    className="option-label"
+                  >
+                    {option.label}
+                  </div>
+                );
+              })
+            ) : (
+              <div className="no-option">No hay opciones disponibles</div>
+            )}
           </div>
         )}
       </div>
     </div>
   );
 };
-
 
 export default MultiSelect;

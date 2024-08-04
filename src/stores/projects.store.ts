@@ -43,8 +43,8 @@ const projectStore: StateCreator<
 
   removeTechnologiesSelected: (key: string) => {
     const { frontendFilter, backendFilter } = get();
-    const newFrontendFilter = frontendFilter.filter(({ key }) => key !== key);
-    const newBackendFilter = backendFilter.filter(({ key }) => key !== key);
+    const newFrontendFilter = frontendFilter.filter((frontendTechnology) => frontendTechnology.key !== key);
+    const newBackendFilter = backendFilter.filter((backendTechnology) => backendTechnology.key !== key);
     set((prevState) => {
       prevState.frontendFilter = newFrontendFilter;
       prevState.backendFilter = newBackendFilter;

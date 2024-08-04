@@ -34,6 +34,26 @@ const useProjects = () => {
   const handleSetBackendFilterSelected = (backendValue: TechnologiesFilter[]) =>
     setBackendFilterSelected(backendValue);
 
+  const handleRemoveTechnologiesSelected = (technologyKey: string) => {
+    removeTechnologiesSelected(technologyKey);
+    const countFrontendTechnology = frontendFilterSelected.length;
+    const countBackendTechnology = backendFilterSelected.length;
+    const newFrontendFilterSelected = frontendFilterSelected.filter(
+      technology => technology.key !== technologyKey
+    );
+    const newBackendFilterSelected = backendFilterSelected.filter(
+      technology => technology.key !== technologyKey
+    );
+
+    if(countFrontendTechnology !== newFrontendFilterSelected.length) {
+      setFrontendFilterSelected(newFrontendFilterSelected);
+    }
+    if(countBackendTechnology !== newBackendFilterSelected.length) {
+      setBackendFilterSelected(newFrontendFilterSelected);
+    }
+
+  } 
+
   const {
     fetchProjectsIsLoading,
     fetchProjectsIsError,
@@ -99,7 +119,7 @@ const useProjects = () => {
     fetchProjectsIsEmpty,
     technologiesSelected,
     handleFilterSubmit,
-    removeTechnologiesSelected,
+    handleRemoveTechnologiesSelected,
 
     // Pagination
     totalItems,
