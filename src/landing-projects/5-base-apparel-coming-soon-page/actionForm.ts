@@ -1,5 +1,4 @@
 const actionSubmit: any = (e: SubmitEvent) => {
-  console.log('Entramos');
   let inputText: any = document.getElementById('inputText');
   let getSpanError = document.getElementsByClassName(
     'container-body__paragraph--error-message'

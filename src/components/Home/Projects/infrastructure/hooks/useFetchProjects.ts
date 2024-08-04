@@ -1,10 +1,11 @@
 import { QueryClient, useQuery } from '@tanstack/react-query';
 import fetchProjects from '../services/fetchProjects';
+import { type TechnologiesFilter } from "@utils/types";
 
 type Args = {
   search?: string;
-  frontend?: string[];
-  backend?: string[];
+  frontend?: TechnologiesFilter[];
+  backend?: TechnologiesFilter[];
 };
 
 const client = new QueryClient();

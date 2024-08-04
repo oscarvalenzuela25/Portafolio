@@ -12,18 +12,22 @@ const Projects = () => {
   const {
     searchFilter,
     handleSetSearchFilter,
-    frontendFilter,
-    handleSetFrontendFilter,
-    backendFilter,
-    handleSetBackendFilter,
+    frontendFilterSelected,
+    handleSetFrontendFilterSelected,
+    backendFilterSelected,
+    handleSetBackendFilterSelected,
     fetchProjectsIsLoading,
     fetchProjectsIsError,
+    fetchProjectsData,
     fetchProjectsIsEmpty,
     technologiesSelected,
     handleFilterSubmit,
+    removeTechnologiesSelected,
+
+    // Pagination
+    totalItems,
     currentPage,
     currentItems,
-    totalItems,
     itemsPerPage,
     handleChangePage,
     handleChangeItemsPerPage,
@@ -38,10 +42,10 @@ const Projects = () => {
             fetchProjectsIsLoading={fetchProjectsIsLoading}
             searchFilter={searchFilter}
             handleSetSearchFilter={handleSetSearchFilter}
-            frontendFilter={frontendFilter}
-            handleSetFrontendFilter={handleSetFrontendFilter}
-            backendFilter={backendFilter}
-            handleSetBackendFilter={handleSetBackendFilter}
+            frontendFilterSelected={frontendFilterSelected}
+            handleSetFrontendFilterSelected={handleSetFrontendFilterSelected}
+            backendFilterSelected={backendFilterSelected}
+            handleSetBackendFilterSelected={handleSetBackendFilterSelected}
             handleFilterSubmit={handleFilterSubmit}
           />
         </div>
@@ -51,7 +55,7 @@ const Projects = () => {
               <SearchBadge
                 key={technology}
                 text={technology}
-                handler={() => console.log(technology)}
+                handler={() => removeTechnologiesSelected(technology)}
               />
             ))}
           </div>
