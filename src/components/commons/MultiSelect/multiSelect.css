@@ -1,0 +1,118 @@
+@import '../../../styles/variables.css';
+
+.container-multi-select {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+.label-multi-select {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: var(--desktop-bodySmallBold-font-size);
+    font-weight: var(--desktop-bodySmallBold-font-weight);
+}
+
+.div-container {
+    position: relative;
+    width: 100%;
+}
+
+.div-container-select {
+    background: white;
+    height: 26px;
+    width: calc(100% - 16px);
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: .05em solid #777;
+    border-radius: .25em;
+    padding: 4px 8px;
+    position: relative;
+}
+
+.div-container-select:focus {
+    border-color: var(--primary);
+}
+
+.placeholder-value {
+    color: var(--text-secondary);
+    font-size: var(--desktop-bodySmall-font-size);
+    font-weight: var(--desktop-bodySmall-font-weight);
+}
+
+.div-container-selected-option {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+    font-size: 0.75em;
+    max-height: 20px;
+    overflow: auto;
+}
+
+/* Estilos de la base de la barra de scroll bar */
+.div-container-selected-option::-webkit-scrollbar {
+    width: 2px;
+    /* Tamaño del scroll en vertical */
+    height: 2px;
+    /* Tamaño del scroll en horizontal */
+    background: var(--text-secondary);
+}
+
+/* Estilos de la barra del scroll bar */
+.div-container-selected-option::-webkit-scrollbar-thumb {
+    background: var(--text-secondary);
+}
+
+/* Estilos de la barra del scroll bar */
+.div-container-selected-option::-webkit-scrollbar-track {
+    background: var(--text-secondary);
+}
+
+.div-container-selected-option-content {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    border-radius: 4px;
+    color: var(--background-primary);
+    height: 20px;
+    padding-left: 4px;
+
+    &:hover {
+        background-color: color-mix(in srgb, var(--primary) 80%, transparent);
+        color: var(--text-primary);
+    }
+}
+
+
+.panel {
+    position: absolute;
+    background: white;
+    width: 100%;
+    overflow: auto;
+    border: .05em solid #777;
+    border-radius: .25em;
+    top: 100%;
+    z-index: 999;
+    left: 0px;
+}
+
+.option-label {
+    cursor: pointer;
+    padding: 8px;
+    font-size: var(--desktop-bodySmall-font-size);
+    font-weight: var(--desktop-bodySmall-font-weight);
+
+    &:hover {
+        background-color: color-mix(in srgb, var(--primary) 80%, transparent);
+        color: var(--text-primary);
+    }
+}
+
+.no-option {
+    padding: 0.5rem;
+    color: #777;
+}

@@ -5,15 +5,17 @@ import useFilter from './hooks/useFilter';
 import Button from '@components/commons/Button';
 import classNames from 'classnames';
 import './filter.css';
+import MultiSelect from '@components/commons/MultiSelect';
+import { type TechnologiesFilter } from "@utils/types";
 
 type Props = {
   fetchProjectsIsLoading: boolean;
   searchFilter: string;
   handleSetSearchFilter: (searchValue: string) => void;
-  frontendFilter: string[];
-  handleSetFrontendFilter: (frontendValue: string[]) => void;
-  backendFilter: string[];
-  handleSetBackendFilter: (backendValue: string[]) => void;
+  frontendFilterSelected: TechnologiesFilter[];
+  handleSetFrontendFilterSelected: (frontendValue: TechnologiesFilter[]) => void;
+  backendFilterSelected: TechnologiesFilter[];
+  handleSetBackendFilterSelected: (backendValue: TechnologiesFilter[]) => void;
   handleFilterSubmit: () => void;
 };
 
@@ -21,13 +23,26 @@ const Filter: FC<Props> = ({
   fetchProjectsIsLoading,
   searchFilter,
   handleSetSearchFilter,
-  frontendFilter,
-  handleSetFrontendFilter,
-  backendFilter,
-  handleSetBackendFilter,
+  frontendFilterSelected,
+  handleSetFrontendFilterSelected,
+  backendFilterSelected,
+  handleSetBackendFilterSelected,
   handleFilterSubmit,
 }) => {
-  const { showFilters, handleToggleFilters } = useFilter();
+  const {
+    showFilters,
+    handleToggleFilters,
+    frontendOptions,
+    backendOptions,
+    handleSetTechnologySelected,
+    handleRemoveTechnologySelected,
+    handleRemoveAllTechnologySelected,
+  } = useFilter({
+    frontendFilterSelected,
+    handleSetFrontendFilterSelected,
+    backendFilterSelected,
+    handleSetBackendFilterSelected
+  });
   return (
     <div className="filter-container">
       <p className="filter-title-desktop">Filtros</p>
@@ -41,8 +56,25 @@ const Filter: FC<Props> = ({
           onChange={e => handleSetSearchFilter(e.target.value)}
         />
         {/* Cambiar estos 2 inputs por los MultipleSelectInput */}
-        {/* <TextInput inputTitle="Frontend" /> */}
-        {/* <TextInput inputTitle="Backend" /> */}
+        <MultiSelect
+          inputTitle="Frontend"
+          type={'FRONTEND'}
+          options={frontendOptions}
+          optionsSelected={frontendFilterSelected}
+          handleSetTechnologySelected={handleSetTechnologySelected}
+          handleRemoveTechnologySelected={handleRemoveTechnologySelected}
+          handleRemoveAllTechnologySelected={handleRemoveAllTechnologySelected}
+        />
+
+        <MultiSelect
+          inputTitle="Backend"
+          type={'BACKEND'}
+          options={backendOptions}
+          optionsSelected={backendFilterSelected}
+          handleSetTechnologySelected={handleSetTechnologySelected}
+          handleRemoveTechnologySelected={handleRemoveTechnologySelected}
+          handleRemoveAllTechnologySelected={handleRemoveAllTechnologySelected}
+        />
       </div>
 
       <div className="container-button-desktop">
@@ -79,8 +111,25 @@ const Filter: FC<Props> = ({
             onChange={e => handleSetSearchFilter(e.target.value)}
           />
           {/* Cambiar estos 2 inputs por los MultipleSelectInput */}
-          {/* <TextInput inputTitle="Frontend" /> */}
-          {/* <TextInput inputTitle="Backend" /> */}
+          <MultiSelect
+            inputTitle="Frontend"
+            type={'FRONTEND'}
+            options={frontendOptions}
+            optionsSelected={frontendFilterSelected}
+            handleSetTechnologySelected={handleSetTechnologySelected}
+            handleRemoveTechnologySelected={handleRemoveTechnologySelected}
+            handleRemoveAllTechnologySelected={handleRemoveAllTechnologySelected}
+          />
+
+          <MultiSelect
+            inputTitle="Backend"
+            type={'BACKEND'}
+            options={backendOptions}
+            optionsSelected={backendFilterSelected}
+            handleSetTechnologySelected={handleSetTechnologySelected}
+            handleRemoveTechnologySelected={handleRemoveTechnologySelected}
+            handleRemoveAllTechnologySelected={handleRemoveAllTechnologySelected}
+          />
         </div>
       )}
 

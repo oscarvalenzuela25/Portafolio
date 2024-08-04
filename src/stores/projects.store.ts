@@ -1,16 +1,19 @@
 import { type StateCreator, create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
 import { immer } from 'zustand/middleware/immer';
+import { type TechnologiesFilter } from "@utils/types";
+import { getRawTechnologies } from '@utils/technologies'
 
 interface ProjectStore {
   searchFilter: string;
-  frontendFilter: string[];
-  backendFilter: string[];
+  frontendFilter: TechnologiesFilter[];
+  backendFilter: TechnologiesFilter[];
 
   setSearchFilter: (searchValue: string) => void;
-  setFrontendFilter: (frontendValue: string[]) => void;
-  setBackendFilter: (backendValue: string[]) => void;
+  setFrontendFilter: (frontendValue: TechnologiesFilter[]) => void;
+  setBackendFilter: (backendValue: TechnologiesFilter[]) => void;
 
+  removeTechnologiesSelected: (key: string) => void;
   getTechnologiesSelected: () => string[];
 }
 
@@ -27,21 +30,31 @@ const projectStore: StateCreator<
       prevState.searchFilter = searchValue;
     });
   },
-  setFrontendFilter: (frontendValue: string[]) => {
+  setFrontendFilter: (frontendValue: TechnologiesFilter[]) => {
     set((prevState: ProjectStore) => {
       prevState.frontendFilter = frontendValue;
     });
   },
-  setBackendFilter: (backendValue: string[]) => {
+  setBackendFilter: (backendValue: TechnologiesFilter[]) => {
     set((prevState: ProjectStore) => {
       prevState.backendFilter = backendValue;
     });
   },
 
+  removeTechnologiesSelected: (key: string) => {
+    const { frontendFilter, backendFilter } = get();
+    const newFrontendFilter = frontendFilter.filter(({ key }) => key !== key);
+    const newBackendFilter = backendFilter.filter(({ key }) => key !== key);
+    set((prevState) => {
+      prevState.frontendFilter = newFrontendFilter;
+      prevState.backendFilter = newBackendFilter;
+    })
+  },
+
   getTechnologiesSelected: () => {
     const { frontendFilter, backendFilter } = get();
-    const frontendFilterValue = frontendFilter || [];
-    const backendFilterValue = backendFilter || [];
+    const frontendFilterValue = getRawTechnologies(frontendFilter) || [];
+    const backendFilterValue = getRawTechnologies(backendFilter) || [];
 
     return [...frontendFilterValue, ...backendFilterValue];
   },
