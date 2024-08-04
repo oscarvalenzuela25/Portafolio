@@ -11,7 +11,7 @@
 
 .grid-container {
   max-width: 1360px;
-  min-height: calc(100vh - 231px);
+  min-height: calc(100vh - 151px);
 
   @media screen and (width >= 1440px) {
     width: 100%;
