@@ -190,8 +190,11 @@ body {
 }
 
 .header__change-bg {
+  display: flex;
+  align-items: center;
   width: 150px;
   margin-top: 15px;
+  gap: 4px;
 }
 
 .header__change-bg label {
@@ -202,7 +205,6 @@ body {
 .header__change-bg input[type='checkbox'] {
   width: 15px;
   height: 15px;
-  margin-bottom: 0;
 }
 /*FIN HEADER*/
 

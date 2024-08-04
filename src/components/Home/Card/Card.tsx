@@ -1,6 +1,8 @@
 import React, { type FC } from 'react';
 import Button from '@components/commons/Button';
 import TechnologySection from './ui/TechnologySection';
+import DesktopIcon from '@icons/DesktopIcon';
+import MobileIcon from '@icons/MobileIcon';
 import './card.css';
 
 export type Project = {
@@ -9,6 +11,7 @@ export type Project = {
   frontend: string[];
   backend: string[];
   url: string;
+  platform: 'desktop'[] | 'mobile'[];
   externalLink: boolean;
   urlRepository: string;
   image: string;
@@ -19,8 +22,16 @@ type Props = {
 };
 
 const Card: FC<Props> = ({ project }) => {
-  const { title, frontend, backend, url, externalLink, urlRepository, image } =
-    project;
+  const {
+    title,
+    frontend,
+    backend,
+    url,
+    externalLink,
+    urlRepository,
+    image,
+    platform,
+  } = project;
   return (
     <div className="container-card">
       <img
@@ -43,6 +54,18 @@ const Card: FC<Props> = ({ project }) => {
             Link al repositorio
           </a>
         )}
+
+        <div className="card-platform-section">
+          {platform.map(item => {
+            const icon =
+              item === 'desktop' ? (
+                <DesktopIcon color="primaryText" />
+              ) : (
+                <MobileIcon color="primaryText" />
+              );
+            return icon;
+          })}
+        </div>
 
         <TechnologySection
           title="Frontend"

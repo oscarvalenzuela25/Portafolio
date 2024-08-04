@@ -10,13 +10,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.8.1",
+    "@astrojs/check": "^0.8.2",
     "@astrojs/react": "^3.6.0",
     "@lottiefiles/react-lottie-player": "^3.5.4",
     "@tanstack/react-query": "^5.51.1",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "astro": "^4.11.5",
+    "astro": "^4.12.2",
     "axios": "^1.7.2",
     "classnames": "^2.5.1",
     "immer": "^10.1.1",

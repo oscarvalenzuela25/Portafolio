@@ -10,11 +10,6 @@
   font-family: 'Poppins', sans-serif;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
 /*Clases de ayuda*/
 .border-error {
   border: 2px solid var(--Red) !important;
@@ -140,6 +135,17 @@ body {
   border: var(--Green);
   border-radius: 5px;
   padding: 15px 0;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0px 3px 5px -2px gray;
+
+  &:hover {
+    background: color-mix(in srgb, var(--Green) 90%, transparent);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
 }
 
 .container-right__container-form button:focus {
@@ -297,8 +303,8 @@ body {
     justify-content: start;
     align-items: center;
     width: 100vw;
+    height: auto;
     min-height: 1000px;
-    height: 100vh;
     font-family: var(--font);
     background: url(../../assets/6-intro-component-with-sign-up-form/bg-intro-mobile.png);
     background-position: start;
@@ -343,7 +349,8 @@ body {
     margin-right: 30px;
     margin-left: 30px;
     min-height: 555px;
-    display: flex column;
+    display: flex;
+    flex-direction: column;
   }
 
   /*Contenedor de titulo derecha*/

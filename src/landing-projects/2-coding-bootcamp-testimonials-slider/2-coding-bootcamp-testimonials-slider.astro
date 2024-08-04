@@ -2,108 +2,132 @@
 import Layout from '@layouts/Layout.astro';
 import { Image } from 'astro:assets';
 import PatternQuotes from '@assets/2-coding-bootcamp-testimonials-slider/pattern-quotes.svg';
-import PatternBg from '@assets/2-coding-bootcamp-testimonials-slider/pattern-bg.svg';
-import imageJohn from '@assets/2-coding-bootcamp-testimonials-slider/image-john.jpg';
-import iconPrev from '@assets/2-coding-bootcamp-testimonials-slider/icon-prev.svg';
-import iconNext from '@assets/2-coding-bootcamp-testimonials-slider/icon-next.svg';
-import patternQuotes from '@assets/2-coding-bootcamp-testimonials-slider/pattern-quotes.svg';
-import imageTanya from '@assets/2-coding-bootcamp-testimonials-slider/image-tanya.jpg';
+import ImageJohn from '@assets/2-coding-bootcamp-testimonials-slider/image-john.jpg';
+import IconPrev from '@assets/2-coding-bootcamp-testimonials-slider/icon-prev.svg';
+import IconNext from '@assets/2-coding-bootcamp-testimonials-slider/icon-next.svg';
+import ImageTanya from '@assets/2-coding-bootcamp-testimonials-slider/image-tanya.jpg';
 import './2-coding-bootcamp-testimonials-slider.css';
 ---
 
 <Layout title="Coding bootcamp testimonials slider">
   <div class="container-fluid">
-    <div class="container">
-      <div class="container__body">
-        <Image src={PatternQuotes} alt="pattern-quotes" />
-        <div class="container__body__paragraph">
-          <p class="container__body__paragraph--title">
-            “ If you want to lay the best foundation possible I’d recommend
-            taking this course. The depth the instructors go into is incredible.
-            I now feel so confident about starting up as a professional
-            developer. ”
-          </p>
+    <div class="container-background-image desktop">
+      <div class="container">
+        <div class="container-left">
+          <Image src={PatternQuotes} alt="pattern-quotes" />
+          <div class="container-left__container-text">
+            <p class="container-left__text-title">
+              “ If you want to lay the best foundation possible I’d recommend
+              taking this course. The depth the instructors go into is
+              incredible. I now feel so confident about starting up as a
+              professional developer. ”
+            </p>
 
-          <p class="container__body__paragraph--name">
-            <strong>John Tarkpor</strong>
-            <br class="mobile" />
-            Junior Front-end Developer
-          </p>
-        </div>
-      </div>
+            <p class="container-left__text-title hidden">
+              “ I’ve been interested in coding for a while but never taken the
+              jump, until now. I couldn’t recommend this course enough. I’m now
+              in the job of my dreams and so excited about the future. ”
+            </p>
 
-      <div class="container__image">
-        <div class="container__image__img">
-          <Image
-            src={PatternBg}
-            alt="pattern-bg"
-            class="container__image__img--img-fondo mobile"
-          />
-          <Image
-            src={imageJohn}
-            alt="image-john"
-            class="container__image__img--img-principal"
-          />
-        </div>
+            <div class="container-left__container-name">
+              <p class="container-left__text-name">John Tarkpor</p>
+              <p>Junior Front-end Developer</p>
+            </div>
 
-        <div class="container__image__img__box-shadow"></div>
-
-        <div class="container__image__button">
-          <div class="container__image__button__left">
-            <Image src={iconPrev} alt="icon-prev" />
+            <div class="container-left__container-name hidden">
+              <p class="container-left__text-name">Tanya Sinclair</p>
+              <p>UX Engineer</p>
+            </div>
           </div>
-          <div class="container__image__button__right">
-            <Image src={iconNext} alt="icon-next" />
+        </div>
+
+        <div class="container-right">
+          <div class="container-right__img">
+            <Image
+              src={ImageJohn}
+              alt="image-john"
+              class="container-right__img--img-principal"
+            />
+
+            <Image
+              src={ImageTanya}
+              alt="image-tanya"
+              class="container-right__img--img-principal hidden"
+            />
+          </div>
+
+          <div class="container-right__box-shadow"></div>
+
+          <div class="container-right__button-container">
+            <div class="container-right__button-left">
+              <Image src={IconPrev} alt="icon-prev" />
+            </div>
+            <div class="container-right__button-right">
+              <Image src={IconNext} alt="icon-next" />
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="container hidden">
-      <div class="container__body">
-        <Image src={patternQuotes} alt="pattern-quotes" />
-        <div class="container__body__paragraph">
-          <p class="container__body__paragraph--title">
-            “ I’ve been interested in coding for a while but never taken the
-            jump, until now. I couldn’t recommend this course enough. I’m now in
-            the job of my dreams and so excited about the future. ”
-          </p>
+    <div class="container-background-image mobile">
+      <div class="container">
+        <div class="container-right">
+          <div class="container-right__img">
+            <Image
+              src={ImageJohn}
+              alt="image-john"
+              class="container-right__img--img-principal"
+            />
 
-          <p class="container__body__paragraph--name">
-            <strong>Tanya Sinclair</strong>
-            <br class="mobile" />
-            UX Engineer
-          </p>
-        </div>
-      </div>
-
-      <div class="container__image">
-        <div class="container__image__img">
-          <Image
-            src={PatternBg}
-            alt="pattern-bg"
-            class="container__image__img--img-fondo mobile"
-          />
-          <Image
-            src={imageTanya}
-            alt="image-tanya"
-            class="container__image__img--img-principal"
-          />
-        </div>
-
-        <div class="container__image__img__box-shadow"></div>
-
-        <div class="container__image__button">
-          <div class="container__image__button__left">
-            <Image src={iconPrev} alt="icon-prev" />
+            <Image
+              src={ImageTanya}
+              alt="image-tanya"
+              class="container-right__img--img-principal hidden"
+            />
           </div>
-          <div class="container__image__button__right">
-            <Image src={iconNext} alt="icon-next" />
+
+          <div class="container-right__box-shadow"></div>
+
+          <div class="container-right__button-container">
+            <div class="container-right__button-left">
+              <Image src={IconPrev} alt="icon-prev" />
+            </div>
+            <div class="container-right__button-right">
+              <Image src={IconNext} alt="icon-next" />
+            </div>
+          </div>
+        </div>
+        <div class="container-left">
+          <Image src={PatternQuotes} alt="pattern-quotes" />
+          <div class="container-left__container-text">
+            <p class="container-left__text-title">
+              “ If you want to lay the best foundation possible I’d recommend
+              taking this course. The depth the instructors go into is
+              incredible. I now feel so confident about starting up as a
+              professional developer. ”
+            </p>
+
+            <p class="container-left__text-title hidden">
+              “ I’ve been interested in coding for a while but never taken the
+              jump, until now. I couldn’t recommend this course enough. I’m now
+              in the job of my dreams and so excited about the future. ”
+            </p>
+
+            <div class="container-left__container-name">
+              <p class="container-left__text-name">John Tarkpor</p>
+              <p>Junior Front-end Developer</p>
+            </div>
+
+            <div class="container-left__container-name hidden">
+              <p class="container-left__text-name">Tanya Sinclair</p>
+              <p>UX Engineer</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</Layout>
 
-<script src="./slides.ts"></script>
+  <script src="./slides.ts"></script>
+</Layout>

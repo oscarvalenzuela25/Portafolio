@@ -5,6 +5,7 @@
     "frontend": ["HTML", "CSS"],
     "backend": [],
     "url": "/1-fylo-data-storage",
+    "platform": ["desktop", "mobile"],
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portafolio/tree/main/src/landing-projects/1-fylo-data-storage",
     "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/1-fylo-data-storage/desktop-design.jpg"
@@ -15,6 +16,7 @@
     "frontend": ["HTML", "CSS", "JAVASCRIPT"],
     "backend": [],
     "url": "/2-coding-bootcamp-testimonials-slider",
+    "platform": ["desktop", "mobile"],
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portafolio/tree/main/src/landing-projects/2-coding-bootcamp-testimonials-slider",
     "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/2-coding-bootcamp-testimonials-slider/desktop-design.jpg"
@@ -25,6 +27,7 @@
     "frontend": ["HTML", "CSS", "JAVASCRIPT"],
     "backend": [],
     "url": "/3-article-preview-component",
+    "platform": ["desktop", "mobile"],
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portafolio/tree/main/src/landing-projects/3-article-preview-component",
     "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/3-article-preview-component/desktop-design.jpg"
@@ -35,6 +38,7 @@
     "frontend": ["HTML", "CSS"],
     "backend": [],
     "url": "/4-four-card-feature-section",
+    "platform": ["desktop", "mobile"],
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portafolio/tree/main/src/landing-projects/4-four-card-feature-section",
     "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/4-four-card-feature-section/desktop-design.jpg"
@@ -45,6 +49,7 @@
     "frontend": ["HTML", "CSS", "JAVASCRIPT"],
     "backend": [],
     "url": "/5-base-apparel-coming-soon-page",
+    "platform": ["desktop", "mobile"],
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portafolio/tree/main/src/landing-projects/5-base-apparel-coming-soon-page",
     "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/5-base-apparel-coming-soon-page/desktop-design.jpg"
@@ -55,6 +60,7 @@
     "frontend": ["HTML", "CSS", "JAVASCRIPT"],
     "backend": [],
     "url": "/6-intro-component-with-sign-up-form",
+    "platform": ["desktop", "mobile"],
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portafolio/tree/main/src/landing-projects/6-intro-component-with-sign-up-form",
     "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/6-intro-component-with-sign-up-form/desktop-design.jpg"
@@ -65,6 +71,7 @@
     "frontend": ["HTML", "CSS"],
     "backend": [],
     "url": "/7-single-price-grid-component",
+    "platform": ["desktop", "mobile"],
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portafolio/tree/main/src/landing-projects/7-single-price-grid-component",
     "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/7-single-price-grid-component/desktop-design.jpg"
@@ -75,6 +82,7 @@
     "frontend": ["HTML", "CSS", "JAVASCRIPT"],
     "backend": [],
     "url": "/8-ping-single-column-coming-soon-page",
+    "platform": ["desktop", "mobile"],
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portafolio/tree/main/src/landing-projects/8-ping-single-column-coming-soon-page",
     "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/8-ping-single-column-coming-soon-page/desktop-design.jpg"
@@ -85,6 +93,7 @@
     "frontend": ["HTML", "CSS"],
     "backend": [],
     "url": "/9-huddle-landing-page-with-a-single-introductory-section",
+    "platform": ["desktop", "mobile"],
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portafolio/tree/main/src/landing-projects/9-huddle-landing-page-with-a-single-introductory-section",
     "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/9-huddle-landing-page-with-a-single-introductory-section/desktop-design.jpg"
@@ -95,6 +104,7 @@
     "frontend": ["HTML", "CSS"],
     "backend": [],
     "url": "/10-huddle-landing-page-with-alternating-feature-blocks",
+    "platform": ["desktop", "mobile"],
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portafolio/tree/main/src/landing-projects/10-huddle-landing-page-with-alternating-feature-blocks",
     "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/10-huddle-landing-page-with-alternating-feature-blocks/desktop-design.jpg"
@@ -105,6 +115,7 @@
     "frontend": ["HTML", "CSS"],
     "backend": [],
     "url": "/11-fylo-landing-page-with-two-column-layout",
+    "platform": ["desktop", "mobile"],
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portafolio/tree/main/src/landing-projects/11-fylo-landing-page-with-two-column-layout",
     "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/11-fylo-landing-page-with-two-column-layout/desktop-design.jpg"
@@ -115,6 +126,7 @@
     "frontend": ["HTML", "CSS", "JAVASCRIPT"],
     "backend": [],
     "url": "/12-social-media-dashboard-with-theme-switcher",
+    "platform": ["desktop", "mobile"],
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portafolio/tree/main/src/landing-projects/12-social-media-dashboard-with-theme-switcher",
     "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/12-social-media-dashboard-with-theme-switcher/desktop-design.jpg"
@@ -125,6 +137,7 @@
     "frontend": ["HTML", "CSS", "JAVASCRIPT"],
     "backend": [],
     "url": "/13-insure-landing-page",
+    "platform": ["desktop", "mobile"],
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portafolio/tree/main/src/landing-projects/13-insure-landing-page",
     "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/13-insure-landing-page/desktop-design.jpg"
@@ -135,6 +148,7 @@
     "frontend": ["HTML", "CSS", "JAVASCRIPT"],
     "backend": [],
     "url": "/14-pricing-component-with-toggle",
+    "platform": ["desktop", "mobile"],
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portafolio/tree/main/src/landing-projects/14-pricing-component-with-toggle",
     "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/14-pricing-component-with-toggle/desktop-design.jpg"
@@ -145,8 +159,20 @@
     "frontend": ["HTML", "CSS", "JAVASCRIPT"],
     "backend": [],
     "url": "/15-project-tracking-intro-component",
+    "platform": ["desktop", "mobile"],
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portafolio/tree/main/src/landing-projects/15-project-tracking-intro-component",
     "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/15-project-tracking-intro-component/desktop-design.jpg"
+  },
+  {
+    "id": 16,
+    "title": "16° Star Rating Component",
+    "frontend": ["HTML", "CSS", "JAVASCRIPT"],
+    "backend": [],
+    "url": "/16-star-rating-component",
+    "platform": ["desktop"],
+    "externalLink": false,
+    "urlRepository": "https://github.com/oscarvalenzuela25/Portafolio/tree/main/src/landing-projects/16-star-rating-component",
+    "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/16-star-rating-component/desktop-design.webp"
   }
 ]

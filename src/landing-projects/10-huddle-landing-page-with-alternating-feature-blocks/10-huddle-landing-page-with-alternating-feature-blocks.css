@@ -14,14 +14,9 @@
   --font-body: 'Open Sans', sans-serif;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
-/*CLASES DE AYUDA*/
+/* helper class*/
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .margin-left-card {
@@ -35,38 +30,44 @@ body {
 button:focus {
   outline: none;
 }
-/*FIN CLASES DE AYUDA*/
+/*End helper class*/
 
 .container {
   width: 100vw;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .row {
-  width: 100vw;
-  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.row-header {
+  width: 100%;
+  background: url(../../assets/10-huddle-landing-page-with-alternating-feature-blocks/bg-hero-desktop.svg),
+    var(--Very-Pale-Cyan);
 }
 
 /*CONTENEDOR HEADER*/
 header {
-  width: 100%;
-  height: 720px;
-  background: url(../../assets/10-huddle-landing-page-with-alternating-feature-blocks/bg-hero-desktop.svg),
-    var(--Very-Pale-Cyan);
+  max-width: 1440px;
+  width: calc(100% - 150px);
+  padding: 75px;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: var(--font-header);
+  gap: 60px;
 }
 
 /*1296px de 1440px*/
 .container-logo {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding-top: 50px;
-  margin-bottom: 60px;
 }
 
 .container-logo button {
@@ -77,18 +78,29 @@ header {
   font-weight: 600;
   font-size: 15px;
   box-shadow: 1px 1px 10px -8px black;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: color-mix(is srgb, #ffffff 80%, transparent);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
 }
 
 .container-head {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 
 .container-head__paragraph {
   width: 45%;
   max-width: 520px;
-  margin-top: 100px;
+  margin-bottom: 90px;
 }
 
 .container-head__paragraph h1 {
@@ -111,10 +123,16 @@ header {
   width: 280px;
   font-size: 15px;
   color: #ffffff;
-  background: var(--Pink);
+  background-color: var(--Pink);
   font-weight: bold;
   border: transparent;
   box-shadow: 1px 1px 20px -8px black;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  &:active {
+    transform: scale(0.95);
+  }
 }
 
 .container-head img {
@@ -125,24 +143,26 @@ header {
 
 /*CONTENEDOR MAIN*/
 main {
-  width: 100%;
+  max-width: 1440px;
+  width: calc(100% - 150px);
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 160px;
   position: relative;
   margin-bottom: 300px;
+  padding: 0px 75px;
+  gap: 40px;
 }
+
 /*1224px de 1440px*/
 .container-card {
-  width: 85%;
-  max-width: 1235px;
+  width: 100%;
   height: 440px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 10px;
-  margin-bottom: 40px;
   box-shadow: 1px 1px 10px -8px black;
 }
 
@@ -165,6 +185,7 @@ main {
 
 .container-card img {
   width: 33%;
+  height: auto;
   max-width: 400px;
 }
 
@@ -203,6 +224,12 @@ main {
   border: transparent;
   border-radius: 100px;
   box-shadow: 1px 1px 20px -8px black;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  &:active {
+    transform: scale(0.95);
+  }
 }
 /*FIN CONTENEDOR MAIN*/
 
@@ -220,10 +247,12 @@ footer {
 /*1250px de 1440px*/
 .container-footer {
   display: flex;
+  justify-content: space-between;
   margin-top: 190px;
-  width: 90%;
-  max-width: 1200px;
+  width: calc(100% - 150px);
   color: #ffffff;
+  max-width: 1440px;
+  padding: 0px 75px;
 }
 
 .container-info {
@@ -380,14 +409,17 @@ SECCION MEDIA QUERYS
   }
 
   .row {
-    width: 100vw;
+    width: 100%;
     max-width: 750px;
   }
 
+  .row-header {
+    margin-bottom: 100px;
+  }
   /*CONTENEDOR HEADER*/
   header {
-    width: 100%;
-    height: 1440px;
+    padding: 40px;
+    width: calc(100% - 80px);
     background: url(../../assets/10-huddle-landing-page-with-alternating-feature-blocks/bg-hero-mobile.svg),
       var(--Very-Pale-Cyan);
     background-repeat: no-repeat;
@@ -396,12 +428,11 @@ SECCION MEDIA QUERYS
     flex-direction: column;
     align-items: center;
     font-family: var(--font-header);
-    margin-bottom: 120px;
   }
 
   /*1296px de 1440px*/
   .container-logo {
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     padding-top: 50px;
@@ -423,7 +454,7 @@ SECCION MEDIA QUERYS
   }
 
   .container-head {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -463,7 +494,6 @@ SECCION MEDIA QUERYS
     background: var(--Pink);
     font-weight: bold;
     border: transparent;
-    margin-bottom: 110px;
   }
 
   .container-head img {
@@ -474,27 +504,28 @@ SECCION MEDIA QUERYS
 
   /*CONTENEDOR MAIN*/
   main {
-    width: 100%;
+    width: calc(100% - 80px);
+    padding: 0px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 0px;
     position: relative;
     margin-bottom: 300px;
+    gap: 60px;
   }
   /*CAMBIAR EL NOMBRE Y VALOR DE LAS CLASES*/
   /*1224px de 1440px*/
   .container-card-mobile {
-    width: 89%;
-    max-width: 670px;
+    width: 100%;
     height: 975px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     border-radius: 30px;
-    margin-bottom: 80px;
     box-shadow: 1px 1px 10px -8px black;
+    padding: 0px 0px 60px 0px;
   }
 
   .container-card__paragraph-mobile {
@@ -658,14 +689,19 @@ SECCION MEDIA QUERYS
 
 @media (max-width: 425px) {
   .row {
-    width: 100vw;
+    width: 100%;
     max-width: 425px;
+  }
+
+  .row-header {
+    margin-bottom: 100px;
   }
 
   /*CONTENEDOR HEADER*/
   header {
-    width: 100%;
-    height: 1100px;
+    padding: 0px 20px;
+    width: calc(100% - 40px);
+    height: auto;
     background: url(../../assets/10-huddle-landing-page-with-alternating-feature-blocks/bg-hero-mobile.svg),
       var(--Very-Pale-Cyan);
     background-repeat: no-repeat;
@@ -678,30 +714,30 @@ SECCION MEDIA QUERYS
   }
 
   .container-logo {
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-top: 50px;
     margin-bottom: 0px;
   }
 
   .container-logo img {
-    height: 32px;
-    margin-top: 15px;
+    height: 35px;
   }
 
   .container-logo button {
-    width: 130px;
+    width: 100px;
     background: #ffffff;
     border: transparent;
     border-radius: 100px;
     font-weight: 600;
-    font-size: 20px;
-    height: 70px;
+    font-size: 16px;
+    height: 50px;
   }
 
   .container-head {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -752,7 +788,8 @@ SECCION MEDIA QUERYS
 
   /*CONTENEDOR MAIN*/
   main {
-    width: 100%;
+    padding: 0px 20px;
+    width: calc(100% - 40px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -763,8 +800,8 @@ SECCION MEDIA QUERYS
   /*CAMBIAR EL NOMBRE Y VALOR DE LAS CLASES*/
   /*1224px de 1440px*/
   .container-card-mobile {
-    width: 89%;
-    max-width: 670px;
+    width: 100%;
+    padding-bottom: 40px;
     height: 975px;
     display: flex;
     flex-direction: column;
@@ -776,7 +813,7 @@ SECCION MEDIA QUERYS
   }
 
   .container-card__paragraph-mobile {
-    width: 90%;
+    width: 100%;
     max-width: 470px;
     text-align: center;
   }
@@ -803,7 +840,7 @@ SECCION MEDIA QUERYS
 
   .container-community {
     height: 355px;
-    width: 93%;
+    width: 90%;
     max-width: 705px;
     display: flex;
     flex-direction: column;

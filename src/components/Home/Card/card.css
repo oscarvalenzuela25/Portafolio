@@ -32,6 +32,13 @@
   margin: 0;
 }
 
+.card-platform-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
 .card-title-technology {
   font-size: var(--desktop-bodySmall-font-size);
   font-weight: var(--desktop-bodySmall-font-weight);

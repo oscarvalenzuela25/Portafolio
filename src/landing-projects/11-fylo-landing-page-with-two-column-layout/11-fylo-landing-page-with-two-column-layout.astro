@@ -30,10 +30,20 @@ import './11-fylo-landing-page-with-two-column-layout.css';
             and co-workers.
           </p>
 
-          <form action="" method="get">
-            <input type="text" placeholder="Enter your email..." />
+          <form action="" method="get" id="formBase">
+            <input
+              type="text"
+              placeholder="Enter your email..."
+              id="formTextInput"
+            />
+            <p class="hidden only-mobile input-message-error">
+              Por favor ingrese un correo valido
+            </p>
             <input type="submit" value="Get Started" />
           </form>
+          <p class="hidden only-desktop input-message-error">
+            Por favor ingrese un correo valido
+          </p>
         </div>
 
         <Image src={Illustration1} alt="" />
@@ -64,11 +74,7 @@ import './11-fylo-landing-page-with-two-column-layout.css';
               collaboration machine.
             </p>
             <div class="avatar">
-              <Image
-                src={AvatarTestimonial}
-                alt="avatar"
-                class="avatar--Image"
-              />
+              <Image src={AvatarTestimonial} alt="avatar" class="avatar--img" />
               <p class="avatar--p">
                 <strong>Kyle Burton</strong>
                 <br />
@@ -78,11 +84,7 @@ import './11-fylo-landing-page-with-two-column-layout.css';
           </div>
         </div>
 
-        <Image
-          src={Illustration2}
-          alt="illustration-2"
-          class="row-main--Image"
-        />
+        <Image src={Illustration2} alt="illustration-2" class="row-main--img" />
       </div>
     </main>
 
@@ -97,8 +99,12 @@ import './11-fylo-landing-page-with-two-column-layout.css';
           </p>
         </div>
 
-        <form action="#" method="get">
-          <input type="text" placeholder="email@example.com" />
+        <form action="#" method="get" id="form-early-access">
+          <input
+            type="text"
+            placeholder="email@example.com"
+            id="form-text-input-early-access"
+          />
           <input type="submit" value="Get Started For Free" />
         </form>
       </div>
@@ -145,3 +151,5 @@ import './11-fylo-landing-page-with-two-column-layout.css';
     </footer>
   </div>
 </Layout>
+
+<script src="./handler.js"></script>

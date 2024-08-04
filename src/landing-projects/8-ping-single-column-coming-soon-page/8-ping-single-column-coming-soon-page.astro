@@ -9,29 +9,31 @@ import './8-ping-single-column-coming-soon-page.css';
 <Layout title="Ping single column coming soon page">
   <main class="container">
     <div class="row">
-      <Image src={Logo} alt="logo" class="logo" />
+      <div class="row-header">
+        <Image src={Logo} alt="logo" class="logo" />
 
-      <h1 class="title">
-        We are launching <span>soon!</span>
-      </h1>
+        <h1 class="title">
+          We are launching <span>soon!</span>
+        </h1>
 
-      <p class="subtitle">Subscribe and get notified</p>
+        <p class="subtitle">Subscribe and get notified</p>
 
-      <form action="" method="get" id="formInput">
-        <input
-          type="text"
-          name="email"
-          placeholder="Your email address..."
-          id="input-email"
-        />
-        <p class="msgError hidden-in-desktop hidden">
+        <form action="" method="get" id="formInput">
+          <input
+            type="text"
+            name="email"
+            placeholder="Your email address..."
+            id="input-email"
+          />
+          <p class="msgError hidden-in-desktop hidden">
+            Plase provide a valid email address
+          </p>
+          <button type="submit">Notify Me</button>
+        </form>
+        <p class="msgError hidden-in-mobile hidden">
           Plase provide a valid email address
         </p>
-        <button type="submit">Notify Me</button>
-      </form>
-      <p class="msgError hidden-in-mobile hidden">
-        Plase provide a valid email address
-      </p>
+      </div>
 
       <Image
         src={IllustrationDashboard}

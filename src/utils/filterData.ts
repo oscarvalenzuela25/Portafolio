@@ -44,5 +44,5 @@ export const filterData = ({ search, frontend, backend }: Args) => {
     data = dataByBackend;
   }
 
-  return data;
+  return data.reverse();
 };

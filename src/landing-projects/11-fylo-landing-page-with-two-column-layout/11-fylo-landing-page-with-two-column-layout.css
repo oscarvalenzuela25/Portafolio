@@ -22,9 +22,20 @@
   --Light-Gray: hsl(0, 0%, 75%);
 }
 
-body {
-  margin: 0;
-  padding: 0;
+.hidden {
+  display: none !important;
+}
+
+.only-desktop {
+  @media (width <= 768px) {
+    display: none !important;
+  }
+}
+
+.only-mobile {
+  @media (width > 768px) {
+    display: none !important;
+  }
 }
 
 .container-fluid {
@@ -46,9 +57,6 @@ nav {
   display: flex;
   justify-content: space-between;
   padding-top: 68px;
-}
-
-nav img {
 }
 
 .titulos {
@@ -101,6 +109,7 @@ nav img {
 .container-header__left form {
   width: 100%;
   font-family: var(--font-body);
+  margin-bottom: 4px;
 }
 
 .container-header__left form input[type='text'] {
@@ -126,6 +135,27 @@ nav img {
   border: transparent;
   border-radius: 3px;
   color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: color-mix(in srgb, var(--Bright-Blue) 90%, transparent);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.input-message-error {
+  color: red;
+  font-size: 13px !important;
+  font-family: var(--font-body);
+  margin: 0 !important;
+
+  @media (width <= 768px) {
+    font-size: 20px !important;
+  }
 }
 
 .container-header img {
@@ -274,6 +304,7 @@ main {
   display: flex;
   flex-direction: column;
   font-family: var(--font-body);
+  gap: 10px;
 }
 
 .row-penultimo form input[type='text'] {
@@ -282,7 +313,6 @@ main {
   border-radius: 5px;
   border: transparent;
   padding: 0 25px;
-  margin-bottom: 15px;
 }
 
 .row-penultimo form input[type='submit'] {
@@ -292,6 +322,22 @@ main {
   background: var(--Bright-Blue);
   color: #ffffff;
   border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: color-mix(in srgb, var(--Bright-Blue) 90%, transparent);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.row-penultimo span {
+  color: red;
+  font-size: 14px;
+  font-family: var(--font-body);
 }
 /*FIN SECCION PENULTIMO*/
 
@@ -462,7 +508,6 @@ footer {
     padding: 0 45px;
     margin-right: 0px;
     font-size: 32px;
-    margin-bottom: 35px;
   }
 
   .container-header__left form input[type='submit'] {
@@ -473,6 +518,7 @@ footer {
     border-radius: 3px;
     color: #ffffff;
     font-size: 32px;
+    margin-top: 30px;
   }
 
   .container-header img {
