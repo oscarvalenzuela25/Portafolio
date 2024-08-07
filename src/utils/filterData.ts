@@ -1,5 +1,5 @@
-import type { Project } from '@components/Home/Card/Card';
 import projects from '@db/projects.json';
+import type { Project } from './types';
 
 type Args = {
   search?: string;

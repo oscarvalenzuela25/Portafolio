@@ -1,9 +1,8 @@
 import { basePath } from '@utils/config';
-import type { Project } from '@components/Home/Card/Card';
 import axios from 'axios';
 import { filterData } from '@utils/filterData';
 import { getRawTechnologies } from '@utils/technologies';
-import { type TechnologiesFilter } from '@utils/types';
+import { type Project, type TechnologiesFilter } from '@utils/types';
 
 type Args = {
   search?: string;

@@ -4,18 +4,7 @@ import TechnologySection from './ui/TechnologySection';
 import DesktopIcon from '@icons/DesktopIcon';
 import MobileIcon from '@icons/MobileIcon';
 import './card.css';
-
-export type Project = {
-  id: number;
-  title: string;
-  frontend: string[];
-  backend: string[];
-  url: string;
-  platform: 'desktop'[] | 'mobile'[];
-  externalLink: boolean;
-  urlRepository: string;
-  image: string;
-};
+import type { Project } from '@utils/types';
 
 type Props = {
   project: Project;
