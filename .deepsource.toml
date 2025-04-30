@@ -4,12 +4,7 @@ version = 1
 name = "javascript"
 enabled = true
 
-[analyzers.meta]
-runtime_version = "18"
-include_patterns = ["src/**", "components/**", "**/*.astro"]
-exclude_patterns = ["node_modules/**", "dist/**", "build/**"]
-
-# Puedes ajustar reglas específicas (transformers)
-[transformers]
-# Ejemplo para desactivar alguna regla (opcional):
-# "javascript.remove-unused-variables" = false
+  [analyzers.meta]
+  plugins = ["react"]
+  include_patterns = ["src/**", "components/**", "**/*.astro"]
+  exclude_patterns = ["node_modules/**", "dist/**", "build/**"]
