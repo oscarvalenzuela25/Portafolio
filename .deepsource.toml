@@ -1,8 +1,19 @@
 version = 1
 
+# Activa el analizador de JavaScript/TypeScript
 [[analyzers]]
 name = "javascript"
 enabled = true
 
-  [analyzers.meta]
-  plugins = ["react"]
+[analyzers.meta]
+target_version = "18"
+include_patterns = ["src/**", "components/**", "**/*.astro"]
+exclude_patterns = ["node_modules/**", "dist/**", "build/**"]
+
+# Opcional: configura las reglas críticas
+[transformers]
+# Puedes desactivar transformaciones específicas si lo deseas
+# eg: "javascript.remove-unused-variables" = false
+
+# Opcional: configura la severidad mínima para bloquear PRs
+# DeepSource lo hace internamente, pero puedes usar su UI para ajustar
