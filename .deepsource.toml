@@ -1,8 +1,16 @@
 version = 1
 
+exclude_patterns = [
+  "node_modules/**",
+  "dist/**"
+]
+
 [[analyzers]]
-name = "javascript"
+name    = "javascript"
 enabled = true
 
-  [analyzers.meta]
-  plugins = ["react"]
+[analyzers.meta]
+plugins       = ["react"]
+module_system = "es-modules"
+dialect       = "typescript"
+environment   = ["nodejs", "browser"]
