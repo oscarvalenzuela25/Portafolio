@@ -10,12 +10,7 @@ type Props = {
   mt?: number;
 };
 
-const TechnologySection: FC<Props> = ({
-  title,
-  technologies = [],
-  mb = 0,
-  mt = 0,
-}) => {
+const TechnologySection: FC<Props> = ({ title, technologies = [], mb = 0, mt = 0 }) => {
   if (technologies.length === 0) return null;
 
   return (

@@ -1,16 +1,9 @@
-let left_button: any = document.getElementsByClassName(
-  'container-right__button-left'
-);
-let right_button: any = document.getElementsByClassName(
-  'container-right__button-right'
-);
+let left_button: any = document.getElementsByClassName('container-right__button-left');
+let right_button: any = document.getElementsByClassName('container-right__button-right');
 
-const texts =
-  document?.getElementsByClassName('container-left__text-title') || [];
-const names =
-  document?.getElementsByClassName('container-left__container-name') || [];
-const images =
-  document?.getElementsByClassName('container-right__img--img-principal') || [];
+const texts = document?.getElementsByClassName('container-left__text-title') || [];
+const names = document?.getElementsByClassName('container-left__container-name') || [];
+const images = document?.getElementsByClassName('container-right__img--img-principal') || [];
 
 const toggleFunction = () => {
   for (let count = 0; count < 4; count++) {

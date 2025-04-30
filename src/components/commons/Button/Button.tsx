@@ -37,6 +37,7 @@ const Button: FC<Props> = ({
         className="link-button"
         href={href}
         target={externalLink ? '_blank' : '_self'}
+        rel="noreferrer"
       >
         <button
           className={classNames('button-container', {

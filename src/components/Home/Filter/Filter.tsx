@@ -6,7 +6,7 @@ import Button from '@components/commons/Button';
 import classNames from 'classnames';
 import './filter.css';
 import MultiSelect from '@components/commons/MultiSelect';
-import { type TechnologiesFilter } from "@utils/types";
+import { type TechnologiesFilter } from '@utils/types';
 
 type Props = {
   fetchProjectsIsLoading: boolean;
@@ -41,7 +41,7 @@ const Filter: FC<Props> = ({
     frontendFilterSelected,
     handleSetFrontendFilterSelected,
     backendFilterSelected,
-    handleSetBackendFilterSelected
+    handleSetBackendFilterSelected,
   });
   return (
     <div className="filter-container">
@@ -78,20 +78,13 @@ const Filter: FC<Props> = ({
       </div>
 
       <div className="container-button-desktop">
-        <Button
-          width="100%"
-          onClick={handleFilterSubmit}
-          loading={fetchProjectsIsLoading}
-        >
+        <Button width="100%" onClick={handleFilterSubmit} loading={fetchProjectsIsLoading}>
           Filtrar
         </Button>
       </div>
 
       {/* Version mobile */}
-      <div
-        className="container-filter-title-mobile"
-        onClick={handleToggleFilters}
-      >
+      <div className="container-filter-title-mobile" onClick={handleToggleFilters}>
         <p className="filter-title-mobile">Filtros</p>
         <div
           className={classNames('filter-icon-mobile', {
@@ -135,11 +128,7 @@ const Filter: FC<Props> = ({
 
       {showFilters && (
         <div className="container-button-mobile">
-          <Button
-            width="100%"
-            onClick={handleFilterSubmit}
-            loading={fetchProjectsIsLoading}
-          >
+          <Button width="100%" onClick={handleFilterSubmit} loading={fetchProjectsIsLoading}>
             Filtrar
           </Button>
         </div>

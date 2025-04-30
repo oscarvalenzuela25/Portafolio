@@ -47,7 +47,8 @@ button:focus {
 
 .row-header {
   width: 100%;
-  background: url(../../assets/10-huddle-landing-page-with-alternating-feature-blocks/bg-hero-desktop.svg),
+  background:
+    url(../../assets/10-huddle-landing-page-with-alternating-feature-blocks/bg-hero-desktop.svg),
     var(--Very-Pale-Cyan);
 }
 
@@ -420,7 +421,8 @@ SECCION MEDIA QUERYS
   header {
     padding: 40px;
     width: calc(100% - 80px);
-    background: url(../../assets/10-huddle-landing-page-with-alternating-feature-blocks/bg-hero-mobile.svg),
+    background:
+      url(../../assets/10-huddle-landing-page-with-alternating-feature-blocks/bg-hero-mobile.svg),
       var(--Very-Pale-Cyan);
     background-repeat: no-repeat;
     background-position: center;
@@ -702,7 +704,8 @@ SECCION MEDIA QUERYS
     padding: 0px 20px;
     width: calc(100% - 40px);
     height: auto;
-    background: url(../../assets/10-huddle-landing-page-with-alternating-feature-blocks/bg-hero-mobile.svg),
+    background:
+      url(../../assets/10-huddle-landing-page-with-alternating-feature-blocks/bg-hero-mobile.svg),
       var(--Very-Pale-Cyan);
     background-repeat: no-repeat;
     background-position: center;

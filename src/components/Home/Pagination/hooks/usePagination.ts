@@ -10,10 +10,7 @@ const usePagination = ({ currentPage, totalItems, itemsPerPage }: Props) => {
   const disabledFirstItem = currentPage === 1;
   const disabledLastItem = currentPage === numberOfPages;
 
-  const arrayPage = Array.from(
-    { length: numberOfPages },
-    (_, index) => index + 1
-  );
+  const arrayPage = Array.from({ length: numberOfPages }, (_, index) => index + 1);
 
   const handleChangePageFirstItem = (handleChange: (value: number) => void) => {
     if (disabledFirstItem) return;

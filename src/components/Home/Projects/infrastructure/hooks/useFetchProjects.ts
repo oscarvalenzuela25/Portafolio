@@ -1,6 +1,6 @@
 import { QueryClient, useQuery } from '@tanstack/react-query';
 import fetchProjects from '../services/fetchProjects';
-import { type TechnologiesFilter } from "@utils/types";
+import { type TechnologiesFilter } from '@utils/types';
 
 type Args = {
   search?: string;

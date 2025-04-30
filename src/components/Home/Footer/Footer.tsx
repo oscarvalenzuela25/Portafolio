@@ -7,10 +7,7 @@ const Footer = () => {
   return (
     <footer className="footer-container">
       <p className="footer-text">Desarrollado por Oscar Valenzuela</p>
-      <IconButton
-        href="https://www.linkedin.com/in/oscar-valenzuela-rojas-8b54701aa/"
-        externalLink
-      >
+      <IconButton href="https://www.linkedin.com/in/oscar-valenzuela-rojas-8b54701aa/" externalLink>
         <LinkedinIcon color="primaryText" />
       </IconButton>
     </footer>

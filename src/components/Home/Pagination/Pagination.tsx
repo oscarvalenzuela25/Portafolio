@@ -42,9 +42,7 @@ const Paginate: FC<Props> = ({
           })}
           onClick={() => handleChangePageFirstItem(handleChangePage)}
         >
-          <ChevronLeftIcon
-            color={disabledFirstItem ? 'secondaryText' : 'primaryText'}
-          />
+          <ChevronLeftIcon color={disabledFirstItem ? 'secondaryText' : 'primaryText'} />
         </div>
         {arrayPage.map(page => (
           <div
@@ -63,9 +61,7 @@ const Paginate: FC<Props> = ({
           })}
           onClick={() => handleChangePageLastItem(handleChangePage)}
         >
-          <ChevronRightIcon
-            color={disabledLastItem ? 'secondaryText' : 'primaryText'}
-          />
+          <ChevronRightIcon color={disabledLastItem ? 'secondaryText' : 'primaryText'} />
         </div>
       </div>
 

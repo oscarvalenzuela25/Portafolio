@@ -11,16 +11,7 @@ type Props = {
 };
 
 const Card: FC<Props> = ({ project }) => {
-  const {
-    title,
-    frontend,
-    backend,
-    url,
-    externalLink,
-    urlRepository,
-    image,
-    platform,
-  } = project;
+  const { title, frontend, backend, url, externalLink, urlRepository, image, platform } = project;
   return (
     <div className="container-card">
       <img
@@ -39,6 +30,7 @@ const Card: FC<Props> = ({ project }) => {
             className="card-title-repository"
             target="_blank"
             href={urlRepository}
+            rel="noreferrer"
           >
             Link al repositorio
           </a>
@@ -56,12 +48,7 @@ const Card: FC<Props> = ({ project }) => {
           })}
         </div>
 
-        <TechnologySection
-          title="Frontend"
-          technologies={frontend}
-          mb={16}
-          mt={16}
-        />
+        <TechnologySection title="Frontend" technologies={frontend} mb={16} mt={16} />
         <TechnologySection title="Backend" technologies={backend} mb={24} />
         <Button href={url} externalLink={externalLink} width="100%">
           Ir al Demo

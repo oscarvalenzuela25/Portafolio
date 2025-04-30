@@ -1,8 +1,4 @@
-import React, {
-  type ButtonHTMLAttributes,
-  type FC,
-  type PropsWithChildren,
-} from 'react';
+import React, { type ButtonHTMLAttributes, type FC, type PropsWithChildren } from 'react';
 import './iconButton.css';
 
 type Props = PropsWithChildren &
@@ -18,6 +14,7 @@ const IconButton: FC<Props> = ({ children, href, externalLink, ...rest }) => {
         className="link-button"
         href={href}
         target={externalLink ? '_blank' : '_self'}
+        rel="noreferrer"
       >
         <button className="icon-button" {...rest}>
           {children}

@@ -1,9 +1,7 @@
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const formBase = document?.getElementById('formBase');
-const inputMessageError = document?.getElementsByClassName(
-  'input-message-error'
-);
+const inputMessageError = document?.getElementsByClassName('input-message-error');
 
 const setClass = (elements, newClass, action) => {
   for (const element of elements) {

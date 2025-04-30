@@ -9,12 +9,7 @@ type Props = PropsWithChildren & {
   isEmpty: boolean;
 };
 
-const CardSectionSkeleton: FC<Props> = ({
-  isLoading,
-  isError,
-  isEmpty,
-  children,
-}) => {
+const CardSectionSkeleton: FC<Props> = ({ isLoading, isError, isEmpty, children }) => {
   if (isLoading)
     return (
       <div className="card-section-skeleton-container">

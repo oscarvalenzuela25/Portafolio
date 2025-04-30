@@ -43,10 +43,13 @@ a {
   display: flex;
   justify-content: center;
   background: var(--Background);
-  background-image: url(../../assets/14-pricing-component-with-toggle/bg-top.svg),
+  background-image:
+    url(../../assets/14-pricing-component-with-toggle/bg-top.svg),
     url(../../assets/14-pricing-component-with-toggle/bg-bottom.svg);
   background-repeat: no-repeat;
-  background-position: right top, left bottom;
+  background-position:
+    right top,
+    left bottom;
 }
 
 .row {

@@ -1,11 +1,9 @@
-
 export type TechnologiesFilter = {
-    key: string;
-    label: string;
-    color: string;
-    type: string[]
+  key: string;
+  label: string;
+  color: string;
+  type: string[];
 };
-
 
 export type Project = {
   id: number;

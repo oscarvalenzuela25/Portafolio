@@ -34,18 +34,24 @@
   margin: 0 40px 0 0;
   width: calc(100% - 40px);
   height: 100%;
-  background-image: url(../../assets/2-coding-bootcamp-testimonials-slider/pattern-bg.svg),
+  background-image:
+    url(../../assets/2-coding-bootcamp-testimonials-slider/pattern-bg.svg),
     url(../../assets/2-coding-bootcamp-testimonials-slider/pattern-curve.svg);
   background-repeat: no-repeat, no-repeat;
-  background-position: right, bottom left;
+  background-position:
+    right,
+    bottom left;
 
   @media (width <= 1124px) {
     margin: 0;
     width: 100%;
-    background-image: url(../../assets/2-coding-bootcamp-testimonials-slider/pattern-bg.svg),
+    background-image:
+      url(../../assets/2-coding-bootcamp-testimonials-slider/pattern-bg.svg),
       url(../../assets/2-coding-bootcamp-testimonials-slider/pattern-curve.svg);
     background-repeat: no-repeat, no-repeat;
-    background-position: right, bottom left;
+    background-position:
+      right,
+      bottom left;
     background-size: 100%;
   }
 }

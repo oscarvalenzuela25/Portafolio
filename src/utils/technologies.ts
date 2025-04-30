@@ -1,4 +1,4 @@
-import { type TechnologiesFilter } from "@utils/types";
+import { type TechnologiesFilter } from '@utils/types';
 
 export const technologies: TechnologiesFilter[] = [
   { key: 'HTML', label: 'HTML', color: '#F06529', type: ['FRONTEND'] },
@@ -29,11 +29,10 @@ export const getTechnologyInfo = (key: string) => {
     color: '#fff',
   };
 
-  return (
-    technologies.find(technology => technology.key === key) || defaultTechnology
-  );
+  return technologies.find(technology => technology.key === key) || defaultTechnology;
 };
 
-export const getTechnologiesByType = (type: string): TechnologiesFilter[] => technologies.filter(tech => tech.type.includes(type?.toUpperCase()))
+export const getTechnologiesByType = (type: string): TechnologiesFilter[] =>
+  technologies.filter(tech => tech.type.includes(type?.toUpperCase()));
 
-export const getRawTechnologies = (value: TechnologiesFilter[]) => value.map(({ key }) => key) 
+export const getRawTechnologies = (value: TechnologiesFilter[]) => value.map(({ key }) => key);

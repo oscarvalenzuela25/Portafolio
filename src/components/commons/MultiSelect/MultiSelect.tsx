@@ -12,14 +12,8 @@ type Props = {
   type: TechnologyType;
   options: TechnologiesFilter[];
   optionsSelected: TechnologiesFilter[];
-  handleSetTechnologySelected: (
-    newTechnology: TechnologiesFilter,
-    type: TechnologyType
-  ) => void;
-  handleRemoveTechnologySelected: (
-    technology: TechnologiesFilter,
-    type: TechnologyType
-  ) => void;
+  handleSetTechnologySelected: (newTechnology: TechnologiesFilter, type: TechnologyType) => void;
+  handleRemoveTechnologySelected: (technology: TechnologiesFilter, type: TechnologyType) => void;
   handleRemoveAllTechnologySelected: (type: TechnologyType) => void;
 };
 
@@ -49,16 +43,9 @@ const MultiSelect: FC<Props> = ({
         {optionsSelected?.length > 0 && (
           <div className="div-container-selected-option">
             {optionsSelected.map(technology => (
-              <div
-                key={technology.key}
-                className="div-container-selected-option-content"
-              >
+              <div key={technology.key} className="div-container-selected-option-content">
                 {technology.label}
-                <IconButton
-                  onClick={() =>
-                    handleRemoveTechnologySelected(technology, type)
-                  }
-                >
+                <IconButton onClick={() => handleRemoveTechnologySelected(technology, type)}>
                   <XmarkIcon styles={{ width: 14, color: 'black' }} />
                 </IconButton>
               </div>

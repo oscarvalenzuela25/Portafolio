@@ -1,25 +1,17 @@
 import { useEffect, useState } from 'react';
 import useFetchProjects from '../infrastructure/hooks/useFetchProjects';
 import useProjectsStore from '@stores/projects.store';
-import { type TechnologiesFilter } from '@utils/types'
+import { type TechnologiesFilter } from '@utils/types';
 
 const useProjects = () => {
   const searchFilterStore = useProjectsStore(state => state.searchFilter);
   const frontendFilterStore = useProjectsStore(state => state.frontendFilter);
   const backendFilterStore = useProjectsStore(state => state.backendFilter);
   const setSearchFilterStore = useProjectsStore(state => state.setSearchFilter);
-  const setFrontendFilterStore = useProjectsStore(
-    state => state.setFrontendFilter
-  );
-  const setBackendFilterStore = useProjectsStore(
-    state => state.setBackendFilter
-  );
-  const getTechnologiesSelectedStore = useProjectsStore(
-    state => state.getTechnologiesSelected
-  );
-  const removeTechnologiesSelected = useProjectsStore(
-    state => state.removeTechnologiesSelected
-  );
+  const setFrontendFilterStore = useProjectsStore(state => state.setFrontendFilter);
+  const setBackendFilterStore = useProjectsStore(state => state.setBackendFilter);
+  const getTechnologiesSelectedStore = useProjectsStore(state => state.getTechnologiesSelected);
+  const removeTechnologiesSelected = useProjectsStore(state => state.removeTechnologiesSelected);
 
   const [searchFilter, setSearchFilter] = useState<string>('');
   const [frontendFilterSelected, setFrontendFilterSelected] = useState<TechnologiesFilter[]>([]);
@@ -27,8 +19,7 @@ const useProjects = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(6);
 
-  const handleSetSearchFilter = (searchValue: string) =>
-    setSearchFilter(searchValue);
+  const handleSetSearchFilter = (searchValue: string) => setSearchFilter(searchValue);
   const handleSetFrontendFilterSelected = (frontendValue: TechnologiesFilter[]) =>
     setFrontendFilterSelected(frontendValue);
   const handleSetBackendFilterSelected = (backendValue: TechnologiesFilter[]) =>
@@ -45,14 +36,13 @@ const useProjects = () => {
       technology => technology.key !== technologyKey
     );
 
-    if(countFrontendTechnology !== newFrontendFilterSelected.length) {
+    if (countFrontendTechnology !== newFrontendFilterSelected.length) {
       setFrontendFilterSelected(newFrontendFilterSelected);
     }
-    if(countBackendTechnology !== newBackendFilterSelected.length) {
+    if (countBackendTechnology !== newBackendFilterSelected.length) {
       setBackendFilterSelected(newFrontendFilterSelected);
     }
-
-  } 
+  };
 
   const {
     fetchProjectsIsLoading,
@@ -103,8 +93,7 @@ const useProjects = () => {
   useEffect(() => {
     handleSetFrontendFilterSelected(frontendFilterStore);
     handleSetBackendFilterSelected(backendFilterStore);
-  }, [])
-
+  }, []);
 
   return {
     searchFilter,

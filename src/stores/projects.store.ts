@@ -1,8 +1,8 @@
 import { type StateCreator, create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
 import { immer } from 'zustand/middleware/immer';
-import { type TechnologiesFilter } from "@utils/types";
-import { getRawTechnologies } from '@utils/technologies'
+import { type TechnologiesFilter } from '@utils/types';
+import { getRawTechnologies } from '@utils/technologies';
 
 interface ProjectStore {
   searchFilter: string;
@@ -43,12 +43,16 @@ const projectStore: StateCreator<
 
   removeTechnologiesSelected: (key: string) => {
     const { frontendFilter, backendFilter } = get();
-    const newFrontendFilter = frontendFilter.filter((frontendTechnology) => frontendTechnology.key !== key);
-    const newBackendFilter = backendFilter.filter((backendTechnology) => backendTechnology.key !== key);
-    set((prevState) => {
+    const newFrontendFilter = frontendFilter.filter(
+      frontendTechnology => frontendTechnology.key !== key
+    );
+    const newBackendFilter = backendFilter.filter(
+      backendTechnology => backendTechnology.key !== key
+    );
+    set(prevState => {
       prevState.frontendFilter = newFrontendFilter;
       prevState.backendFilter = newBackendFilter;
-    })
+    });
   },
 
   getTechnologiesSelected: () => {

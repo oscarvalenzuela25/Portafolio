@@ -2,12 +2,7 @@ import React, { type FC } from 'react';
 import { getColor } from '@utils/iconColors';
 import type { IconProps } from './types';
 
-const ChevronDownIcon: FC<IconProps> = ({
-  isLoading,
-  disabled,
-  styles,
-  color,
-}) => {
+const ChevronDownIcon: FC<IconProps> = ({ isLoading, disabled, styles, color }) => {
   const colorSelected = getColor({
     isLoading: isLoading,
     disabled: disabled,
