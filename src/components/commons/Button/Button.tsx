@@ -14,7 +14,7 @@ type Props = PropsWithChildren &
     width?: string;
     variant?: 'contained' | 'outlined';
     starticon?: ReactNode;
-    endicon?: ReactNode;
+    endicon?: any;
     href?: string;
     externalLink?: boolean;
   };
