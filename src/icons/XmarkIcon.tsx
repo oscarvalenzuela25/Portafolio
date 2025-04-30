@@ -23,7 +23,7 @@ const XmarkIcon: FC<IconProps> = ({ isLoading, disabled, styles, color }) => {
         height: styles?.height || 20,
       }}
     >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+      <path strokeLinecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
     </svg>
   );
 };
