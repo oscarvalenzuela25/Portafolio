@@ -26,7 +26,7 @@ const fetchProjects = async ({ searchFilter, frontendFilter, backendFilter }: Ar
     });
   } catch (error) {
     console.log(error);
-    return false;
+    return [];
   }
 };
 
