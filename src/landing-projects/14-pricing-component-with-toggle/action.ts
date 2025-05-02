@@ -1,21 +1,24 @@
-const changeHidden = (array: any) => {
-  for (let card of array) {
+const changeHidden = (array: HTMLCollectionOf<Element>) => {
+  for (let card of Array.from(array)) {
     card.classList.toggle('hidden');
   }
 };
 
-let checker: any = document.getElementById('checker');
-checker.addEventListener('click', function () {
-  let checkerBall: any = document.getElementById('checker-ball');
-  let cardAnual: any = document.getElementsByClassName('anual');
-  let cardMensual: any = document.getElementsByClassName('mensual');
-  let anual: any = document.getElementById('anual');
-  let mensual: any = document.getElementById('mensual');
+const checker = document.getElementById('checker') as HTMLElement | null;
 
-  checkerBall.classList.toggle('ball-active');
-  checker.classList.toggle('change-background-checker');
-  anual.classList.toggle('p-active');
-  mensual.classList.toggle('p-active');
-  changeHidden(cardAnual);
-  changeHidden(cardMensual);
-});
+if (checker) {
+  checker.addEventListener('click', function () {
+    const checkerBall = document.getElementById('checker-ball') as HTMLElement | null;
+    const cardAnual = document.getElementsByClassName('anual') as HTMLCollectionOf<HTMLElement>;
+    const cardMensual = document.getElementsByClassName('mensual') as HTMLCollectionOf<HTMLElement>;
+    const anual = document.getElementById('anual') as HTMLElement | null;
+    const mensual = document.getElementById('mensual') as HTMLElement | null;
+
+    checkerBall?.classList.toggle('ball-active');
+    checker.classList.toggle('change-background-checker');
+    anual?.classList.toggle('p-active');
+    mensual?.classList.toggle('p-active');
+    changeHidden(cardAnual);
+    changeHidden(cardMensual);
+  });
+}

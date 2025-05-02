@@ -1,0 +1,20 @@
+@import '/src/styles/variables.css';
+
+.card-section-skeleton-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--background-primary);
+  min-height: 450px;
+  border-radius: 4px;
+}
+
+.card-section-skeleton-text {
+  font-size: var(--desktop-lead-font-size);
+  font-weight: var(--desktop-lead-font-weight);
+  color: var(--text-primary);
+  margin-top: 16px;
+  text-align: center;
+}

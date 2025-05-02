@@ -16,3 +16,7 @@ export type Project = {
   urlRepository: string;
   image: string;
 };
+
+export type SearchFilterType = "SEARCH";
+export type BackendFilterType = "BACKEND";
+export type FrontendFilterType = "FRONTEND";

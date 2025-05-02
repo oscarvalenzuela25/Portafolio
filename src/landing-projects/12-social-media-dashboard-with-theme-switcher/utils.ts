@@ -1,4 +1,4 @@
-const changeClass = (array: any, removeClass: any, addClass: any) => {
+const changeClass = (array: HTMLCollectionOf<Element>, removeClass: string, addClass: string) => {
   while (array.length) {
     for (let children of array) {
       children.classList.replace(removeClass, addClass);
@@ -6,7 +6,7 @@ const changeClass = (array: any, removeClass: any, addClass: any) => {
   }
 };
 
-let checkbox: any = document.getElementById('dark_mode');
+const checkbox = document.getElementById('dark_mode') as HTMLInputElement;
 checkbox.addEventListener('click', () => {
   if (checkbox.checked) {
     let bgLight = document.getElementsByClassName('bg-light');

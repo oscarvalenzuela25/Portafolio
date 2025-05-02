@@ -1,27 +1,31 @@
-const validations = () => {
-  let form: any = document.getElementsByTagName('form')[0];
+const validations = (): boolean => {
+  const form = document.getElementsByTagName('form')[0] as HTMLFormElement;
   let countErrors = 0;
 
-  for (let input of form) {
-    if (input.name.trim() != '') {
-      let imgError: any = document.getElementById(input.name + 'ImgError');
-      let msgError: any = document.getElementById(input.name + 'MsgError');
+  // Usamos HTMLFormControlsCollection para recorrer inputs
+  const elements = Array.from(form.elements) as HTMLInputElement[];
+
+  for (const input of elements) {
+    if (input.name.trim() !== '') {
+      const imgError = document.getElementById(`${input.name}ImgError`) as HTMLElement | null;
+      const msgError = document.getElementById(`${input.name}MsgError`) as HTMLElement | null;
+
       if (input.value.trim() === '') {
-        imgError.classList.remove('hidden');
-        msgError.classList.remove('hidden');
+        imgError?.classList.remove('hidden');
+        msgError?.classList.remove('hidden');
         input.classList.add('border-error');
         countErrors++;
       } else {
-        imgError.classList.add('hidden');
-        msgError.classList.add('hidden');
+        imgError?.classList.add('hidden');
+        msgError?.classList.add('hidden');
         input.classList.remove('border-error');
 
-        //Confirmacion del email
+        // Validación de email
         if (input.name === 'email') {
-          const regexEmail = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
-          if (!regexEmail.exec(input.value)) {
-            imgError.classList.remove('hidden');
-            msgError.classList.remove('hidden');
+          const regexEmail = /^[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+$/;
+          if (!regexEmail.test(input.value)) {
+            imgError?.classList.remove('hidden');
+            msgError?.classList.remove('hidden');
             input.classList.add('border-error');
             countErrors++;
           }
@@ -30,7 +34,7 @@ const validations = () => {
     }
   }
 
-  return +countErrors === 0;
+  return countErrors === 0;
 };
 
 const form = document.getElementById('formInput');

@@ -1,5 +1,7 @@
-const actionSubmit: any = (e: SubmitEvent) => {
-  let inputText: any = document.getElementById('inputText');
+const actionSubmit = (e: SubmitEvent) => {
+  const inputText: HTMLInputElement | null = document.getElementById(
+    'inputText'
+  ) as HTMLInputElement;
   let getSpanError = document.getElementsByClassName('container-body__paragraph--error-message')[0];
   let getIconError = document.getElementsByClassName('icon-error')[0];
   let getForm = document.getElementsByTagName('form')[0];
@@ -11,12 +13,12 @@ const actionSubmit: any = (e: SubmitEvent) => {
     getIconError.classList.add('hidden');
     getForm.classList.remove('border-error');
     return true;
-  } else {
-    getSpanError.classList.remove('hidden');
-    getIconError.classList.remove('hidden');
-    getForm.classList.add('border-error');
-    e.preventDefault();
   }
+  getSpanError.classList.remove('hidden');
+  getIconError.classList.remove('hidden');
+  getForm.classList.add('border-error');
+  e.preventDefault();
+  return false;
 };
 
 const formInput = document.getElementById('form');
