@@ -1,0 +1,111 @@
+@import '/src/styles/variables.css';
+
+.title {
+  font-size: var(--desktop-h1-font-size);
+  font-weight: var(--desktop-h1-font-weight);
+  color: var(--text-primary);
+  margin-top: calc(50px - 32px);
+  margin-bottom: 70px;
+  text-align: center;
+
+  @media (width <= 767px) {
+    font-size: var(--mobile-h1-font-size);
+    font-weight: var(--mobile-h1-font-weight);
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+
+  @media screen and (768px <= width <= 1024px) {
+    flex-direction: column;
+  }
+  @media screen and (width <= 767px) {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.container__filter-container {
+  width: 100%;
+  @media screen and (width >= 1440px) {
+    width: calc(100% / 12 * 3 - 20px);
+  }
+  @media screen and (1025px <= width <= 1439px) {
+    width: calc(100% / 12 * 3 - 20px);
+  }
+}
+
+.container__result-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @media screen and (width >= 1440px) {
+    width: calc(100% / 12 * 9 - 20px);
+  }
+  @media screen and (1025px <= width <= 1439px) {
+    width: calc(100% / 12 * 9 - 20px);
+  }
+}
+
+.search-badge-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px 0;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+
+  @media screen and (width <= 767px) {
+    gap: 24px;
+  }
+}
+
+.paginator-container {
+  width: calc(100% - 40px);
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  margin: 80px 0 0 0;
+}
+
+.card-grid {
+  @media screen and (width >= 1440px) {
+    width: calc(100% / 12 * 4 - (40px * (12 / 4 - 1)) / (12 / 4));
+  }
+  @media screen and (1025px <= width <= 1439px) {
+    width: calc(100% / 12 * 4 - (40px * (12 / 4 - 1)) / (12 / 4));
+  }
+  @media screen and (768px <= width <= 1024px) {
+    width: calc(100% / 12 * 4 - (40px * (12 / 4 - 1)) / (12 / 4));
+  }
+  @media screen and (515px <= width <= 767px) {
+    width: calc(100% / 12 * 6 - (24px * (12 / 6 - 1)) / (12 / 6));
+  }
+  @media screen and (375px <= width <= 514px) {
+    width: calc(100% / 12 * 12);
+  }
+  @media screen and (320px <= width <= 374px) {
+    width: calc(100% / 12 * 12);
+  }
+  @media screen and (width <= 319px) {
+    width: calc(100% / 12 * 12);
+  }
+}
