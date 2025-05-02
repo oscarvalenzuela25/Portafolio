@@ -1,7 +1,7 @@
 import React, { type FC } from 'react';
 import Spacer from '@components/Spacer';
 import { getTechnologyInfo } from '@utils/technologies';
-import './../card.css';
+import '../card.css';
 
 type Props = {
   title: string;

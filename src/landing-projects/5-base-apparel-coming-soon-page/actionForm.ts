@@ -1,5 +1,7 @@
 const actionSubmit = (e: SubmitEvent) => {
-  let inputText: HTMLInputElement | null = document.getElementById('inputText') as HTMLInputElement;
+  const inputText: HTMLInputElement | null = document.getElementById(
+    'inputText'
+  ) as HTMLInputElement;
   let getSpanError = document.getElementsByClassName('container-body__paragraph--error-message')[0];
   let getIconError = document.getElementsByClassName('icon-error')[0];
   let getForm = document.getElementsByTagName('form')[0];

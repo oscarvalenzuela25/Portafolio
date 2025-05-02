@@ -56,11 +56,10 @@ const MultiSelect: FC<Props> = ({
 
       <div
         className="div-container-select"
-        tabIndex={0}
         ref={inputRef}
         onClick={() => setIsOpen(prevState => !prevState)}
       >
-        {optionSelectedLength == 0 && (
+        {optionSelectedLength === 0 && (
           <p className="placeholder-value">Buscar por tecnologias a usar...</p>
         )}
         {optionSelectedLength > 0 && (

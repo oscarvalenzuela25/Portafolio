@@ -62,7 +62,7 @@ const CardSectionSkeleton: FC<Props> = ({ isLoading, isError, isEmpty, children 
       </div>
     );
 
-  return <>{children}</>;
+  return children;
 };
 
 export default CardSectionSkeleton;
