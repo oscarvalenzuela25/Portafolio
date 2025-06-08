@@ -48,9 +48,9 @@ const Card: FC<Props> = ({ project }) => {
           {platform.map(item => {
             const icon =
               item === 'desktop' ? (
-                <DesktopIcon color="primaryText" />
+                <DesktopIcon key={item} color="primaryText" />
               ) : (
-                <MobileIcon color="primaryText" />
+                <MobileIcon key={item} color="primaryText" />
               );
             return icon;
           })}

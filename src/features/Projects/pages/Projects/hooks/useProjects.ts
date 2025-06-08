@@ -45,11 +45,6 @@ const useProjects = () => {
     handleTopScreen();
   };
 
-  // useEffect(() => {
-  //   handleSetFrontendFilterSelected(frontendFilterStore);
-  //   handleSetBackendFilterSelected(backendFilterStore);
-  // }, []);
-
   return {
     fetchProjectsIsLoading,
     fetchProjectsIsError,

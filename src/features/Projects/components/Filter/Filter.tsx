@@ -27,6 +27,7 @@ const Filter: FC<Props> = ({ fetchProjectsIsLoading }) => {
     handleClearAllFilters,
     handleSubmitFilters,
   } = useFilter();
+
   return (
     <div className="filter-container">
       <p className="filter-title-desktop">Filtros</p>
@@ -37,6 +38,12 @@ const Filter: FC<Props> = ({ fetchProjectsIsLoading }) => {
           placeholder="Buscar por palabras claves..."
           value={searchTempFilter}
           onChange={e => handleSetSearchTempFilter(e.target.value)}
+          onKeyDown={e => {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              handleSubmitFilters();
+            }
+          }}
         />
         <MultiSelect
           inputTitle="Frontend"

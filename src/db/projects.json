@@ -174,5 +174,27 @@
     "externalLink": false,
     "urlRepository": "https://github.com/oscarvalenzuela25/Portafolio/tree/main/src/landing-projects/16-star-rating-component",
     "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/16-star-rating-component/desktop-design.webp"
+  },
+  {
+    "id": 17,
+    "title": "17° Task Board App",
+    "frontend": ["REACTJS", "HTML", "CSS", "JAVASCRIPT", "TAILWINDCSS", "TYPESCRIPT"],
+    "backend": ["INDEXEDDB", "TYPESCRIPT"],
+    "url": "https://task-board-app.pages.dev",
+    "platform": ["desktop", "mobile"],
+    "externalLink": true,
+    "urlRepository": "https://github.com/oscarvalenzuela25/Task-Board-App",
+    "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/task-board-app.png"
+  },
+  {
+    "id": 18,
+    "title": "18° Password Generator App",
+    "frontend": ["REACTJS", "HTML", "CSS", "JAVASCRIPT", "TYPESCRIPT"],
+    "backend": [],
+    "url": "https://password-generator-app-five-beta.vercel.app",
+    "platform": ["desktop", "mobile"],
+    "externalLink": true,
+    "urlRepository": "https://github.com/oscarvalenzuela25/Password-Generator-App",
+    "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/password-generator-app.png"
   }
 ]

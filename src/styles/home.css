@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
-@import 'variables.css';
+@import url('variables.css');
 
 .root-container {
   background-color: var(--background-secondary);
