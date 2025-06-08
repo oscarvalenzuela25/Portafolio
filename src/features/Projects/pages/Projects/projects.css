@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'American Kestrel';
-  src: url('../../../../../public/fonts/americankestral.ttf') format('truetype');
+  src: url('/fonts/americankestral.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -9,7 +9,7 @@
   font-size: var(--desktop-display-font-size);
   font-weight: var(--desktop-h1-font-weight);
   color: var(--text-primary);
-  margin-top: calc(50px - 32px);
+  margin-top: 35px;
   margin-bottom: 70px;
   text-align: center;
   font-family: 'American Kestrel', sans-serif;
@@ -18,8 +18,8 @@
   @media (width <= 767px) {
     font-size: var(--mobile-h1-font-size);
     font-weight: var(--mobile-h1-font-weight);
-    margin-top: 0;
-    margin-bottom: 50px;
+    margin-top: 35px;
+    margin-bottom: 35px;
   }
 }
 
