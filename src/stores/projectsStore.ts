@@ -1,5 +1,5 @@
 import { type StateCreator, create } from 'zustand';
-import { devtools, persist } from 'zustand/middleware';
+import { persist } from 'zustand/middleware';
 import { immer } from 'zustand/middleware/immer';
 import { type TechnologiesFilter } from '@utils/types';
 
@@ -16,10 +16,7 @@ interface ProjectStore {
   getTechnologiesSelected: () => TechnologiesFilter[];
 }
 
-const projectStore: StateCreator<
-  ProjectStore,
-  [['zustand/devtools', never], ['zustand/immer', never]]
-> = (set, get) => ({
+const projectStore: StateCreator<ProjectStore, [['zustand/immer', never]]> = (set, get) => ({
   searchFilter: '',
   frontendFilter: [],
   backendFilter: [],
@@ -54,7 +51,7 @@ const projectStore: StateCreator<
 });
 
 const useProjectsStore = create<ProjectStore>()(
-  devtools(persist(immer(projectStore), { name: 'projects-store' }))
+  persist(immer(projectStore), { name: 'projects-store' })
 );
 
 export default useProjectsStore;

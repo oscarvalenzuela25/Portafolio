@@ -1,8 +1,10 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   type BackendFilterType,
+  type FilterParams,
   type FrontendFilterType,
   type TechnologiesFilter,
+  type UpdateFiltersParams,
 } from '@utils/types';
 import { getTechnologiesByType } from '@utils/technologies';
 import useProjectsStore from '@stores/projectsStore';
@@ -19,22 +21,47 @@ const useFilter = () => {
     []
   );
 
-  const searchFilter = useProjectsStore(state => state.searchFilter);
-  const frontendFilter = useProjectsStore(state => state.frontendFilter);
-  const backendFilter = useProjectsStore(state => state.backendFilter);
   const setSearchFilter = useProjectsStore(state => state.setSearchFilter);
   const setFrontendFilter = useProjectsStore(state => state.setFrontendFilter);
   const setBackendFilter = useProjectsStore(state => state.setBackendFilter);
   const resetFilters = useProjectsStore(state => state.resetFilters);
 
+  const getFilterParamsFromURL = (): FilterParams => {
+    const params = new URLSearchParams(window.location.search);
+
+    const searchFilterParams = params.get('search') || '';
+    const rawFrontend = params.get('frontendSearch') || '';
+    const rawBackend = params.get('backendSearch') || '';
+
+    const frontendKeys = rawFrontend.split(',').filter(Boolean);
+    const backendKeys = rawBackend.split(',').filter(Boolean);
+
+    const validFrontend = getTechnologiesByType('FRONTEND');
+    const validBackend = getTechnologiesByType('BACKEND');
+
+    const frontendFilterParams = validFrontend.filter(tech => frontendKeys.includes(tech?.key));
+    const backendFilterParams = validBackend.filter(tech => backendKeys.includes(tech?.key));
+
+    return {
+      searchFilterParams,
+      frontendFilterParams,
+      backendFilterParams,
+    };
+  };
+
   useEffect(() => {
     if (firstRender) {
-      setSearchTempFilter(searchFilter);
-      setFrontendTempFilterSelected(frontendFilter);
-      setBackendTempFilterSelected(backendFilter);
+      const { searchFilterParams, frontendFilterParams, backendFilterParams } =
+        getFilterParamsFromURL();
+      setSearchTempFilter(searchFilterParams);
+      setFrontendTempFilterSelected(frontendFilterParams);
+      setBackendTempFilterSelected(backendFilterParams);
+      setSearchFilter(searchFilterParams);
+      setFrontendFilter(frontendFilterParams);
+      setBackendFilter(backendFilterParams);
       setFirstRender(false);
     }
-  }, [searchFilter, frontendFilter, backendFilter]);
+  }, []);
 
   const handleToggleFilters = useCallback(() => {
     setShowFilters(prevState => !prevState);
@@ -113,10 +140,43 @@ const useFilter = () => {
     }
   };
 
+  const updateURLWithFilters = ({
+    newSearchFilter = '',
+    newFrontendFilter = [],
+    newBackendFilter = [],
+  }: UpdateFiltersParams) => {
+    const url = new URL(window.location.href);
+
+    url.searchParams.delete('search');
+    url.searchParams.delete('frontendSearch');
+    url.searchParams.delete('backendSearch');
+
+    if (newSearchFilter.trim() !== '') {
+      url.searchParams.set('search', newSearchFilter.trim());
+    }
+
+    if (Array.isArray(newFrontendFilter) && newFrontendFilter.length > 0) {
+      const frontendKeys = newFrontendFilter.map(item => item.key).join(',');
+      url.searchParams.set('frontendSearch', frontendKeys);
+    }
+
+    if (Array.isArray(newBackendFilter) && newBackendFilter.length > 0) {
+      const backendKeys = newBackendFilter.map(item => item.key).join(',');
+      url.searchParams.set('backendSearch', backendKeys);
+    }
+
+    window.history.pushState({}, '', url);
+  };
+
   const handleSubmitFilters = () => {
     setSearchFilter(searchTempFilter);
     setFrontendFilter(frontendTempFilterSelected);
     setBackendFilter(backendTempFilterSelected);
+    updateURLWithFilters({
+      newSearchFilter: searchTempFilter,
+      newFrontendFilter: frontendTempFilterSelected,
+      newBackendFilter: backendTempFilterSelected,
+    });
     setShowFilters(false);
   };
 
@@ -124,6 +184,11 @@ const useFilter = () => {
     setFrontendTempFilterSelected([]);
     setBackendTempFilterSelected([]);
     setSearchTempFilter('');
+    updateURLWithFilters({
+      newSearchFilter: '',
+      newFrontendFilter: [],
+      newBackendFilter: [],
+    });
     resetFilters();
   };
 

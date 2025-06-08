@@ -20,6 +20,7 @@ export const technologies: TechnologiesFilter[] = [
   { key: 'MONGODB', label: 'MongoDB', color: '#00ED64', type: ['BD'] },
   { key: 'MYSQL', label: 'MySQL', color: '#3E6E93', type: ['BD'] },
   { key: 'MARIADB', label: 'Maria DB', color: '#C0765A', type: ['BD'] },
+  { key: 'INDEXEDDB', label: 'IndexedDB', color: '#C0765A', type: ['BD', 'BACKEND'] },
 ];
 
 export const getTechnologyInfo = (key: string) => {
