@@ -7,7 +7,7 @@
   flex-direction: column;
   align-items: center;
   font-family: 'Mukta', sans-serif;
-  height: 100dvh;
+  min-height: 100dvh;
 }
 
 .grid-container {
