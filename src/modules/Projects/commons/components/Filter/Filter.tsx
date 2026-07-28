@@ -1,10 +1,10 @@
-import React, { type FC } from 'react';
+import { type FC } from 'react';
 import ChevronDownIcon from '@icons/ChevronDownIcon';
 import TextInput from '@components/TextInput';
 import useFilter from './hooks/useFilter';
 import Button from '@components/Button';
 import classNames from 'classnames';
-import './filter.css';
+import './styles.css';
 import MultiSelect from '@components/MultiSelect';
 
 type Props = {
@@ -86,19 +86,26 @@ const Filter: FC<Props> = ({ fetchProjectsIsLoading }) => {
       </div>
 
       {/* Version mobile */}
-      <div className="container-filter-title-mobile" onClick={handleToggleFilters}>
-        <p className="filter-title-mobile">Filtros</p>
-        <div
+      <button
+        type="button"
+        className="container-filter-title-mobile"
+        aria-expanded={showFilters}
+        aria-controls="mobile-filter-controls"
+        onClick={handleToggleFilters}
+      >
+        <span className="filter-title-mobile">Filtros</span>
+        <span
+          aria-hidden="true"
           className={classNames('filter-icon-mobile', {
             'filter-icon-mobile--active': showFilters,
           })}
         >
           <ChevronDownIcon color="primaryText" />
-        </div>
-      </div>
+        </span>
+      </button>
 
       {showFilters && (
-        <div className="filter-inputs-container-mobile">
+        <div className="filter-inputs-container-mobile" id="mobile-filter-controls">
           <TextInput
             inputTitle="Palabras claves"
             placeholder="Buscar por palabras claves..."

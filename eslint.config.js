@@ -5,10 +5,20 @@ import tsParser from '@typescript-eslint/parser';
 import prettier from 'eslint-config-prettier';
 
 export default [
+  {
+    ignores: ['dist/**', '.astro/**'],
+  },
   ...eslintPluginAstro.configs['flat/recommended'],
   reactPlugin.configs.flat.recommended,
   reactPlugin.configs.flat['jsx-runtime'],
   reactHooksPlugin.configs['recommended-latest'],
+  {
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+  },
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {

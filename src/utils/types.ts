@@ -3,6 +3,7 @@ export type TechnologiesFilter = {
   label: string;
   color: string;
   type: string[];
+  icon?: string;
 };
 
 export type Project = {
@@ -26,6 +27,7 @@ export type Technology = {
   label: string;
   color: string;
   type: string[];
+  icon?: string;
 };
 
 export type FilterParams = {

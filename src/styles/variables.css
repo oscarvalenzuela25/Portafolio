@@ -1,9 +1,38 @@
 :root {
-  --primary: #7f5af0;
-  --text-primary: #fffffe;
-  --text-secondary: #94a1b2;
-  --background-primary: #16161a;
-  --background-secondary: #242629;
+  /* Portfolio palette */
+  --background: #050406;
+  --foreground: #f8fafc;
+  --card: #09080d;
+  --card-foreground: #f8fafc;
+  --popover: #0c0a10;
+  --popover-foreground: #f8fafc;
+  --primary: #945af2;
+  --primary-foreground: #050406;
+  --secondary: #231736;
+  --secondary-foreground: #d1b8f9;
+  --muted: #1d1825;
+  --muted-foreground: #b0abba;
+  --accent: #210f3d;
+  --accent-foreground: #d1b8f9;
+  --destructive: #ef4343;
+  --destructive-foreground: #f8fafc;
+  --border: #241f2e;
+  --input: #241f2e;
+  --ring: #945af2;
+
+  /* Legacy aliases used by the current components */
+  --text-primary: var(--foreground);
+  --text-secondary: var(--muted-foreground);
+  --background-primary: var(--card);
+  --background-secondary: var(--background);
+
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --radius-sm: 0.625rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1rem;
+  --shadow-sm: 0 20px 40px -10px rgb(0 0 0 / 45%), 0 1px 2px -1px rgb(0 0 0 / 40%);
+  --shadow-md: 0 24px 48px -12px rgb(0 0 0 / 55%), 0 4px 12px -4px rgb(148 90 242 / 10%);
+  --tracking-normal: -0.02em;
 
   /* Desktop typography */
   --desktop-display-font-size: 64px;

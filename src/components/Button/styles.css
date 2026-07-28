@@ -1,0 +1,76 @@
+@import '/src/styles/variables.css';
+
+.button-container {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  min-height: 40px;
+  background-color: var(--card);
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  padding: 8px 16px;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+  align-items: center;
+  &:hover {
+    background-color: var(--accent);
+    box-shadow: 0 8px 24px -12px rgb(148 90 242 / 70%);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.button-container:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--ring) 35%, transparent);
+  outline-offset: 3px;
+}
+
+.button-container--loading {
+  color: var(--muted-foreground);
+  background-color: var(--muted);
+  border-color: var(--border);
+  cursor: not-allowed;
+
+  &:active {
+    transform: scale(1);
+  }
+}
+
+.button-container[aria-disabled='true'] {
+  pointer-events: none;
+}
+
+.button-container--contained {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.button-container--contained:hover {
+  background-color: color-mix(in srgb, var(--primary) 88%, white);
+  border-color: color-mix(in srgb, var(--primary) 88%, white);
+}
+
+.button-container--text {
+  background-color: transparent !important;
+}
+
+.link-button {
+  text-decoration: none;
+}
+
+.button-text {
+  margin: 0;
+  color: var(--primary);
+  font-size: var(--desktop-bodySmallBold-font-size);
+  font-weight: var(--desktop-bodySmallBold-font-weight);
+}
+
+.button-text--contained {
+  color: var(--primary-foreground);
+}

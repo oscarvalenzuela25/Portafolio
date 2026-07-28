@@ -322,6 +322,16 @@ explícita.
 - Respeta los alias definidos en `tsconfig.json`.
 - Mantén TypeScript estricto y evita `any`.
 - Conserva los cambios enfocados; no reformatees archivos no relacionados.
+- Cada componente React debe vivir en una carpeta con su mismo nombre y contener
+  como mínimo `NombreComponente.tsx` e `index.ts`.
+- Los estilos propios de un componente deben estar en `styles.css` dentro de su
+  carpeta. No uses nombres de CSS derivados del nombre del componente.
+- Cuando un componente tenga estado, efectos, handlers complejos o lógica
+  derivada, extráelos a `hooks/useNombreComponente.ts`. No crees hooks vacíos
+  para componentes puramente presentacionales.
+- Aplica la misma estructura a componentes anidados e iconos React. Mantén los
+  tipos compartidos fuera de las carpetas individuales cuando tengan varios
+  consumidores.
 - Reutiliza tokens de `src/theme/` y variables CSS antes de duplicar valores.
 - Mantén componentes exclusivos del catálogo dentro de
   `src/modules/Projects/commons/`; mueve algo a `src/components/` sólo cuando

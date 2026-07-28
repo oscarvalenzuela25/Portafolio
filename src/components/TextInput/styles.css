@@ -1,0 +1,48 @@
+@import '/src/styles/variables.css';
+
+.container-text-input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.label-text-input {
+  margin: 0;
+  color: var(--card-foreground);
+  font-size: var(--desktop-bodySmallBold-font-size);
+  font-weight: var(--desktop-bodySmallBold-font-weight);
+}
+
+.text-input {
+  box-sizing: border-box;
+  min-height: 42px;
+  padding: 10px 12px;
+  font-size: var(--desktop-bodySmall-font-size);
+  font-weight: var(--desktop-bodySmall-font-weight);
+  color: var(--popover-foreground);
+  background-color: var(--popover);
+  border: none;
+  border-radius: var(--radius-sm);
+  width: 100%;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &::placeholder {
+    color: var(--muted-foreground);
+    opacity: 1;
+  }
+
+  &:hover {
+    background-color: color-mix(in srgb, var(--popover) 86%, var(--secondary));
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--ring) 28%, transparent);
+  }
+}

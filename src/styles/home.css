@@ -1,13 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 @import url('variables.css');
 
 .root-container {
-  background-color: var(--background-secondary);
+  background:
+    radial-gradient(circle at 50% -10%, rgb(148 90 242 / 18%), transparent 32rem),
+    radial-gradient(circle at 100% 35%, rgb(48 201 232 / 6%), transparent 28rem), var(--background);
+  color: var(--foreground);
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Mukta', sans-serif;
+  font-family: var(--font-sans);
+  letter-spacing: var(--tracking-normal);
   min-height: 100dvh;
+  isolation: isolate;
+}
+
+.root-container ::selection {
+  color: var(--primary-foreground);
+  background: var(--primary);
 }
 
 .grid-container {
@@ -26,5 +36,16 @@
   @media screen and (width <= 767px) {
     width: calc(100% - 48px);
     min-height: calc(100vh - 161px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .root-container *,
+  .root-container *::before,
+  .root-container *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

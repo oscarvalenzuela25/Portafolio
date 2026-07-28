@@ -1,0 +1,36 @@
+@import '/src/styles/variables.css';
+
+.card-title-technology {
+  margin: 0;
+  color: var(--muted-foreground);
+  font-size: var(--desktop-bodySmall-font-size);
+  font-weight: var(--desktop-bodySmall-font-weight);
+}
+
+.card-container-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.technology-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 28px;
+  padding: 4px 8px;
+  color: var(--secondary-foreground);
+  font-size: var(--desktop-tiny-font-size);
+  font-weight: 600;
+  line-height: 1;
+  background-color: color-mix(in srgb, var(--secondary) 72%, transparent);
+  border: 1px solid color-mix(in srgb, var(--primary) 22%, var(--border));
+  border-radius: 8px;
+}
+
+.technology-badge__icon {
+  display: block;
+  flex: 0 0 auto;
+  border-radius: 5px;
+}

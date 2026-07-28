@@ -1,0 +1,19 @@
+@import '/src/styles/variables.css';
+
+.search-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--primary) 32%, var(--border));
+  border-radius: 999px;
+  padding: 4px 16px;
+}
+
+.search-badge-text {
+  color: var(--accent-foreground);
+  font-size: var(--desktop-smallBold-font-size);
+  font-weight: var(--desktop-smallBold-font-weight);
+  margin: 0;
+  text-align: center;
+}

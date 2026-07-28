@@ -1,5 +1,5 @@
-import React, { type ButtonHTMLAttributes, type FC, type PropsWithChildren } from 'react';
-import './iconButton.css';
+import { type ButtonHTMLAttributes, type FC, type PropsWithChildren } from 'react';
+import './styles.css';
 
 type Props = PropsWithChildren &
   ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -11,20 +11,20 @@ const IconButton: FC<Props> = ({ children, href, externalLink, ...rest }) => {
   if (href) {
     return (
       <a
-        className="link-button"
+        className="icon-button link-button"
         href={href}
         target={externalLink ? '_blank' : '_self'}
-        rel="noreferrer"
+        rel={externalLink ? 'noopener noreferrer' : undefined}
+        aria-label={rest['aria-label']}
+        title={rest.title}
       >
-        <button className="icon-button" {...rest}>
-          {children}
-        </button>
+        {children}
       </a>
     );
   }
 
   return (
-    <button className="icon-button" {...rest}>
+    <button type="button" className="icon-button" {...rest}>
       {children}
     </button>
   );
