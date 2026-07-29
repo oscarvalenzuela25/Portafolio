@@ -1,0 +1,176 @@
+@import '/src/styles/variables.css';
+
+.container-multi-select {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.container-multi-select--open {
+  z-index: 10;
+}
+
+.label-multi-select {
+  margin: 0;
+  color: var(--card-foreground);
+  font-size: var(--desktop-bodySmallBold-font-size);
+  font-weight: var(--desktop-bodySmallBold-font-weight);
+}
+
+.div-container {
+  position: relative;
+  width: 100%;
+}
+
+.div-container-select {
+  box-sizing: border-box;
+  background: var(--popover);
+  min-height: 42px;
+  width: 100%;
+  color: var(--popover-foreground);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  position: relative;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.div-container-select:hover {
+  background-color: color-mix(in srgb, var(--popover) 86%, var(--secondary));
+}
+
+.div-container-select:focus-within {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ring) 28%, transparent);
+}
+
+.div-container-select:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.placeholder-value {
+  color: var(--text-secondary);
+  font-size: var(--desktop-bodySmall-font-size);
+  font-weight: var(--desktop-bodySmall-font-weight);
+}
+
+.div-container-selected-option {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+  font-size: 0.75em;
+}
+
+/* Estilos de la base de la barra de scroll bar */
+.div-container-selected-option::-webkit-scrollbar {
+  width: 2px;
+  /* Tamaño del scroll en vertical */
+  height: 2px;
+  /* Tamaño del scroll en horizontal */
+  background: var(--text-secondary);
+}
+
+/* Estilos de la barra del scroll bar */
+.div-container-selected-option::-webkit-scrollbar-thumb {
+  background: var(--text-secondary);
+}
+
+/* Estilos de la barra del scroll bar */
+.div-container-selected-option::-webkit-scrollbar-track {
+  background: var(--text-secondary);
+}
+
+.div-container-selected-option-content {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  border: 1px solid color-mix(in srgb, var(--primary) 30%, var(--border));
+  border-radius: 999px;
+  color: var(--secondary-foreground);
+  min-height: 24px;
+  padding: 0 4px 0 10px;
+  background-color: var(--accent);
+  cursor: default;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: var(--secondary);
+  }
+}
+
+.panel {
+  position: absolute;
+  z-index: 999;
+  background: var(--popover);
+  color: var(--popover-foreground);
+  width: 100%;
+  max-height: 0;
+  overflow: auto;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  border: 0 solid var(--border);
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  top: calc(100% - 4px);
+  left: 0;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.2s ease,
+    visibility 0s linear 0.3s,
+    border-width 0s linear 0.3s;
+}
+
+.panel--open {
+  max-height: 300px;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  border-width: 1px;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.2s ease,
+    visibility 0s,
+    border-width 0s;
+}
+
+.option-label {
+  display: block;
+  width: 100%;
+  color: inherit;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 8px;
+  font-size: var(--desktop-bodySmall-font-size);
+  font-weight: var(--desktop-bodySmall-font-weight);
+
+  &:hover {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+  }
+}
+
+.option-label:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: 2px solid var(--ring);
+  outline-offset: -2px;
+  background-color: var(--secondary);
+}
+
+.no-option {
+  padding: 0.5rem;
+  color: var(--muted-foreground);
+}

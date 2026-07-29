@@ -1,0 +1,33 @@
+.icon-button {
+  background-color: transparent;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  min-width: 24px;
+  min-height: 24px;
+  padding: 2px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: inherit;
+  transition:
+    opacity 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+  &:hover {
+    opacity: 0.9;
+    box-shadow: 0px 0px 20px -18px;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.icon-button:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.link-button {
+  text-decoration: none;
+}

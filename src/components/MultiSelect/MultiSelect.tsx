@@ -1,11 +1,10 @@
-import React, { useEffect, useRef, useState, type FC } from 'react';
-import './multiSelect.css';
+import { type FC } from 'react';
 import CloseIcon from '@icons/CloseIcon';
 import XmarkIcon from '@icons/XmarkIcon';
 import IconButton from '../IconButton/IconButton';
 import { type TechnologiesFilter } from '@utils/types';
-
-type TechnologyType = 'FRONTEND' | 'BACKEND';
+import useMultiSelect, { type TechnologyType } from './hooks/useMultiSelect';
+import './styles.css';
 
 type Props = {
   inputTitle: string;
@@ -26,41 +25,47 @@ const MultiSelect: FC<Props> = ({
   handleRemoveTechnologySelected,
   handleRemoveAllTechnologySelected,
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const inputRef = useRef<HTMLDivElement | null>(null);
-  const panelRef = useRef<HTMLDivElement | null>(null);
-  const optionSelectedLength = optionsSelected?.length || 0;
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        inputRef.current &&
-        panelRef.current &&
-        !inputRef.current.contains(event.target as Node) &&
-        !panelRef.current.contains(event.target as Node)
-      ) {
-        setIsOpen(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
+  const {
+    isOpen,
+    inputRef,
+    panelRef,
+    labelId,
+    panelId,
+    optionSelectedLength,
+    handleToggleOpen,
+    handleKeyDown,
+    handleSelectOption,
+    handleRemoveOption,
+    handleRemoveAll,
+    isOptionSelected,
+  } = useMultiSelect({
+    type,
+    optionsSelected,
+    handleSetTechnologySelected,
+    handleRemoveTechnologySelected,
+    handleRemoveAllTechnologySelected,
+  });
 
   return (
-    <div className="container-multi-select">
-      <p className="label-multi-select">{inputTitle}</p>
+    <div className={`container-multi-select${isOpen ? ' container-multi-select--open' : ''}`}>
+      <span className="label-multi-select" id={labelId}>
+        {inputTitle}
+      </span>
 
       <div
         className="div-container-select"
         ref={inputRef}
-        onClick={() => setIsOpen(prevState => !prevState)}
+        role="combobox"
+        tabIndex={0}
+        aria-labelledby={labelId}
+        aria-controls={panelId}
+        aria-expanded={isOpen}
+        aria-haspopup="listbox"
+        onClick={handleToggleOpen}
+        onKeyDown={handleKeyDown}
       >
         {optionSelectedLength === 0 && (
-          <p className="placeholder-value">Buscar por tecnologias a usar...</p>
+          <span className="placeholder-value">Buscar por tecnologías a usar...</span>
         )}
         {optionSelectedLength > 0 && (
           <div className="div-container-selected-option">
@@ -68,12 +73,10 @@ const MultiSelect: FC<Props> = ({
               <div key={technology.key} className="div-container-selected-option-content">
                 {technology.label}
                 <IconButton
-                  onClick={e => {
-                    e.stopPropagation();
-                    handleRemoveTechnologySelected(technology, type);
-                  }}
+                  aria-label={`Quitar ${technology.label}`}
+                  onClick={event => handleRemoveOption(event, technology)}
                 >
-                  <XmarkIcon styles={{ width: 14, color: '#ffff' }} />
+                  <XmarkIcon styles={{ width: 14, color: 'var(--secondary-foreground)' }} />
                 </IconButton>
               </div>
             ))}
@@ -82,38 +85,33 @@ const MultiSelect: FC<Props> = ({
 
         {optionSelectedLength > 0 && (
           <IconButton
-            onClick={e => {
-              e.stopPropagation();
-              handleRemoveAllTechnologySelected(type);
-            }}
+            aria-label={`Quitar todas las tecnologías de ${inputTitle}`}
+            onClick={handleRemoveAll}
           >
-            <CloseIcon styles={{ width: 20, color: '#000' }} />
+            <CloseIcon styles={{ width: 20, color: 'var(--muted-foreground)' }} />
           </IconButton>
         )}
 
         <div
-          className="panel"
+          className={`panel${isOpen ? ' panel--open' : ''}`}
+          id={panelId}
           ref={panelRef}
-          style={{
-            maxHeight: isOpen ? '300px' : '0',
-            transition: 'all 0.3s ease',
-            zIndex: 999,
-          }}
+          role="listbox"
+          aria-labelledby={labelId}
         >
           {options.length > 0 ? (
             options.map(option => {
               return (
-                <div
+                <button
+                  type="button"
                   key={option.label}
-                  onClick={e => {
-                    e.stopPropagation();
-                    handleSetTechnologySelected(option, type);
-                    setIsOpen(false);
-                  }}
+                  role="option"
+                  aria-selected={isOptionSelected(option.key)}
+                  onClick={event => handleSelectOption(event, option)}
                   className="option-label"
                 >
                   {option.label}
-                </div>
+                </button>
               );
             })
           ) : (

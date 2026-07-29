@@ -1,11 +1,6 @@
-import React, {
-  type FC,
-  type PropsWithChildren,
-  type ButtonHTMLAttributes,
-  type ReactNode,
-} from 'react';
+import { type FC, type PropsWithChildren, type ButtonHTMLAttributes, type ReactNode } from 'react';
 import classNames from 'classnames';
-import './button.css';
+import './styles.css';
 
 type Props = PropsWithChildren &
   ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -31,55 +26,52 @@ const Button: FC<Props> = ({
   externalLink,
   ...rest
 }) => {
-  if (href)
-    return (
-      <a
-        className="link-button"
-        href={href}
-        target={externalLink ? '_blank' : '_self'}
-        rel="noreferrer"
-      >
-        <button
-          className={classNames('button-container', {
-            'button-container--contained': variant === 'contained',
-            'button-container--text': variant === 'text',
-            'button-container--loading': loading || disabled,
-          })}
-          style={{ width }}
-          {...rest}
-        >
-          {starticon && starticon}
-          <p
-            className={classNames('button-text', {
-              'button-text--contained': variant === 'contained',
-            })}
-          >
-            {loading ? 'Cargando...' : children}
-          </p>
-          {endicon && endicon}
-        </button>
-      </a>
-    );
-  return (
-    <button
-      className={classNames('button-container', {
-        'button-container--contained': variant === 'contained',
-        'button-container--text': variant === 'text',
-        'button-container--loading': loading || disabled,
-      })}
-      style={{ width }}
-      {...rest}
-    >
-      {starticon && starticon}
-      <p
+  const isUnavailable = loading || disabled;
+  const buttonClassName = classNames('button-container', {
+    'button-container--contained': variant === 'contained',
+    'button-container--text': variant === 'text',
+    'button-container--loading': isUnavailable,
+  });
+  const content = (
+    <>
+      {starticon}
+      <span
         className={classNames('button-text', {
           'button-text--contained': variant === 'contained',
           'button-text--text': variant === 'text',
         })}
       >
         {loading ? 'Cargando...' : children}
-      </p>
-      {endicon && endicon}
+      </span>
+      {endicon}
+    </>
+  );
+
+  if (href) {
+    return (
+      <a
+        className={classNames('link-button', buttonClassName)}
+        href={href}
+        target={externalLink ? '_blank' : '_self'}
+        rel={externalLink ? 'noopener noreferrer' : undefined}
+        style={{ width }}
+        aria-disabled={isUnavailable || undefined}
+        tabIndex={isUnavailable ? -1 : undefined}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <button
+      className={buttonClassName}
+      style={{ width }}
+      disabled={isUnavailable}
+      aria-busy={loading || undefined}
+      {...rest}
+    >
+      {content}
     </button>
   );
 };

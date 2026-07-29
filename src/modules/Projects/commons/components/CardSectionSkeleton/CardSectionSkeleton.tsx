@@ -1,7 +1,8 @@
-import React, { type FC, type PropsWithChildren } from 'react';
+import { type FC, type PropsWithChildren } from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
 import theme from '@theme/index';
-import './cardSectionSkeleton.css';
+import useCardSectionSkeleton from './hooks/useCardSectionSkeleton';
+import './styles.css';
 
 type Props = PropsWithChildren & {
   isLoading: boolean;
@@ -10,7 +11,9 @@ type Props = PropsWithChildren & {
 };
 
 const CardSectionSkeleton: FC<Props> = ({ isLoading, isError, isEmpty, children }) => {
-  if (isLoading)
+  const status = useCardSectionSkeleton({ isLoading, isError, isEmpty });
+
+  if (status === 'loading')
     return (
       <div className="card-section-skeleton-container">
         <Player
@@ -25,7 +28,7 @@ const CardSectionSkeleton: FC<Props> = ({ isLoading, isError, isEmpty, children 
         />
       </div>
     );
-  if (isError)
+  if (status === 'error')
     return (
       <div className="card-section-skeleton-container">
         <Player
@@ -43,7 +46,7 @@ const CardSectionSkeleton: FC<Props> = ({ isLoading, isError, isEmpty, children 
         </p>
       </div>
     );
-  if (isEmpty)
+  if (status === 'empty')
     return (
       <div className="card-section-skeleton-container">
         <Player

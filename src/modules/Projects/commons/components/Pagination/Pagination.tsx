@@ -1,7 +1,7 @@
-import React, { type FC } from 'react';
+import { type FC } from 'react';
 import usePagination from './hooks/usePagination';
 import classNames from 'classnames';
-import './pagination.css';
+import './styles.css';
 import ChevronLeftIcon from '@icons/ChevronLeftIcon';
 import ChevronRightIcon from '@icons/ChevronRightIcon';
 
@@ -34,41 +34,55 @@ const Paginate: FC<Props> = ({
   });
 
   return (
-    <div className="pagination-container-root">
+    <nav className="pagination-container-root" aria-label="Paginación de proyectos">
       <div className="pagination-container">
-        <div
+        <button
+          type="button"
           className={classNames('pagination-item', {
             'pagination-item--disabled': disabledFirstItem,
           })}
+          aria-label="Página anterior"
+          disabled={disabledFirstItem}
           onClick={() => handleChangePageFirstItem(handleChangePage)}
         >
           <ChevronLeftIcon color={disabledFirstItem ? 'secondaryText' : 'primaryText'} />
-        </div>
+        </button>
         {arrayPage.map(page => (
-          <div
+          <button
+            type="button"
             className={classNames('pagination-item', {
               'pagination-item--active': Number(currentPage) === Number(page),
             })}
             key={page}
+            aria-label={`Ir a la página ${page}`}
+            aria-current={Number(currentPage) === Number(page) ? 'page' : undefined}
             onClick={() => handleChangePage(page)}
           >
             {page}
-          </div>
+          </button>
         ))}
-        <div
+        <button
+          type="button"
           className={classNames('pagination-item', {
             'pagination-item--disabled': disabledLastItem,
           })}
+          aria-label="Página siguiente"
+          disabled={disabledLastItem}
           onClick={() => handleChangePageLastItem(handleChangePage)}
         >
           <ChevronRightIcon color={disabledLastItem ? 'secondaryText' : 'primaryText'} />
-        </div>
+        </button>
       </div>
 
-      <form>
+      <div className="items-per-page-control">
+        <label className="items-per-page-label" htmlFor="items-per-page">
+          Por página
+        </label>
         <select
+          id="items-per-page"
           name="itemsPerPage"
           className="pagination-item-per-page"
+          aria-label="Cantidad de proyectos por página"
           value={itemsPerPage}
           onChange={e => handleChangeItemsPerPage(Number(e.target.value))}
         >
@@ -78,8 +92,8 @@ const Paginate: FC<Props> = ({
             </option>
           ))}
         </select>
-      </form>
-    </div>
+      </div>
+    </nav>
   );
 };
 
