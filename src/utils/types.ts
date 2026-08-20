@@ -4,11 +4,14 @@ export type TechnologiesFilter = {
   color: string;
   type: string[];
   icon?: string;
+  iconUrl?: string;
 };
 
 export type Project = {
   id: number;
   title: string;
+  description?: string;
+  status?: string;
   frontend: string[];
   backend: string[];
   url: string;
@@ -28,6 +31,7 @@ export type Technology = {
   color: string;
   type: string[];
   icon?: string;
+  iconUrl?: string;
 };
 
 export type FilterParams = {

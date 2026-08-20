@@ -21,13 +21,16 @@ const TechnologySection: FC<Props> = ({ title, technologies = [], mb = 0, mt = 0
       <p className="card-title-technology">{title}</p>
       <Spacer height={8} />
       <div className="card-container-technologies">
-        {technologyItems.map(({ key, label, icon }) => {
+        {technologyItems.map(({ key, label, icon, iconUrl }) => {
+          const imageSource = iconUrl ||
+            (icon ? `https://skillicons.dev/icons?i=${icon}&theme=dark` : undefined);
+
           return (
             <span className="technology-badge" key={key} title={label}>
-              {icon && (
+              {imageSource && (
                 <img
                   className="technology-badge__icon"
-                  src={`https://skillicons.dev/icons?i=${icon}&theme=dark`}
+                  src={imageSource}
                   alt=""
                   aria-hidden="true"
                   width="22"

@@ -11,6 +11,7 @@ export const technologies: TechnologiesFilter[] = [
     icon: 'js',
   },
   { key: 'REACTJS', label: 'React', color: '#16A5E1', type: ['FRONTEND'], icon: 'react' },
+  { key: 'ASTRO', label: 'Astro', color: '#FF5D01', type: ['FRONTEND'], icon: 'astro' },
   { key: 'NEXTJS', label: 'NextJS', color: '#fff', type: ['FRONTEND'], icon: 'nextjs' },
   {
     key: 'TAILWINDCSS',
@@ -42,6 +43,13 @@ export const technologies: TechnologiesFilter[] = [
     icon: 'graphql',
   },
   { key: 'NODEJS', label: 'Node.js', color: '#6BA260', type: ['BACKEND'], icon: 'nodejs' },
+  {
+    key: 'STRAPI',
+    label: 'Strapi',
+    color: '#4945FF',
+    type: ['BACKEND'],
+    iconUrl: 'https://cdn.simpleicons.org/strapi/9B95FF',
+  },
   {
     key: 'EXPRESSJS',
     label: 'Express.js',
@@ -77,6 +85,7 @@ export const getTechnologyInfo = (key: string) => {
     label: key,
     color: '#fff',
     icon: undefined,
+    iconUrl: undefined,
   };
 
   return technologies.find(technology => technology.key === key) || defaultTechnology;
