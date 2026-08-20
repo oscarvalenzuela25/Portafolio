@@ -12,28 +12,41 @@ type Props = {
 };
 
 const Card: FC<Props> = ({ project }) => {
-  const { title, frontend, backend, url, externalLink, urlRepository, image, platform } = project;
+  const {
+    title,
+    description,
+    status,
+    frontend,
+    backend,
+    url,
+    externalLink,
+    urlRepository,
+    image,
+    platform,
+  } = project;
   const { isImageLoaded, handleImageLoad, platformLabel } = useCard(platform);
 
   return (
     <article className="container-card">
-      {!isImageLoaded && (
-        <div className="container-img-skeleton">
-          <div className="img-skeleton" />
-        </div>
-      )}
-      <img
-        src={image}
-        alt={`Vista previa del proyecto ${title}`}
-        onLoad={handleImageLoad}
-        style={{
-          width: '100%',
-          height: 'auto',
-          display: isImageLoaded ? 'block' : 'none',
-        }}
-      />
+      <div className="card-media">
+        {!isImageLoaded && (
+          <div className="container-img-skeleton">
+            <div className="img-skeleton" />
+          </div>
+        )}
+        <img
+          className="card-image"
+          src={image}
+          alt={`Vista previa del proyecto ${title}`}
+          onLoad={handleImageLoad}
+          decoding="async"
+          style={{ display: isImageLoaded ? 'block' : 'none' }}
+        />
+        {status && <span className="card-status">{status}</span>}
+      </div>
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
+        {description && <p className="card-description">{description}</p>}
         {urlRepository && (
           <a
             className="card-title-repository"

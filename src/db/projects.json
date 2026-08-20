@@ -196,5 +196,18 @@
     "externalLink": true,
     "urlRepository": "https://github.com/oscarvalenzuela25/Password-Generator-App",
     "image": "https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/password-generator-app.png"
+  },
+  {
+    "id": 19,
+    "title": "19° Products · Blog con Astro y Strapi",
+    "description": "Blog multipropósito con contenido administrable, demos temáticas y una arquitectura reutilizable orientada a producto.",
+    "status": "Nuevo",
+    "frontend": ["ASTRO", "REACTJS", "TYPESCRIPT", "STYLED-COMPONENTS"],
+    "backend": ["STRAPI", "TYPESCRIPT"],
+    "url": "https://products-blog-client.vercel.app",
+    "platform": ["desktop", "mobile"],
+    "externalLink": true,
+    "urlRepository": "https://github.com/oscarvalenzuela25/Products",
+    "image": "https://products-blog-client.vercel.app/og.png"
   }
 ]
