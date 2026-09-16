@@ -201,7 +201,6 @@
     "id": 19,
     "title": "19° Products · Blog con Astro y Strapi",
     "description": "Blog multipropósito con contenido administrable, demos temáticas y una arquitectura reutilizable orientada a producto.",
-    "status": "Nuevo",
     "frontend": ["ASTRO", "REACTJS", "TYPESCRIPT", "STYLED-COMPONENTS"],
     "backend": ["STRAPI", "TYPESCRIPT"],
     "url": "https://products-blog-client.vercel.app",
@@ -209,5 +208,18 @@
     "externalLink": true,
     "urlRepository": "https://github.com/oscarvalenzuela25/Products",
     "image": "https://products-blog-client.vercel.app/og.png"
+  },
+  {
+    "id": 20,
+    "title": "20° Nodia-DB · Diagramador de Bases de Datos",
+    "description": "Editor visual interactivo de diagramas entidad-relación (ER), modelado de esquemas y exportación SQL sin necesidad de cuenta.",
+    "status": "Nuevo",
+    "frontend": ["REACTJS", "TAILWINDCSS", "JAVASCRIPT", "HTML", "CSS"],
+    "backend": ["INDEXEDDB"],
+    "url": "https://nodia-db.pages.dev",
+    "platform": ["desktop", "mobile"],
+    "externalLink": true,
+    "urlRepository": "",
+    "image": "/nodia-db.png"
   }
 ]

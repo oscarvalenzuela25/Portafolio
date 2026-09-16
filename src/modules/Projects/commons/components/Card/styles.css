@@ -121,6 +121,23 @@
   color: var(--secondary-foreground);
 }
 
+.card-repository-private {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--desktop-bodySmall-font-size);
+  font-weight: var(--desktop-bodySmall-font-weight);
+  color: var(--muted-foreground);
+  margin: 0;
+  cursor: default;
+  user-select: none;
+}
+
+.card-repository-private svg {
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
 .card-platform-section {
   display: flex;
   align-items: center;

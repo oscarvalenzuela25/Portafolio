@@ -17,7 +17,7 @@ export type Project = {
   url: string;
   platform: string[];
   externalLink: boolean;
-  urlRepository: string;
+  urlRepository?: string;
   image: string;
 };
 
