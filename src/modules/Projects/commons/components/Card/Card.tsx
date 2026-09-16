@@ -47,7 +47,7 @@ const Card: FC<Props> = ({ project }) => {
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
         {description && <p className="card-description">{description}</p>}
-        {urlRepository && (
+        {urlRepository ? (
           <a
             className="card-title-repository"
             target="_blank"
@@ -56,6 +56,24 @@ const Card: FC<Props> = ({ project }) => {
           >
             Link al repositorio
           </a>
+        ) : (
+          <span className="card-repository-private" title="Código fuente en repositorio privado">
+            <svg
+              aria-hidden="true"
+              width="13"
+              height="13"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+            Repositorio privado
+          </span>
         )}
 
         <div className="card-platform-section" role="img" aria-label={platformLabel}>
